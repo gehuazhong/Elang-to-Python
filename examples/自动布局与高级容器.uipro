@@ -1,0 +1,1884 @@
+{
+  "canvas": {
+    "grid_size": 8,
+    "show_grid": true,
+    "show_guides": true,
+    "snap_distance": 6,
+    "snap_to_grid": true,
+    "snap_to_guides": true
+  },
+  "codegen": {
+    "entry_file": "main.py",
+    "template_id": "builtin.pyside6",
+    "window_class": "MainWindow"
+  },
+  "connections": [],
+  "document_id": "f0f29882-a09c-4296-b466-fdc007152481",
+  "extensions": {},
+  "format": "uipro",
+  "handlers": [],
+  "name": "自动布局与高级容器",
+  "nodes": [
+    {
+      "code_name": "tab_page_3",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "057d743b-13be-41ee-ba91-af73c042274a",
+      "layout": null,
+      "layout_item": null,
+      "name": "页面3",
+      "object_order": 2,
+      "parent_id": "c8f6c96a-d2f1-43ce-b288-45d0fb03a6d4",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_direction": "left_to_right",
+        "status_tip": "",
+        "text": "多文档",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "pages",
+      "stack_order": null,
+      "type_id": "builtin.tab_page",
+      "type_version": 1
+    },
+    {
+      "code_name": "mdi_subwindow_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 410,
+        "width": 345,
+        "x": 16,
+        "y": 24
+      },
+      "id": "06249a8f-2f73-4be5-a862-6bbc5676f614",
+      "layout": null,
+      "layout_item": null,
+      "name": "多文档子窗口1",
+      "object_order": 0,
+      "parent_id": "c0434613-35c7-4a27-a49d-700735a2d0fb",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "maximized": false,
+        "status_tip": "",
+        "title": "数据窗口",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.mdi_subwindow",
+      "type_version": 1
+    },
+    {
+      "code_name": "button_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 40,
+        "width": 120,
+        "x": 0,
+        "y": 0
+      },
+      "id": "128cb1c8-382d-4b51-9d66-21d6e6ee3c7d",
+      "layout": null,
+      "layout_item": null,
+      "name": "按钮1",
+      "object_order": 2,
+      "parent_id": "4fd1c760-6c0d-4239-819f-a195f1ea9948",
+      "properties": {
+        "auto_repeat": false,
+        "background_color": "",
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "flat": false,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "icon": "",
+        "icon_height": 0,
+        "icon_width": 0,
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "repeat_delay": 300,
+        "repeat_interval": 100,
+        "shortcut": "",
+        "status_tip": "",
+        "text": "查询",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 2,
+      "type_id": "builtin.button",
+      "type_version": 1
+    },
+    {
+      "code_name": "scroll_area_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 535,
+        "width": 385,
+        "x": 400,
+        "y": 16
+      },
+      "id": "13382fe1-c5de-4d38-93f7-b3ca085cfd1c",
+      "layout": null,
+      "layout_item": null,
+      "name": "滚动区域1",
+      "object_order": 1,
+      "parent_id": "f077a2bd-cc24-4744-a398-63fb0b3c2626",
+      "properties": {
+        "background_color": "",
+        "content_height": 820,
+        "content_width": 350,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "horizontal_policy": "as_needed",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "scroll_x": 0,
+        "scroll_y": 0,
+        "status_tip": "",
+        "tool_tip": "",
+        "vertical_policy": "as_needed",
+        "visible": true,
+        "widget_resizable": false
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.scroll_area",
+      "type_version": 1
+    },
+    {
+      "code_name": "main_window",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 680,
+        "width": 1080,
+        "x": 100,
+        "y": 100
+      },
+      "id": "1b3b0e06-76a5-404f-bc70-ba96b5032a9a",
+      "layout": null,
+      "layout_item": null,
+      "name": "主窗口",
+      "object_order": 0,
+      "parent_id": null,
+      "properties": {
+        "enabled": true,
+        "visible": true,
+        "window_title": "自动布局与高级容器"
+      },
+      "slot": "root",
+      "stack_order": null,
+      "type_id": "builtin.main_window",
+      "type_version": 1
+    },
+    {
+      "code_name": "horizontal_layout_2",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 60,
+        "width": 770,
+        "x": 16,
+        "y": 498
+      },
+      "id": "1e148aaa-2b78-401d-aa4a-9deb29bf73fe",
+      "layout": null,
+      "layout_item": null,
+      "name": "水平布局2",
+      "object_order": 4,
+      "parent_id": "d894b203-2819-4591-ba28-11626f1bd74d",
+      "properties": {
+        "background_color": "",
+        "content_bottom": 8,
+        "content_left": 8,
+        "content_right": 8,
+        "content_top": 8,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "spacing": 8,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 4,
+      "type_id": "builtin.horizontal_layout",
+      "type_version": 1
+    },
+    {
+      "code_name": "tool_box_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 535,
+        "width": 365,
+        "x": 16,
+        "y": 16
+      },
+      "id": "20c1bf4d-b048-42cf-9a3f-64717ac2b1f7",
+      "layout": null,
+      "layout_item": null,
+      "name": "折叠页容器1",
+      "object_order": 0,
+      "parent_id": "f077a2bd-cc24-4744-a398-63fb0b3c2626",
+      "properties": {
+        "background_color": "",
+        "current_index": 0,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.tool_box",
+      "type_version": 1
+    },
+    {
+      "code_name": "label_3",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 32,
+        "width": 160,
+        "x": 0,
+        "y": 0
+      },
+      "id": "34840551-e6a9-4328-ab5e-f56c428c8a88",
+      "layout": null,
+      "layout_item": null,
+      "name": "标签3",
+      "object_order": 0,
+      "parent_id": "71274533-f393-4b98-a12f-d0ca431fd0a7",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "margin": 0,
+        "open_external_links": false,
+        "status_tip": "",
+        "text": "项目名称",
+        "text_format": "plain",
+        "text_interaction": "links",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "line_edit_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 32,
+        "width": 200,
+        "x": 0,
+        "y": 0
+      },
+      "id": "43beb0ef-10c6-404d-9210-075c17a10f81",
+      "layout": null,
+      "layout_item": null,
+      "name": "单行编辑框1",
+      "object_order": 1,
+      "parent_id": "4fd1c760-6c0d-4239-819f-a195f1ea9948",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "clear_button": true,
+        "echo_mode": "normal",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame": true,
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 1,
+        "max_length": 32767,
+        "placeholder_text": "输入名称搜索",
+        "read_only": false,
+        "status_tip": "",
+        "text": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.line_edit",
+      "type_version": 1
+    },
+    {
+      "code_name": "list_view_2",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 420,
+        "width": 325,
+        "x": 8,
+        "y": 8
+      },
+      "id": "4565c900-5447-4bb0-a6b1-b187fb6c91ec",
+      "layout": null,
+      "layout_item": null,
+      "name": "列表模型视图2",
+      "object_order": 0,
+      "parent_id": "e5c67515-778c-4806-8250-27e4507f4ffa",
+      "properties": {
+        "alternating": true,
+        "background_color": "",
+        "editable": false,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "items": [
+          "双击页头切换",
+          "选择对象树中的页面",
+          "右键添加或删除页面"
+        ],
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "selection_mode": "single",
+        "status_tip": "",
+        "tool_tip": "",
+        "view_mode": "list",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.list_view",
+      "type_version": 1
+    },
+    {
+      "code_name": "line_edit_2",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 32,
+        "width": 200,
+        "x": 0,
+        "y": 0
+      },
+      "id": "49fdd7c2-7743-4b04-bab1-663c0992364d",
+      "layout": null,
+      "layout_item": null,
+      "name": "单行编辑框2",
+      "object_order": 1,
+      "parent_id": "71274533-f393-4b98-a12f-d0ca431fd0a7",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "clear_button": true,
+        "echo_mode": "normal",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame": true,
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "max_length": 32767,
+        "placeholder_text": "请输入内容",
+        "read_only": false,
+        "status_tip": "",
+        "text": "界面示例",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.line_edit",
+      "type_version": 1
+    },
+    {
+      "code_name": "horizontal_layout_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 64,
+        "width": 770,
+        "x": 16,
+        "y": 56
+      },
+      "id": "4fd1c760-6c0d-4239-819f-a195f1ea9948",
+      "layout": null,
+      "layout_item": null,
+      "name": "水平布局1",
+      "object_order": 1,
+      "parent_id": "d894b203-2819-4591-ba28-11626f1bd74d",
+      "properties": {
+        "background_color": "",
+        "content_bottom": 8,
+        "content_left": 8,
+        "content_right": 8,
+        "content_top": 8,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "spacing": 8,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.horizontal_layout",
+      "type_version": 1
+    },
+    {
+      "code_name": "label_4",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 32,
+        "width": 160,
+        "x": 0,
+        "y": 0
+      },
+      "id": "5067d5bb-5659-4d42-9afe-0dee777e255c",
+      "layout": null,
+      "layout_item": null,
+      "name": "标签4",
+      "object_order": 2,
+      "parent_id": "71274533-f393-4b98-a12f-d0ca431fd0a7",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "margin": 0,
+        "open_external_links": false,
+        "status_tip": "",
+        "text": "负责人",
+        "text_format": "plain",
+        "text_interaction": "links",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 2,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "line_edit_3",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 32,
+        "width": 200,
+        "x": 0,
+        "y": 0
+      },
+      "id": "5f76ecb0-e3ee-4a17-b6a0-8ded86b4f119",
+      "layout": null,
+      "layout_item": null,
+      "name": "单行编辑框3",
+      "object_order": 3,
+      "parent_id": "71274533-f393-4b98-a12f-d0ca431fd0a7",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "clear_button": true,
+        "echo_mode": "normal",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame": true,
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "max_length": 32767,
+        "placeholder_text": "请输入姓名",
+        "read_only": false,
+        "status_tip": "",
+        "text": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 3,
+      "type_id": "builtin.line_edit",
+      "type_version": 1
+    },
+    {
+      "code_name": "label_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 32,
+        "width": 740,
+        "x": 16,
+        "y": 12
+      },
+      "id": "65af70bc-0aca-4be9-b415-64da0cb347de",
+      "layout": null,
+      "layout_item": null,
+      "name": "标签1",
+      "object_order": 0,
+      "parent_id": "d894b203-2819-4591-ba28-11626f1bd74d",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 14,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "margin": 0,
+        "open_external_links": false,
+        "status_tip": "",
+        "text": "布局按内容排列，窗口中保持统一间距",
+        "text_format": "plain",
+        "text_interaction": "links",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "form_layout_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 130,
+        "width": 770,
+        "x": 16,
+        "y": 352
+      },
+      "id": "71274533-f393-4b98-a12f-d0ca431fd0a7",
+      "layout": null,
+      "layout_item": null,
+      "name": "表单布局1",
+      "object_order": 3,
+      "parent_id": "d894b203-2819-4591-ba28-11626f1bd74d",
+      "properties": {
+        "background_color": "",
+        "content_bottom": 8,
+        "content_left": 8,
+        "content_right": 8,
+        "content_top": 8,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "spacing": 8,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 3,
+      "type_id": "builtin.form_layout",
+      "type_version": 1
+    },
+    {
+      "code_name": "table_view_2",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 780,
+        "width": 330,
+        "x": 8,
+        "y": 8
+      },
+      "id": "77699c37-b96b-4042-b72f-aa2343481b50",
+      "layout": null,
+      "layout_item": null,
+      "name": "表格模型视图2",
+      "object_order": 0,
+      "parent_id": "13382fe1-c5de-4d38-93f7-b3ca085cfd1c",
+      "properties": {
+        "alternating": true,
+        "background_color": "",
+        "editable": false,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "selection_mode": "single",
+        "sorting": false,
+        "status_tip": "",
+        "table_data": {
+          "headers": [
+            "行号",
+            "说明"
+          ],
+          "rows": [
+            [
+              "1",
+              "滚动查看内容"
+            ],
+            [
+              "2",
+              "滚动查看内容"
+            ],
+            [
+              "3",
+              "滚动查看内容"
+            ],
+            [
+              "4",
+              "滚动查看内容"
+            ],
+            [
+              "5",
+              "滚动查看内容"
+            ],
+            [
+              "6",
+              "滚动查看内容"
+            ],
+            [
+              "7",
+              "滚动查看内容"
+            ],
+            [
+              "8",
+              "滚动查看内容"
+            ],
+            [
+              "9",
+              "滚动查看内容"
+            ],
+            [
+              "10",
+              "滚动查看内容"
+            ],
+            [
+              "11",
+              "滚动查看内容"
+            ],
+            [
+              "12",
+              "滚动查看内容"
+            ],
+            [
+              "13",
+              "滚动查看内容"
+            ],
+            [
+              "14",
+              "滚动查看内容"
+            ],
+            [
+              "15",
+              "滚动查看内容"
+            ],
+            [
+              "16",
+              "滚动查看内容"
+            ],
+            [
+              "17",
+              "滚动查看内容"
+            ],
+            [
+              "18",
+              "滚动查看内容"
+            ],
+            [
+              "19",
+              "滚动查看内容"
+            ],
+            [
+              "20",
+              "滚动查看内容"
+            ],
+            [
+              "21",
+              "滚动查看内容"
+            ],
+            [
+              "22",
+              "滚动查看内容"
+            ],
+            [
+              "23",
+              "滚动查看内容"
+            ],
+            [
+              "24",
+              "滚动查看内容"
+            ],
+            [
+              "25",
+              "滚动查看内容"
+            ],
+            [
+              "26",
+              "滚动查看内容"
+            ],
+            [
+              "27",
+              "滚动查看内容"
+            ],
+            [
+              "28",
+              "滚动查看内容"
+            ],
+            [
+              "29",
+              "滚动查看内容"
+            ],
+            [
+              "30",
+              "滚动查看内容"
+            ]
+          ]
+        },
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.table_view",
+      "type_version": 1
+    },
+    {
+      "code_name": "svg_widget_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 300,
+        "width": 305,
+        "x": 8,
+        "y": 8
+      },
+      "id": "920111fc-10ca-439d-b9a9-f2559968f8b2",
+      "layout": null,
+      "layout_item": null,
+      "name": "SVG 矢量图1",
+      "object_order": 0,
+      "parent_id": "bdf65f36-07e2-4495-8101-471095163b4b",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "status_tip": "",
+        "svg_data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"160\" viewBox=\"0 0 200 160\"><rect x=\"20\" y=\"20\" width=\"160\" height=\"120\" rx=\"16\" fill=\"#0078d4\"/></svg>",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.svg_widget",
+      "type_version": 1
+    },
+    {
+      "code_name": "tab_page_5",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "97c27f87-36d4-4677-9230-8827c737510f",
+      "layout": null,
+      "layout_item": null,
+      "name": "页面5",
+      "object_order": 1,
+      "parent_id": "20c1bf4d-b048-42cf-9a3f-64717ac2b1f7",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_direction": "left_to_right",
+        "status_tip": "",
+        "text": "树形模型",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "pages",
+      "stack_order": null,
+      "type_id": "builtin.tab_page",
+      "type_version": 1
+    },
+    {
+      "code_name": "tree_view_2",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 420,
+        "width": 325,
+        "x": 8,
+        "y": 8
+      },
+      "id": "9efddfd3-6e10-4566-b0e5-eeafeb9754f1",
+      "layout": null,
+      "layout_item": null,
+      "name": "树形模型视图2",
+      "object_order": 0,
+      "parent_id": "97c27f87-36d4-4677-9230-8827c737510f",
+      "properties": {
+        "alternating": true,
+        "background_color": "",
+        "editable": false,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "selection_mode": "single",
+        "sorting": false,
+        "status_tip": "",
+        "tool_tip": "",
+        "tree_data": [
+          {
+            "children": [
+              {
+                "children": [],
+                "text": "子节点"
+              }
+            ],
+            "text": "根节点"
+          }
+        ],
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.tree_view",
+      "type_version": 1
+    },
+    {
+      "code_name": "label_2",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 32,
+        "width": 160,
+        "x": 0,
+        "y": 0
+      },
+      "id": "a23aa80b-9a89-4fec-810e-1e643abe18ca",
+      "layout": null,
+      "layout_item": null,
+      "name": "标签2",
+      "object_order": 0,
+      "parent_id": "4fd1c760-6c0d-4239-819f-a195f1ea9948",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "margin": 0,
+        "open_external_links": false,
+        "status_tip": "",
+        "text": "关键词",
+        "text_format": "plain",
+        "text_interaction": "links",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "table_view_3",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 340,
+        "width": 305,
+        "x": 8,
+        "y": 8
+      },
+      "id": "a2c34ab8-6d65-4abd-a59c-034532eeb146",
+      "layout": null,
+      "layout_item": null,
+      "name": "表格模型视图3",
+      "object_order": 0,
+      "parent_id": "06249a8f-2f73-4be5-a862-6bbc5676f614",
+      "properties": {
+        "alternating": true,
+        "background_color": "",
+        "editable": false,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "selection_mode": "single",
+        "sorting": false,
+        "status_tip": "",
+        "table_data": {
+          "headers": [
+            "名称",
+            "状态"
+          ],
+          "rows": [
+            [
+              "项目一",
+              "就绪"
+            ]
+          ]
+        },
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.table_view",
+      "type_version": 1
+    },
+    {
+      "code_name": "mdi_subwindow_2",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 410,
+        "width": 345,
+        "x": 390,
+        "y": 70
+      },
+      "id": "bdf65f36-07e2-4495-8101-471095163b4b",
+      "layout": null,
+      "layout_item": null,
+      "name": "多文档子窗口2",
+      "object_order": 1,
+      "parent_id": "c0434613-35c7-4a27-a49d-700735a2d0fb",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "maximized": false,
+        "status_tip": "",
+        "title": "预览窗口",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.mdi_subwindow",
+      "type_version": 1
+    },
+    {
+      "code_name": "mdi_area_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 540,
+        "width": 770,
+        "x": 16,
+        "y": 16
+      },
+      "id": "c0434613-35c7-4a27-a49d-700735a2d0fb",
+      "layout": null,
+      "layout_item": null,
+      "name": "多文档区域1",
+      "object_order": 0,
+      "parent_id": "057d743b-13be-41ee-ba91-af73c042274a",
+      "properties": {
+        "arrangement": "manual",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "status_tip": "",
+        "tool_tip": "",
+        "view_mode": "subwindows",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.mdi_area",
+      "type_version": 1
+    },
+    {
+      "code_name": "tab_widget_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 625,
+        "width": 830,
+        "x": 16,
+        "y": 16
+      },
+      "id": "c8f6c96a-d2f1-43ce-b288-45d0fb03a6d4",
+      "layout": null,
+      "layout_item": null,
+      "name": "选择夹1",
+      "object_order": 0,
+      "parent_id": "f1ea2bcd-1152-40fa-96cb-1d5b4a84ea24",
+      "properties": {
+        "background_color": "",
+        "current_index": 0,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.tab_widget",
+      "type_version": 1
+    },
+    {
+      "code_name": "table_view_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 240,
+        "width": 360,
+        "x": 0,
+        "y": 0
+      },
+      "id": "d49ff1b6-20ba-4280-a9fa-dc9d73191c70",
+      "layout": null,
+      "layout_item": null,
+      "name": "表格模型视图1",
+      "object_order": 1,
+      "parent_id": "fac215fc-8830-4d70-a37b-078dd67dfcab",
+      "properties": {
+        "alternating": true,
+        "background_color": "",
+        "editable": true,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "selection_mode": "single",
+        "sorting": false,
+        "status_tip": "",
+        "table_data": {
+          "headers": [
+            "控件",
+            "状态"
+          ],
+          "rows": [
+            [
+              "模型视图",
+              "可编辑"
+            ],
+            [
+              "自动布局",
+              "已启用"
+            ],
+            [
+              "原生预览",
+              "可运行"
+            ]
+          ]
+        },
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.table_view",
+      "type_version": 1
+    },
+    {
+      "code_name": "tab_page_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "d894b203-2819-4591-ba28-11626f1bd74d",
+      "layout": null,
+      "layout_item": null,
+      "name": "页面1",
+      "object_order": 0,
+      "parent_id": "c8f6c96a-d2f1-43ce-b288-45d0fb03a6d4",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_direction": "left_to_right",
+        "status_tip": "",
+        "text": "自动布局",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "pages",
+      "stack_order": null,
+      "type_id": "builtin.tab_page",
+      "type_version": 1
+    },
+    {
+      "code_name": "dialog_button_box_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 36,
+        "width": 300,
+        "x": 0,
+        "y": 0
+      },
+      "id": "d92f584b-46dd-486a-9769-230624517559",
+      "layout": null,
+      "layout_item": null,
+      "name": "对话框按钮组1",
+      "object_order": 1,
+      "parent_id": "1e148aaa-2b78-401d-aa4a-9deb29bf73fe",
+      "properties": {
+        "background_color": "",
+        "buttons": [
+          "确定",
+          "取消"
+        ],
+        "center_buttons": false,
+        "close_parent_dialog": true,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "orientation": "horizontal",
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.dialog_button_box",
+      "type_version": 1
+    },
+    {
+      "code_name": "list_view_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 240,
+        "width": 360,
+        "x": 0,
+        "y": 0
+      },
+      "id": "e4ba469f-480f-4d7e-bc3c-4c9d90c7d734",
+      "layout": null,
+      "layout_item": null,
+      "name": "列表模型视图1",
+      "object_order": 0,
+      "parent_id": "fac215fc-8830-4d70-a37b-078dd67dfcab",
+      "properties": {
+        "alternating": true,
+        "background_color": "",
+        "editable": false,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "items": [
+          "已接入 72 类组件",
+          "中文属性与事件",
+          "保存、复制与撤销",
+          "独立 Python 导出"
+        ],
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "selection_mode": "single",
+        "status_tip": "",
+        "tool_tip": "",
+        "view_mode": "list",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.list_view",
+      "type_version": 1
+    },
+    {
+      "code_name": "tab_page_4",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "e5c67515-778c-4806-8250-27e4507f4ffa",
+      "layout": null,
+      "layout_item": null,
+      "name": "页面4",
+      "object_order": 0,
+      "parent_id": "20c1bf4d-b048-42cf-9a3f-64717ac2b1f7",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_direction": "left_to_right",
+        "status_tip": "",
+        "text": "列表模型",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "pages",
+      "stack_order": null,
+      "type_id": "builtin.tab_page",
+      "type_version": 1
+    },
+    {
+      "code_name": "spacer_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 40,
+        "width": 40,
+        "x": 0,
+        "y": 0
+      },
+      "id": "ea83c9d4-ff25-4bcd-b61b-9df85d5a8c3e",
+      "layout": null,
+      "layout_item": null,
+      "name": "弹性空白1",
+      "object_order": 0,
+      "parent_id": "1e148aaa-2b78-401d-aa4a-9deb29bf73fe",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "expanding": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 1,
+        "minimum_extent": 0,
+        "orientation": "horizontal",
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.spacer",
+      "type_version": 1
+    },
+    {
+      "code_name": "tree_view_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 550,
+        "width": 165,
+        "x": 8,
+        "y": 8
+      },
+      "id": "ede9881d-4cea-44d4-b61e-619f116d055e",
+      "layout": null,
+      "layout_item": null,
+      "name": "树形模型视图1",
+      "object_order": 0,
+      "parent_id": "efe893d3-5f2d-4654-aa06-5537bb2d1b77",
+      "properties": {
+        "alternating": true,
+        "background_color": "",
+        "editable": false,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "selection_mode": "single",
+        "sorting": false,
+        "status_tip": "",
+        "tool_tip": "",
+        "tree_data": [
+          {
+            "children": [
+              {
+                "children": [],
+                "text": "自动布局"
+              },
+              {
+                "children": [],
+                "text": "模型视图"
+              },
+              {
+                "children": [],
+                "text": "多文档窗口"
+              }
+            ],
+            "text": "项目"
+          }
+        ],
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.tree_view",
+      "type_version": 1
+    },
+    {
+      "code_name": "dock_widget_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "efe893d3-5f2d-4654-aa06-5537bb2d1b77",
+      "layout": null,
+      "layout_item": null,
+      "name": "停靠窗口1",
+      "object_order": 0,
+      "parent_id": "1b3b0e06-76a5-404f-bc70-ba96b5032a9a",
+      "properties": {
+        "background_color": "",
+        "closable": true,
+        "dock_area": "left",
+        "dock_height": 220,
+        "dock_width": 190,
+        "enabled": true,
+        "floatable": true,
+        "floating": false,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_direction": "left_to_right",
+        "movable": true,
+        "status_tip": "",
+        "title": "组件目录",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "dock",
+      "stack_order": null,
+      "type_id": "builtin.dock_widget",
+      "type_version": 1
+    },
+    {
+      "code_name": "tab_page_2",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "f077a2bd-cc24-4744-a398-63fb0b3c2626",
+      "layout": null,
+      "layout_item": null,
+      "name": "页面2",
+      "object_order": 1,
+      "parent_id": "c8f6c96a-d2f1-43ce-b288-45d0fb03a6d4",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_direction": "left_to_right",
+        "status_tip": "",
+        "text": "页面与滚动",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "pages",
+      "stack_order": null,
+      "type_id": "builtin.tab_page",
+      "type_version": 1
+    },
+    {
+      "code_name": "central_widget",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "f1ea2bcd-1152-40fa-96cb-1d5b4a84ea24",
+      "layout": {
+        "kind": "absolute",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "spacing": 8
+      },
+      "layout_item": null,
+      "name": "工作区",
+      "object_order": 0,
+      "parent_id": "1b3b0e06-76a5-404f-bc70-ba96b5032a9a",
+      "properties": {
+        "enabled": true,
+        "visible": true
+      },
+      "slot": "central",
+      "stack_order": null,
+      "type_id": "builtin.central_widget",
+      "type_version": 1
+    },
+    {
+      "code_name": "grid_layout_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 200,
+        "width": 770,
+        "x": 16,
+        "y": 136
+      },
+      "id": "fac215fc-8830-4d70-a37b-078dd67dfcab",
+      "layout": null,
+      "layout_item": null,
+      "name": "网格布局1",
+      "object_order": 2,
+      "parent_id": "d894b203-2819-4591-ba28-11626f1bd74d",
+      "properties": {
+        "background_color": "",
+        "columns": 2,
+        "content_bottom": 8,
+        "content_left": 8,
+        "content_right": 8,
+        "content_top": 8,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "spacing": 8,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 2,
+      "type_id": "builtin.grid_layout",
+      "type_version": 1
+    }
+  ],
+  "resources": [],
+  "root_id": "1b3b0e06-76a5-404f-bc70-ba96b5032a9a",
+  "schema_version": 2,
+  "tab_order": []
+}

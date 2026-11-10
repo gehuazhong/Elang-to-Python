@@ -1,0 +1,151 @@
+{
+  "format": "uipro",
+  "schema_version": 2,
+  "document_id": "8032df40-4b8a-4dce-8a31-2dca661df03e",
+  "name": "中文界面示例",
+  "root_id": "71420b0a-65db-40b3-8ef3-8d936d59a370",
+  "nodes": [
+    {
+      "id": "71420b0a-65db-40b3-8ef3-8d936d59a370",
+      "type_id": "builtin.main_window",
+      "type_version": 1,
+      "name": "主窗口",
+      "code_name": "main_window",
+      "parent_id": null,
+      "slot": "root",
+      "object_order": 0,
+      "stack_order": null,
+      "geometry": {"x": 100, "y": 100, "width": 800, "height": 560},
+      "properties": {"window_title": "中文界面示例", "enabled": true, "visible": true},
+      "designer": {"locked": false, "hidden": false},
+      "layout": null,
+      "layout_item": null,
+      "extensions": {}
+    },
+    {
+      "id": "7cb29f14-51fd-4c29-8371-d4ab8ef96c8d",
+      "type_id": "builtin.central_widget",
+      "type_version": 1,
+      "name": "工作区",
+      "code_name": "central_widget",
+      "parent_id": "71420b0a-65db-40b3-8ef3-8d936d59a370",
+      "slot": "central",
+      "object_order": 0,
+      "stack_order": null,
+      "geometry": null,
+      "properties": {"enabled": true, "visible": true},
+      "designer": {"locked": false, "hidden": false},
+      "layout": {"kind": "absolute", "margins": [0, 0, 0, 0], "spacing": 8},
+      "layout_item": null,
+      "extensions": {}
+    },
+    {
+      "id": "b3148e4b-a74b-4fc2-ab4a-54e1da65bd01",
+      "type_id": "builtin.button",
+      "type_version": 1,
+      "name": "确认按钮",
+      "code_name": "button_confirm",
+      "parent_id": "7cb29f14-51fd-4c29-8371-d4ab8ef96c8d",
+      "slot": "children",
+      "object_order": 0,
+      "stack_order": 0,
+      "geometry": {"x": 48, "y": 48, "width": 120, "height": 40},
+      "properties": {
+        "text": "确认",
+        "enabled": true,
+        "visible": true,
+        "checkable": false,
+        "checked": false,
+        "tool_tip": "单击执行确认事件"
+      },
+      "designer": {"locked": false, "hidden": false},
+      "layout": null,
+      "layout_item": null,
+      "extensions": {}
+    },
+    {
+      "id": "0900951c-8cd0-44f9-9874-1765b8ff8f23",
+      "type_id": "builtin.label",
+      "type_version": 1,
+      "name": "提示标签",
+      "code_name": "label_message",
+      "parent_id": "7cb29f14-51fd-4c29-8371-d4ab8ef96c8d",
+      "slot": "children",
+      "object_order": 1,
+      "stack_order": 1,
+      "geometry": {"x": 48, "y": 112, "width": 320, "height": 32},
+      "properties": {
+        "text": "请单击确认按钮",
+        "enabled": true,
+        "visible": true,
+        "alignment": "left_vcenter",
+        "word_wrap": false,
+        "tool_tip": "两秒后显示定时器事件结果"
+      },
+      "designer": {"locked": false, "hidden": false},
+      "layout": null,
+      "layout_item": null,
+      "extensions": {}
+    },
+    {
+      "id": "0f7c10de-812c-4476-831c-b60a7301b549",
+      "type_id": "builtin.timer",
+      "type_version": 1,
+      "name": "提示定时器",
+      "code_name": "timer_notice",
+      "parent_id": "71420b0a-65db-40b3-8ef3-8d936d59a370",
+      "slot": "non_visual",
+      "object_order": 0,
+      "stack_order": null,
+      "geometry": null,
+      "properties": {"interval": 2000, "single_shot": true, "auto_start": true},
+      "designer": {"locked": false, "hidden": false},
+      "layout": null,
+      "layout_item": null,
+      "extensions": {}
+    }
+  ],
+  "connections": [
+    {
+      "id": "079e67c1-bd0f-44f7-abaa-adc59049705a",
+      "source_id": "b3148e4b-a74b-4fc2-ab4a-54e1da65bd01",
+      "event": "clicked",
+      "target": {"kind": "handler", "handler_id": "f2dbe898-1422-4092-8880-2f9867a9c241"},
+      "arguments": [{"kind": "event_arg", "index": 0}],
+      "enabled": true
+    },
+    {
+      "id": "8f5eed89-2471-480e-b3d9-dde1a76e6a15",
+      "source_id": "0f7c10de-812c-4476-831c-b60a7301b549",
+      "event": "timeout",
+      "target": {"kind": "slot", "node_id": "0900951c-8cd0-44f9-9874-1765b8ff8f23", "slot": "set_text"},
+      "arguments": [{"kind": "constant", "value_type": "string", "value": "定时器已触发"}],
+      "enabled": true
+    }
+  ],
+  "handlers": [
+    {
+      "id": "f2dbe898-1422-4092-8880-2f9867a9c241",
+      "name": "确认按钮被单击",
+      "code_name": "on_button_confirm_clicked",
+      "parameters": [{"name": "checked", "display_name": "是否选中", "value_type": "boolean"}],
+      "description": "在生成的处理函数中编写确认按钮被单击后的操作。"
+    }
+  ],
+  "resources": [],
+  "tab_order": ["b3148e4b-a74b-4fc2-ab4a-54e1da65bd01"],
+  "canvas": {
+    "grid_size": 8,
+    "show_grid": true,
+    "snap_to_grid": true,
+    "show_guides": true,
+    "snap_to_guides": true,
+    "snap_distance": 6
+  },
+  "codegen": {
+    "template_id": "pyside6.standard",
+    "window_class": "MainWindow",
+    "entry_file": "main.py"
+  },
+  "extensions": {}
+}

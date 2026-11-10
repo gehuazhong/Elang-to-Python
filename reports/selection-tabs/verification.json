@@ -1,0 +1,6 @@
+{
+  "platform": "windows",
+  "native_page_switches": "passed",
+  "isolated_export": "passed",
+  "designer_properties_click_and_undo": "passed"
+}

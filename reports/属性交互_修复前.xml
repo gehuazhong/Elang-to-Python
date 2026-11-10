@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="19" skipped="0" tests="24" time="5.030" timestamp="2026-11-07T06:11:33.234389+08:00" hostname="DESKTOP-EIJ20OD"><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[None-geometry.width-False]" time="0.140"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert 799 == 800&#10; +  where 799 = value(&lt;PySide6.QtWidgets.QSpinBox(0x26f7e6ba100) at 0x0000026F7E06C0C0&gt;)">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert 799 == 800
+E    +  where 799 = value(&lt;PySide6.QtWidgets.QSpinBox(0x26f7e6ba100) at 0x0000026F7E06C0C0&gt;)</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[None-geometry.width-True]" time="0.163"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert 799 == 800&#10; +  where 799 = value(&lt;PySide6.QtWidgets.QSpinBox(0x26f7ecc6060) at 0x0000026F7E43BB00&gt;)">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert 799 == 800
+E    +  where 799 = value(&lt;PySide6.QtWidgets.QSpinBox(0x26f7ecc6060) at 0x0000026F7E43BB00&gt;)</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[None-border_style-False]" time="0.165"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert 'fixed' == 'standard'&#10;  &#10;  - standard&#10;  + fixed">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert 'fixed' == 'standard'
+E     
+E     - standard
+E     + fixed</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[None-border_style-True]" time="0.165"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert 'fixed' == 'standard'&#10;  &#10;  - standard&#10;  + fixed">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert 'fixed' == 'standard'
+E     
+E     - standard
+E     + fixed</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[button-parent_id-False]" time="0.197" /><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[button-parent_id-True]" time="0.196" /><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[button-font_size-False]" time="0.191" /><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[button-font_size-True]" time="0.203" /><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[line_edit-max_length-False]" time="0.193"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert 32766 == 32767&#10; +  where 32766 = value(&lt;PySide6.QtWidgets.QSpinBox(0x26f7ecc6820) at 0x0000026F7E00D300&gt;)">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert 32766 == 32767
+E    +  where 32766 = value(&lt;PySide6.QtWidgets.QSpinBox(0x26f7ecc6820) at 0x0000026F7E00D300&gt;)</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[line_edit-max_length-True]" time="0.199"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert 32766 == 32767&#10; +  where 32766 = value(&lt;PySide6.QtWidgets.QSpinBox(0x26f7ecc6820) at 0x0000026F7F8DAC00&gt;)">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert 32766 == 32767
+E    +  where 32766 = value(&lt;PySide6.QtWidgets.QSpinBox(0x26f7ecc6820) at 0x0000026F7F8DAC00&gt;)</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[double_spin_box-value-False]" time="0.200"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert -1.0 == 0.0&#10; +  where -1.0 = value(&lt;PySide6.QtWidgets.QDoubleSpinBox(0x26f7ecc6df0) at 0x0000026F7F939200&gt;)">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert -1.0 == 0.0
+E    +  where -1.0 = value(&lt;PySide6.QtWidgets.QDoubleSpinBox(0x26f7ecc6df0) at 0x0000026F7F939200&gt;)</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[double_spin_box-value-True]" time="0.191"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert -1.0 == 0.0&#10; +  where -1.0 = value(&lt;PySide6.QtWidgets.QDoubleSpinBox(0x26f7ecc7990) at 0x0000026F7F526EC0&gt;)">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert -1.0 == 0.0
+E    +  where -1.0 = value(&lt;PySide6.QtWidgets.QDoubleSpinBox(0x26f7ecc7990) at 0x0000026F7F526EC0&gt;)</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[date_edit-value-False]" time="0.201"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert '1999-01-01' == '2000-01-01'&#10;  &#10;  - 2000-01-01&#10;  + 1999-01-01">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert '1999-01-01' == '2000-01-01'
+E     
+E     - 2000-01-01
+E     + 1999-01-01</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[date_edit-value-True]" time="0.199"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert '1999-01-01' == '2000-01-01'&#10;  &#10;  - 2000-01-01&#10;  + 1999-01-01">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert '1999-01-01' == '2000-01-01'
+E     
+E     - 2000-01-01
+E     + 1999-01-01</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[time_edit-value-False]" time="0.198"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert '11:00:00' == '12:00:00'&#10;  &#10;  - 12:00:00&#10;  ?  ^&#10;  + 11:00:00&#10;  ?  ^">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert '11:00:00' == '12:00:00'
+E     
+E     - 12:00:00
+E     ?  ^
+E     + 11:00:00
+E     ?  ^</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[time_edit-value-True]" time="0.193"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert '11:00:00' == '12:00:00'&#10;  &#10;  - 12:00:00&#10;  ?  ^&#10;  + 11:00:00&#10;  ?  ^">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert '11:00:00' == '12:00:00'
+E     
+E     - 12:00:00
+E     ?  ^
+E     + 11:00:00
+E     ?  ^</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[datetime_edit-value-False]" time="0.197"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert '1999-01-01T12:00:00' == '2000-01-01T12:00:00'&#10;  &#10;  - 2000-01-01T12:00:00&#10;  ? ^^^^&#10;  + 1999-01-01T12:00:00&#10;  ? ^^^^">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert '1999-01-01T12:00:00' == '2000-01-01T12:00:00'
+E     
+E     - 2000-01-01T12:00:00
+E     ? ^^^^
+E     + 1999-01-01T12:00:00
+E     ? ^^^^</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[datetime_edit-value-True]" time="0.198"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert '1999-01-01T12:00:00' == '2000-01-01T12:00:00'&#10;  &#10;  - 2000-01-01T12:00:00&#10;  ? ^^^^&#10;  + 1999-01-01T12:00:00&#10;  ? ^^^^">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert '1999-01-01T12:00:00' == '2000-01-01T12:00:00'
+E     
+E     - 2000-01-01T12:00:00
+E     ? ^^^^
+E     + 1999-01-01T12:00:00
+E     ? ^^^^</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[tab_widget-current_index-False]" time="0.198"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert 1 == 0&#10; +  where 1 = value(&lt;PySide6.QtWidgets.QComboBox(0x26f7e7810f0) at 0x0000026F7F4FC980&gt;)">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert 1 == 0
+E    +  where 1 = value(&lt;PySide6.QtWidgets.QComboBox(0x26f7e7810f0) at 0x0000026F7F4FC980&gt;)</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_never_changes_property[tab_widget-current_index-True]" time="0.196"><failure message="AssertionError: 滚轮误改了属性编辑器的值。&#10;assert 1 == 0&#10; +  where 1 = value(&lt;PySide6.QtWidgets.QComboBox(0x26f7e87bb80) at 0x0000026F7F54CC80&gt;)">tests\test_property_interactions.py:53: in test_wheel_never_changes_property
+    assert value(editor) == expected, "滚轮误改了属性编辑器的值。"
+E   AssertionError: 滚轮误改了属性编辑器的值。
+E   assert 1 == 0
+E    +  where 1 = value(&lt;PySide6.QtWidgets.QComboBox(0x26f7e87bb80) at 0x0000026F7F54CC80&gt;)</failure></testcase><testcase classname="tests.test_property_interactions" name="test_wheel_over_editor_scrolls_property_tree" time="0.164"><failure message="AssertionError: 属性值未改变，但滚轮也不能卡在编辑器上。&#10;assert 0 &gt; 0&#10; +  where 0 = &lt;built-in method value of PySide6.QtWidgets.QScrollBar object at 0x0000026F7F50E300&gt;()&#10; +    where &lt;built-in method value of PySide6.QtWidgets.QScrollBar object at 0x0000026F7F50E300&gt; = &lt;PySide6.QtWidgets.QScrollBar(0x26f7ebfdad0) at 0x0000026F7F50E300&gt;.value">tests\test_property_interactions.py:71: in test_wheel_over_editor_scrolls_property_tree
+    assert bar.value() &gt; 0, "属性值未改变，但滚轮也不能卡在编辑器上。"
+E   AssertionError: 属性值未改变，但滚轮也不能卡在编辑器上。
+E   assert 0 &gt; 0
+E    +  where 0 = &lt;built-in method value of PySide6.QtWidgets.QScrollBar object at 0x0000026F7F50E300&gt;()
+E    +    where &lt;built-in method value of PySide6.QtWidgets.QScrollBar object at 0x0000026F7F50E300&gt; = &lt;PySide6.QtWidgets.QScrollBar(0x26f7ebfdad0) at 0x0000026F7F50E300&gt;.value</failure></testcase><testcase classname="tests.test_property_interactions" name="test_open_choice_survives_refresh_then_closes_cleanly[border_style]" time="0.182"><failure message="AssertionError: 刷新中断了正在选择的弹层。&#10;assert (&lt;PySide6.QtWidgets.QComboBox(0x26f7e87c2c0) at 0x0000026F7F93B600&gt; is &lt;PySide6.QtWidgets.QComboBox(0x26f7e781830) at 0x0000026F7F913DC0&gt;)">tests\test_property_interactions.py:84: in test_open_choice_survives_refresh_then_closes_cleanly
+    assert panel.editors[prop] is editor and editor.view().isVisible(), "刷新中断了正在选择的弹层。"
+E   AssertionError: 刷新中断了正在选择的弹层。
+E   assert (&lt;PySide6.QtWidgets.QComboBox(0x26f7e87c2c0) at 0x0000026F7F93B600&gt; is &lt;PySide6.QtWidgets.QComboBox(0x26f7e781830) at 0x0000026F7F913DC0&gt;)</failure></testcase><testcase classname="tests.test_property_interactions" name="test_open_choice_survives_refresh_then_closes_cleanly[font_size]" time="0.191" /><testcase classname="tests.test_property_interactions" name="test_toolbar_zoom_does_not_change_on_wheel" time="0.158"><failure message="AttributeError: 'DesignerCanvas' object has no attribute 'zoom_percent'">tests\test_property_interactions.py:93: in test_toolbar_zoom_does_not_change_on_wheel
+    original = window.page.canvas.zoom_percent
+E   AttributeError: 'DesignerCanvas' object has no attribute 'zoom_percent'</failure></testcase></testsuite></testsuites>

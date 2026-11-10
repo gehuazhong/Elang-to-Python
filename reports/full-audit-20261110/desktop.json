@@ -1,0 +1,47 @@
+{
+  "platform": "windows",
+  "native": {
+    "list_view": {
+      "style_keeps_selection_and_edits": true,
+      "selection_models_before": 1,
+      "selection_models_after_20_replacements": 1
+    },
+    "table_view": {
+      "style_keeps_selection_and_edits": true,
+      "selection_models_before": 1,
+      "selection_models_after_20_replacements": 1
+    },
+    "tree_view": {
+      "style_keeps_selection_and_edits": true,
+      "selection_models_before": 1,
+      "selection_models_after_20_replacements": 1
+    },
+    "column_view": {
+      "style_keeps_selection_and_edits": true,
+      "selection_models_before": 1,
+      "selection_models_after_20_replacements": 1
+    }
+  },
+  "isolated_export": {
+    "list_view": {
+      "style_keeps_selection_and_edits": true,
+      "selection_models_before": 1,
+      "selection_models_after_20_replacements": 1
+    },
+    "table_view": {
+      "style_keeps_selection_and_edits": true,
+      "selection_models_before": 1,
+      "selection_models_after_20_replacements": 1
+    },
+    "tree_view": {
+      "style_keeps_selection_and_edits": true,
+      "selection_models_before": 1,
+      "selection_models_after_20_replacements": 1
+    },
+    "column_view": {
+      "style_keeps_selection_and_edits": true,
+      "selection_models_before": 1,
+      "selection_models_after_20_replacements": 1
+    }
+  }
+}

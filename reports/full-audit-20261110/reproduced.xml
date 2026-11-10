@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="9" skipped="0" tests="12" time="2.557" timestamp="2026-11-10T02:46:23.253393+08:00" hostname="DESKTOP-EIJ20OD"><testcase classname="tests.test_full_audit" name="test_model_style_update_preserves_model_and_selection[list_view]" time="0.104"><failure message="assert &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc3670) at 0x0000025B37651080&gt; is &lt;PySide6.QtGui.QStandardItemModel(0x25b361c2610) at 0x0000025B3700E8C0&gt;&#10; +  where &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc3670) at 0x0000025B37651080&gt; = &lt;built-in method model of ListView object at 0x0000025B36FE4140&gt;()&#10; +    where &lt;built-in method model of ListView object at 0x0000025B36FE4140&gt; = &lt;runtime.advanced_views.ListView(0x25b361f9da0, name=&quot;列表模型视图1&quot;) at 0x0000025B36FE4140&gt;.model">project = ProjectModel(nodes=mappingproxy({'313074fb-7ff9-4fd4-90c4-5063473af851': WidgetNode(id='313074fb-7ff9-4fd4-90c4-506347...tra=&lt;core.models.FrozenMap object at 0x0000025B36F56B90&gt;)}), data=&lt;core.models.FrozenMap object at 0x0000025B36F572B0&gt;)
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B36FFF350&gt;
+qt_app = &lt;PySide6.QtWidgets.QApplication(0x25b33802220) at 0x0000025B36FCDE00&gt;
+kind = 'list_view'
+
+    @pytest.mark.parametrize("kind", ["list_view", "table_view", "tree_view", "column_view"])
+    def test_model_style_update_preserves_model_and_selection(project, registry, qt_app, kind):
+        project, key = create_node(project, registry, "builtin." + kind, 10, 10)
+        tree = RuntimeTree(registry)
+        try:
+            tree.apply(compile_plan(project, registry, "initial"))
+            widget = tree.widgets[key]
+            model, selection = widget.model(), widget.selectionModel()
+            selection.setCurrentIndex(model.index(0, 0), QItemSelectionModel.SelectionFlag.ClearAndSelect)
+            current = selection.currentIndex()
+            changed = set_property(project, registry, key, "foreground_color", "#246b92")
+            tree.apply(compile_plan(changed, registry, "style"))
+&gt;           assert widget.model() is model
+E           assert &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc3670) at 0x0000025B37651080&gt; is &lt;PySide6.QtGui.QStandardItemModel(0x25b361c2610) at 0x0000025B3700E8C0&gt;
+E            +  where &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc3670) at 0x0000025B37651080&gt; = &lt;built-in method model of ListView object at 0x0000025B36FE4140&gt;()
+E            +    where &lt;built-in method model of ListView object at 0x0000025B36FE4140&gt; = &lt;runtime.advanced_views.ListView(0x25b361f9da0, name="列表模型视图1") at 0x0000025B36FE4140&gt;.model
+
+tests\test_full_audit.py:32: AssertionError</failure></testcase><testcase classname="tests.test_full_audit" name="test_model_style_update_preserves_model_and_selection[table_view]" time="0.076"><failure message="assert &lt;PySide6.QtGui.QStandardItemModel(0x25b360df4c0) at 0x0000025B38957C00&gt; is &lt;PySide6.QtGui.QStandardItemModel(0x25b361c2610) at 0x0000025B3700F280&gt;&#10; +  where &lt;PySide6.QtGui.QStandardItemModel(0x25b360df4c0) at 0x0000025B38957C00&gt; = &lt;built-in method model of TableView object at 0x0000025B3700F780&gt;()&#10; +    where &lt;built-in method model of TableView object at 0x0000025B3700F780&gt; = &lt;runtime.advanced_views.TableView(0x25b361fc260, name=&quot;表格模型视图1&quot;) at 0x0000025B3700F780&gt;.model">project = ProjectModel(nodes=mappingproxy({'087f54e7-00c4-449e-868f-e8682d2050fe': WidgetNode(id='087f54e7-00c4-449e-868f-e8682d...tra=&lt;core.models.FrozenMap object at 0x0000025B37440190&gt;)}), data=&lt;core.models.FrozenMap object at 0x0000025B36F57F10&gt;)
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B37651990&gt;
+qt_app = &lt;PySide6.QtWidgets.QApplication(0x25b33802220) at 0x0000025B36FCDE00&gt;
+kind = 'table_view'
+
+    @pytest.mark.parametrize("kind", ["list_view", "table_view", "tree_view", "column_view"])
+    def test_model_style_update_preserves_model_and_selection(project, registry, qt_app, kind):
+        project, key = create_node(project, registry, "builtin." + kind, 10, 10)
+        tree = RuntimeTree(registry)
+        try:
+            tree.apply(compile_plan(project, registry, "initial"))
+            widget = tree.widgets[key]
+            model, selection = widget.model(), widget.selectionModel()
+            selection.setCurrentIndex(model.index(0, 0), QItemSelectionModel.SelectionFlag.ClearAndSelect)
+            current = selection.currentIndex()
+            changed = set_property(project, registry, key, "foreground_color", "#246b92")
+            tree.apply(compile_plan(changed, registry, "style"))
+&gt;           assert widget.model() is model
+E           assert &lt;PySide6.QtGui.QStandardItemModel(0x25b360df4c0) at 0x0000025B38957C00&gt; is &lt;PySide6.QtGui.QStandardItemModel(0x25b361c2610) at 0x0000025B3700F280&gt;
+E            +  where &lt;PySide6.QtGui.QStandardItemModel(0x25b360df4c0) at 0x0000025B38957C00&gt; = &lt;built-in method model of TableView object at 0x0000025B3700F780&gt;()
+E            +    where &lt;built-in method model of TableView object at 0x0000025B3700F780&gt; = &lt;runtime.advanced_views.TableView(0x25b361fc260, name="表格模型视图1") at 0x0000025B3700F780&gt;.model
+
+tests\test_full_audit.py:32: AssertionError</failure></testcase><testcase classname="tests.test_full_audit" name="test_model_style_update_preserves_model_and_selection[tree_view]" time="0.074"><failure message="assert &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc4a10) at 0x0000025B3765A300&gt; is &lt;PySide6.QtGui.QStandardItemModel(0x25b361c2610) at 0x0000025B37659E80&gt;&#10; +  where &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc4a10) at 0x0000025B3765A300&gt; = &lt;built-in method model of TreeView object at 0x0000025B3765A540&gt;()&#10; +    where &lt;built-in method model of TreeView object at 0x0000025B3765A540&gt; = &lt;runtime.advanced_views.TreeView(0x25b3373de20, name=&quot;树形模型视图1&quot;) at 0x0000025B3765A540&gt;.model">project = ProjectModel(nodes=mappingproxy({'8df9b054-504d-492b-8a05-0863d657c074': WidgetNode(id='8df9b054-504d-492b-8a05-0863d6...tra=&lt;core.models.FrozenMap object at 0x0000025B37443BE0&gt;)}), data=&lt;core.models.FrozenMap object at 0x0000025B374419F0&gt;)
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B3765B9D0&gt;
+qt_app = &lt;PySide6.QtWidgets.QApplication(0x25b33802220) at 0x0000025B36FCDE00&gt;
+kind = 'tree_view'
+
+    @pytest.mark.parametrize("kind", ["list_view", "table_view", "tree_view", "column_view"])
+    def test_model_style_update_preserves_model_and_selection(project, registry, qt_app, kind):
+        project, key = create_node(project, registry, "builtin." + kind, 10, 10)
+        tree = RuntimeTree(registry)
+        try:
+            tree.apply(compile_plan(project, registry, "initial"))
+            widget = tree.widgets[key]
+            model, selection = widget.model(), widget.selectionModel()
+            selection.setCurrentIndex(model.index(0, 0), QItemSelectionModel.SelectionFlag.ClearAndSelect)
+            current = selection.currentIndex()
+            changed = set_property(project, registry, key, "foreground_color", "#246b92")
+            tree.apply(compile_plan(changed, registry, "style"))
+&gt;           assert widget.model() is model
+E           assert &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc4a10) at 0x0000025B3765A300&gt; is &lt;PySide6.QtGui.QStandardItemModel(0x25b361c2610) at 0x0000025B37659E80&gt;
+E            +  where &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc4a10) at 0x0000025B3765A300&gt; = &lt;built-in method model of TreeView object at 0x0000025B3765A540&gt;()
+E            +    where &lt;built-in method model of TreeView object at 0x0000025B3765A540&gt; = &lt;runtime.advanced_views.TreeView(0x25b3373de20, name="树形模型视图1") at 0x0000025B3765A540&gt;.model
+
+tests\test_full_audit.py:32: AssertionError</failure></testcase><testcase classname="tests.test_full_audit" name="test_model_style_update_preserves_model_and_selection[column_view]" time="0.090"><failure message="assert &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc3670) at 0x0000025B388E3AC0&gt; is &lt;PySide6.QtGui.QStandardItemModel(0x25b361c2610) at 0x0000025B388E1400&gt;&#10; +  where &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc3670) at 0x0000025B388E3AC0&gt; = &lt;built-in method model of ColumnView object at 0x0000025B388E26C0&gt;()&#10; +    where &lt;built-in method model of ColumnView object at 0x0000025B388E26C0&gt; = &lt;runtime.advanced_views.ColumnView(0x25b361f9da0, name=&quot;分栏视图1&quot;) at 0x0000025B388E26C0&gt;.model">project = ProjectModel(nodes=mappingproxy({'39dc5b3b-0eb4-48e4-91af-1eebc9e986e3': WidgetNode(id='39dc5b3b-0eb4-48e4-91af-1eebc9...tra=&lt;core.models.FrozenMap object at 0x0000025B36F54A30&gt;)}), data=&lt;core.models.FrozenMap object at 0x0000025B37440D00&gt;)
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B388E1950&gt;
+qt_app = &lt;PySide6.QtWidgets.QApplication(0x25b33802220) at 0x0000025B36FCDE00&gt;
+kind = 'column_view'
+
+    @pytest.mark.parametrize("kind", ["list_view", "table_view", "tree_view", "column_view"])
+    def test_model_style_update_preserves_model_and_selection(project, registry, qt_app, kind):
+        project, key = create_node(project, registry, "builtin." + kind, 10, 10)
+        tree = RuntimeTree(registry)
+        try:
+            tree.apply(compile_plan(project, registry, "initial"))
+            widget = tree.widgets[key]
+            model, selection = widget.model(), widget.selectionModel()
+            selection.setCurrentIndex(model.index(0, 0), QItemSelectionModel.SelectionFlag.ClearAndSelect)
+            current = selection.currentIndex()
+            changed = set_property(project, registry, key, "foreground_color", "#246b92")
+            tree.apply(compile_plan(changed, registry, "style"))
+&gt;           assert widget.model() is model
+E           assert &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc3670) at 0x0000025B388E3AC0&gt; is &lt;PySide6.QtGui.QStandardItemModel(0x25b361c2610) at 0x0000025B388E1400&gt;
+E            +  where &lt;PySide6.QtGui.QStandardItemModel(0x25b32cc3670) at 0x0000025B388E3AC0&gt; = &lt;built-in method model of ColumnView object at 0x0000025B388E26C0&gt;()
+E            +    where &lt;built-in method model of ColumnView object at 0x0000025B388E26C0&gt; = &lt;runtime.advanced_views.ColumnView(0x25b361f9da0, name="分栏视图1") at 0x0000025B388E26C0&gt;.model
+
+tests\test_full_audit.py:32: AssertionError</failure></testcase><testcase classname="tests.test_full_audit" name="test_replacing_view_content_does_not_accumulate_selection_models[list_view]" time="0.096" /><testcase classname="tests.test_full_audit" name="test_replacing_view_content_does_not_accumulate_selection_models[table_view]" time="0.104" /><testcase classname="tests.test_full_audit" name="test_replacing_view_content_does_not_accumulate_selection_models[tree_view]" time="0.106" /><testcase classname="tests.test_full_audit" name="test_replacing_view_content_does_not_accumulate_selection_models[column_view]" time="0.115"><failure message="assert 13 == 1&#10; +  where 13 = &lt;function test_replacing_view_content_does_not_accumulate_selection_models.&lt;locals&gt;.&lt;lambda&gt; at 0x0000025B388B0CC0&gt;()">project = ProjectModel(nodes=mappingproxy({'d1fa089e-6a87-4454-8175-65e93dfeea49': WidgetNode(id='d1fa089e-6a87-4454-8175-65e93d...tra=&lt;core.models.FrozenMap object at 0x0000025B36F55660&gt;)}), data=&lt;core.models.FrozenMap object at 0x0000025B37441420&gt;)
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B387730D0&gt;
+qt_app = &lt;PySide6.QtWidgets.QApplication(0x25b33802220) at 0x0000025B36FCDE00&gt;
+kind = 'column_view'
+
+    @pytest.mark.parametrize("kind", ["list_view", "table_view", "tree_view", "column_view"])
+    def test_replacing_view_content_does_not_accumulate_selection_models(project, registry, qt_app, kind):
+        project, key = create_node(project, registry, "builtin." + kind, 10, 10)
+        tree = RuntimeTree(registry)
+        try:
+            tree.apply(compile_plan(project, registry, "initial"))
+            widget = tree.widgets[key]
+            count = lambda: len(widget.findChildren(QItemSelectionModel, options=Qt.FindChildOption.FindDirectChildrenOnly))
+            baseline = count()
+            for index in range(12):
+                if kind == "list_view":
+                    name, value = "items", [f"row {index}"]
+                elif kind == "table_view":
+                    name, value = "table_data", {"headers": ["Name"], "rows": [[f"row {index}"]]}
+                else:
+                    name, value = "tree_data", [{"text": f"row {index}", "children": []}]
+                changed = set_property(project, registry, key, name, value)
+                tree.apply(compile_plan(changed, registry, "content"))
+                drain(qt_app)
+&gt;           assert count() == baseline
+E           assert 13 == 1
+E            +  where 13 = &lt;function test_replacing_view_content_does_not_accumulate_selection_models.&lt;locals&gt;.&lt;lambda&gt; at 0x0000025B388B0CC0&gt;()
+
+tests\test_full_audit.py:59: AssertionError</failure></testcase><testcase classname="tests.test_full_audit" name="test_invalid_native_window_settings_do_not_prevent_startup[corrupt-layout]" time="0.256"><failure message="TypeError: 'PySide6.QtWidgets.QWidget.restoreGeometry' called with wrong argument types:&#10;  PySide6.QtWidgets.QWidget.restoreGeometry(str)&#10;Supported signatures:&#10;  PySide6.QtWidgets.QWidget.restoreGeometry(geometry: PySide6.QtCore.QByteArray | bytes | bytearray | memoryview, /)">qt_app = &lt;PySide6.QtWidgets.QApplication(0x25b33802220) at 0x0000025B36FCDE00&gt;
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B38771350&gt;
+tmp_path = WindowsPath('C:/Users/葛/AppData/Local/Temp/pytest-of-葛/pytest-554/test_invalid_native_window_set0')
+value = 'corrupt-layout'
+
+    @pytest.mark.parametrize("value", ["corrupt-layout", 123, [1, 2]])
+    def test_invalid_native_window_settings_do_not_prevent_startup(qt_app, registry, tmp_path, value):
+        settings = QSettings(str(tmp_path / "bad.ini"), QSettings.Format.IniFormat)
+        settings.setValue("window/geometry", value)
+        settings.setValue("window/state_v2", value)
+&gt;       window = MainWindow(registry, settings=settings, enable_recovery=False)
+
+tests\test_full_audit.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;app.main_window.MainWindow(0x25b36295070) at 0x0000025B387E8780&gt;
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B38771350&gt;
+
+    def __init__(self, registry: WidgetRegistry, *, settings: QSettings | None = None,
+                 recovery_directory: Path | None = None, enable_recovery: bool = True,
+                 persist_settings: bool = True) -&gt; None:
+        super().__init__()
+        self.registry = registry
+        self.settings = settings or QSettings()
+        self.persist_settings = persist_settings
+        self.workbench_preferences = load_preferences(self.settings) if persist_settings else WorkbenchPreferences()
+        self._recent_paths: list[str] = []
+        stored = self.settings.value("files/recent", []) if persist_settings else []
+        if isinstance(stored, list):
+            self._recent_paths = [item for item in stored if isinstance(item, str) and item][:10]
+        self._closed = False
+        self._exit_requested = False
+        self._pending_close: set[str] = set()
+        self._recovery_sources: dict[str, Path] = {}
+        self._new_number = 0
+        self._switching = False
+        self.setWindowTitle("中文界面设计器")
+        self.resize(1280, 820)
+        self.setMinimumSize(960, 620)
+        self.setDockOptions(QMainWindow.DockOption.AllowTabbedDocks | QMainWindow.DockOption.AnimatedDocks)
+        apply_designer_theme(self)
+        self.setWindowIcon(ui_icon("window", ACCENT))
+        central = QWidget()
+        center_layout = QVBoxLayout(central)
+        center_layout.setContentsMargins(0, 0, 0, 0)
+        center_layout.setSpacing(0)
+        self.recovery_button = QPushButton()
+        self.recovery_button.setObjectName("recoveryBanner")
+        self.recovery_button.hide()
+        self.recovery_button.clicked.connect(self.show_recovery)
+        center_layout.addWidget(self.recovery_button)
+        self.tabs = QTabWidget()
+        self.tabs.setObjectName("documentTabs")
+        self.tabs.setTabsClosable(True)
+        self.tabs.setMovable(True)
+        self.tabs.setDocumentMode(True)
+        self.tabs.tabBar().setExpanding(False)
+        self.tabs.tabBar().setElideMode(Qt.TextElideMode.ElideRight)
+        self.tabs.tabBar().setUsesScrollButtons(True)
+        center_layout.addWidget(self.tabs)
+        self.welcome = QWidget()
+        self.welcome.setObjectName("welcomePage")
+        welcome_layout = QVBoxLayout(self.welcome)
+        welcome_layout.setContentsMargins(24, 24, 24, 24)
+        welcome_layout.setSpacing(14)
+        welcome_layout.addStretch()
+        title = QLabel("中文界面设计器")
+        title.setObjectName("welcomeTitle")
+        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        welcome_layout.addWidget(title)
+        subtitle = QLabel("从一个窗口，开始设计。")
+        subtitle.setObjectName("secondaryText")
+        subtitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        welcome_layout.addWidget(subtitle)
+        for text, callback in (("新建项目    Ctrl+N", self.new_document),
+                               ("打开项目    Ctrl+O", self.open_dialog),
+                               ("搜索命令    Ctrl+Shift+P", self.show_commands)):
+            button = QPushButton(text)
+            button.setMinimumWidth(240)
+            button.clicked.connect(lambda checked=False, run=callback: self._guard(run))
+            welcome_layout.addWidget(button, 0, Qt.AlignmentFlag.AlignHCenter)
+        welcome_layout.addStretch()
+        self.welcome.hide()
+        center_layout.addWidget(self.welcome)
+        self.setCentralWidget(central)
+        self.toolbox = ToolboxPanel(registry)
+        self.properties = PropertyPanel()
+        self.object_tree = ObjectTree()
+        self.object_tree.before_selection = self.properties.commit_pending
+        self.output = OutputPanel()
+        self.toolbox_dock = self._dock("组件箱", "toolbox", self.toolbox, Qt.DockWidgetArea.LeftDockWidgetArea)
+        self.property_dock = self._dock("属性", "properties", self.properties, Qt.DockWidgetArea.RightDockWidgetArea)
+        self.object_dock = self._dock("对象树", "objects", self.object_tree, Qt.DockWidgetArea.LeftDockWidgetArea)
+        self.output_dock = self._dock("输出", "output", self.output, Qt.DockWidgetArea.BottomDockWidgetArea)
+        self.splitDockWidget(self.toolbox_dock, self.object_dock, Qt.Orientation.Vertical)
+        self.resizeDocks([self.toolbox_dock, self.property_dock], [216, 320], Qt.Orientation.Horizontal)
+        self.resizeDocks([self.toolbox_dock, self.object_dock], [300, 240], Qt.Orientation.Vertical)
+        self.resizeDocks([self.output_dock], [72], Qt.Orientation.Vertical)
+        self.save_service = SaveService(self)
+        self.save_service.finished.connect(self._saved)
+        self.recovery: RecoveryService | None = None
+        if enable_recovery:
+            directory = recovery_directory or Path(QStandardPaths.writableLocation(QStandardPaths.StandardLocation.AppLocalDataLocation)) / "恢复副本"
+            try:
+                self.recovery = RecoveryService(directory, self)
+                self.recovery.notice.connect(self.report_error)
+            except OSError:
+                logger.exception("恢复目录无法建立。")
+                self.report_error("恢复目录无法建立，自动恢复暂不可用；仍可手动保存。")
+        self.actions: dict[str, QAction] = {}
+        self.preview_service = PreviewService(registry, self)
+        self.preview_service.notice.connect(self._preview_notice)
+        self.preview_service.error.connect(self.report_error)
+        self.preview_service.changed.connect(self._refresh_actions)
+        self._build_actions()
+        self._build_activity_bar()
+        self.document_status = QLabel()
+        self.document_status.setAccessibleName("文档保存状态")
+        self.preview_status = QLabel()
+        self.preview_status.setAccessibleName("预览状态")
+        self.statusBar().addPermanentWidget(self.document_status)
+        self.statusBar().addPermanentWidget(self.preview_status)
+        self._default_layout = self.saveState()
+        apply_preferences(self, self.workbench_preferences)
+        self.tabs.currentChanged.connect(self._tab_changed)
+        self.tabs.tabCloseRequested.connect(self.request_close)
+        self.toolbox.create_requested.connect(self._create_component)
+        self.properties.error.connect(self.report_error)
+        self.properties.menu_edit_requested.connect(self.edit_menus)
+        self.object_tree.itemDoubleClicked.connect(self._object_double_clicked)
+        self.statusBar().showMessage("从组件箱拖入控件；拖到容器内部可创建子控件。")
+        self.geometry_restored = False
+        self.layout_restored = False
+        if self.persist_settings:
+            geometry = self.settings.value("window/geometry")
+            state = self.settings.value("window/state_v2")
+            if geometry is not None:
+&gt;               self.geometry_restored = self.restoreGeometry(geometry)
+E               TypeError: 'PySide6.QtWidgets.QWidget.restoreGeometry' called with wrong argument types:
+E                 PySide6.QtWidgets.QWidget.restoreGeometry(str)
+E               Supported signatures:
+E                 PySide6.QtWidgets.QWidget.restoreGeometry(geometry: PySide6.QtCore.QByteArray | bytes | bytearray | memoryview, /)
+
+app\main_window.py:169: TypeError</failure></testcase><testcase classname="tests.test_full_audit" name="test_invalid_native_window_settings_do_not_prevent_startup[123]" time="0.117"><failure message="TypeError: 'PySide6.QtWidgets.QWidget.restoreGeometry' called with wrong argument types:&#10;  PySide6.QtWidgets.QWidget.restoreGeometry(int)&#10;Supported signatures:&#10;  PySide6.QtWidgets.QWidget.restoreGeometry(geometry: PySide6.QtCore.QByteArray | bytes | bytearray | memoryview, /)">qt_app = &lt;PySide6.QtWidgets.QApplication(0x25b33802220) at 0x0000025B36FCDE00&gt;
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B3896BCD0&gt;
+tmp_path = WindowsPath('C:/Users/葛/AppData/Local/Temp/pytest-of-葛/pytest-554/test_invalid_native_window_set1')
+value = 123
+
+    @pytest.mark.parametrize("value", ["corrupt-layout", 123, [1, 2]])
+    def test_invalid_native_window_settings_do_not_prevent_startup(qt_app, registry, tmp_path, value):
+        settings = QSettings(str(tmp_path / "bad.ini"), QSettings.Format.IniFormat)
+        settings.setValue("window/geometry", value)
+        settings.setValue("window/state_v2", value)
+&gt;       window = MainWindow(registry, settings=settings, enable_recovery=False)
+
+tests\test_full_audit.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;app.main_window.MainWindow(0x25b378bb940) at 0x0000025B36F95E00&gt;
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B3896BCD0&gt;
+
+    def __init__(self, registry: WidgetRegistry, *, settings: QSettings | None = None,
+                 recovery_directory: Path | None = None, enable_recovery: bool = True,
+                 persist_settings: bool = True) -&gt; None:
+        super().__init__()
+        self.registry = registry
+        self.settings = settings or QSettings()
+        self.persist_settings = persist_settings
+        self.workbench_preferences = load_preferences(self.settings) if persist_settings else WorkbenchPreferences()
+        self._recent_paths: list[str] = []
+        stored = self.settings.value("files/recent", []) if persist_settings else []
+        if isinstance(stored, list):
+            self._recent_paths = [item for item in stored if isinstance(item, str) and item][:10]
+        self._closed = False
+        self._exit_requested = False
+        self._pending_close: set[str] = set()
+        self._recovery_sources: dict[str, Path] = {}
+        self._new_number = 0
+        self._switching = False
+        self.setWindowTitle("中文界面设计器")
+        self.resize(1280, 820)
+        self.setMinimumSize(960, 620)
+        self.setDockOptions(QMainWindow.DockOption.AllowTabbedDocks | QMainWindow.DockOption.AnimatedDocks)
+        apply_designer_theme(self)
+        self.setWindowIcon(ui_icon("window", ACCENT))
+        central = QWidget()
+        center_layout = QVBoxLayout(central)
+        center_layout.setContentsMargins(0, 0, 0, 0)
+        center_layout.setSpacing(0)
+        self.recovery_button = QPushButton()
+        self.recovery_button.setObjectName("recoveryBanner")
+        self.recovery_button.hide()
+        self.recovery_button.clicked.connect(self.show_recovery)
+        center_layout.addWidget(self.recovery_button)
+        self.tabs = QTabWidget()
+        self.tabs.setObjectName("documentTabs")
+        self.tabs.setTabsClosable(True)
+        self.tabs.setMovable(True)
+        self.tabs.setDocumentMode(True)
+        self.tabs.tabBar().setExpanding(False)
+        self.tabs.tabBar().setElideMode(Qt.TextElideMode.ElideRight)
+        self.tabs.tabBar().setUsesScrollButtons(True)
+        center_layout.addWidget(self.tabs)
+        self.welcome = QWidget()
+        self.welcome.setObjectName("welcomePage")
+        welcome_layout = QVBoxLayout(self.welcome)
+        welcome_layout.setContentsMargins(24, 24, 24, 24)
+        welcome_layout.setSpacing(14)
+        welcome_layout.addStretch()
+        title = QLabel("中文界面设计器")
+        title.setObjectName("welcomeTitle")
+        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        welcome_layout.addWidget(title)
+        subtitle = QLabel("从一个窗口，开始设计。")
+        subtitle.setObjectName("secondaryText")
+        subtitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        welcome_layout.addWidget(subtitle)
+        for text, callback in (("新建项目    Ctrl+N", self.new_document),
+                               ("打开项目    Ctrl+O", self.open_dialog),
+                               ("搜索命令    Ctrl+Shift+P", self.show_commands)):
+            button = QPushButton(text)
+            button.setMinimumWidth(240)
+            button.clicked.connect(lambda checked=False, run=callback: self._guard(run))
+            welcome_layout.addWidget(button, 0, Qt.AlignmentFlag.AlignHCenter)
+        welcome_layout.addStretch()
+        self.welcome.hide()
+        center_layout.addWidget(self.welcome)
+        self.setCentralWidget(central)
+        self.toolbox = ToolboxPanel(registry)
+        self.properties = PropertyPanel()
+        self.object_tree = ObjectTree()
+        self.object_tree.before_selection = self.properties.commit_pending
+        self.output = OutputPanel()
+        self.toolbox_dock = self._dock("组件箱", "toolbox", self.toolbox, Qt.DockWidgetArea.LeftDockWidgetArea)
+        self.property_dock = self._dock("属性", "properties", self.properties, Qt.DockWidgetArea.RightDockWidgetArea)
+        self.object_dock = self._dock("对象树", "objects", self.object_tree, Qt.DockWidgetArea.LeftDockWidgetArea)
+        self.output_dock = self._dock("输出", "output", self.output, Qt.DockWidgetArea.BottomDockWidgetArea)
+        self.splitDockWidget(self.toolbox_dock, self.object_dock, Qt.Orientation.Vertical)
+        self.resizeDocks([self.toolbox_dock, self.property_dock], [216, 320], Qt.Orientation.Horizontal)
+        self.resizeDocks([self.toolbox_dock, self.object_dock], [300, 240], Qt.Orientation.Vertical)
+        self.resizeDocks([self.output_dock], [72], Qt.Orientation.Vertical)
+        self.save_service = SaveService(self)
+        self.save_service.finished.connect(self._saved)
+        self.recovery: RecoveryService | None = None
+        if enable_recovery:
+            directory = recovery_directory or Path(QStandardPaths.writableLocation(QStandardPaths.StandardLocation.AppLocalDataLocation)) / "恢复副本"
+            try:
+                self.recovery = RecoveryService(directory, self)
+                self.recovery.notice.connect(self.report_error)
+            except OSError:
+                logger.exception("恢复目录无法建立。")
+                self.report_error("恢复目录无法建立，自动恢复暂不可用；仍可手动保存。")
+        self.actions: dict[str, QAction] = {}
+        self.preview_service = PreviewService(registry, self)
+        self.preview_service.notice.connect(self._preview_notice)
+        self.preview_service.error.connect(self.report_error)
+        self.preview_service.changed.connect(self._refresh_actions)
+        self._build_actions()
+        self._build_activity_bar()
+        self.document_status = QLabel()
+        self.document_status.setAccessibleName("文档保存状态")
+        self.preview_status = QLabel()
+        self.preview_status.setAccessibleName("预览状态")
+        self.statusBar().addPermanentWidget(self.document_status)
+        self.statusBar().addPermanentWidget(self.preview_status)
+        self._default_layout = self.saveState()
+        apply_preferences(self, self.workbench_preferences)
+        self.tabs.currentChanged.connect(self._tab_changed)
+        self.tabs.tabCloseRequested.connect(self.request_close)
+        self.toolbox.create_requested.connect(self._create_component)
+        self.properties.error.connect(self.report_error)
+        self.properties.menu_edit_requested.connect(self.edit_menus)
+        self.object_tree.itemDoubleClicked.connect(self._object_double_clicked)
+        self.statusBar().showMessage("从组件箱拖入控件；拖到容器内部可创建子控件。")
+        self.geometry_restored = False
+        self.layout_restored = False
+        if self.persist_settings:
+            geometry = self.settings.value("window/geometry")
+            state = self.settings.value("window/state_v2")
+            if geometry is not None:
+&gt;               self.geometry_restored = self.restoreGeometry(geometry)
+E               TypeError: 'PySide6.QtWidgets.QWidget.restoreGeometry' called with wrong argument types:
+E                 PySide6.QtWidgets.QWidget.restoreGeometry(int)
+E               Supported signatures:
+E                 PySide6.QtWidgets.QWidget.restoreGeometry(geometry: PySide6.QtCore.QByteArray | bytes | bytearray | memoryview, /)
+
+app\main_window.py:169: TypeError</failure></testcase><testcase classname="tests.test_full_audit" name="test_invalid_native_window_settings_do_not_prevent_startup[value2]" time="0.119"><failure message="TypeError: 'PySide6.QtWidgets.QWidget.restoreGeometry' called with wrong argument types:&#10;  PySide6.QtWidgets.QWidget.restoreGeometry(list)&#10;Supported signatures:&#10;  PySide6.QtWidgets.QWidget.restoreGeometry(geometry: PySide6.QtCore.QByteArray | bytes | bytearray | memoryview, /)">qt_app = &lt;PySide6.QtWidgets.QApplication(0x25b33802220) at 0x0000025B36FCDE00&gt;
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B389B8B50&gt;
+tmp_path = WindowsPath('C:/Users/葛/AppData/Local/Temp/pytest-of-葛/pytest-554/test_invalid_native_window_set2')
+value = [1, 2]
+
+    @pytest.mark.parametrize("value", ["corrupt-layout", 123, [1, 2]])
+    def test_invalid_native_window_settings_do_not_prevent_startup(qt_app, registry, tmp_path, value):
+        settings = QSettings(str(tmp_path / "bad.ini"), QSettings.Format.IniFormat)
+        settings.setValue("window/geometry", value)
+        settings.setValue("window/state_v2", value)
+&gt;       window = MainWindow(registry, settings=settings, enable_recovery=False)
+
+tests\test_full_audit.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;app.main_window.MainWindow(0x25b381d3700) at 0x0000025B3762F380&gt;
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B389B8B50&gt;
+
+    def __init__(self, registry: WidgetRegistry, *, settings: QSettings | None = None,
+                 recovery_directory: Path | None = None, enable_recovery: bool = True,
+                 persist_settings: bool = True) -&gt; None:
+        super().__init__()
+        self.registry = registry
+        self.settings = settings or QSettings()
+        self.persist_settings = persist_settings
+        self.workbench_preferences = load_preferences(self.settings) if persist_settings else WorkbenchPreferences()
+        self._recent_paths: list[str] = []
+        stored = self.settings.value("files/recent", []) if persist_settings else []
+        if isinstance(stored, list):
+            self._recent_paths = [item for item in stored if isinstance(item, str) and item][:10]
+        self._closed = False
+        self._exit_requested = False
+        self._pending_close: set[str] = set()
+        self._recovery_sources: dict[str, Path] = {}
+        self._new_number = 0
+        self._switching = False
+        self.setWindowTitle("中文界面设计器")
+        self.resize(1280, 820)
+        self.setMinimumSize(960, 620)
+        self.setDockOptions(QMainWindow.DockOption.AllowTabbedDocks | QMainWindow.DockOption.AnimatedDocks)
+        apply_designer_theme(self)
+        self.setWindowIcon(ui_icon("window", ACCENT))
+        central = QWidget()
+        center_layout = QVBoxLayout(central)
+        center_layout.setContentsMargins(0, 0, 0, 0)
+        center_layout.setSpacing(0)
+        self.recovery_button = QPushButton()
+        self.recovery_button.setObjectName("recoveryBanner")
+        self.recovery_button.hide()
+        self.recovery_button.clicked.connect(self.show_recovery)
+        center_layout.addWidget(self.recovery_button)
+        self.tabs = QTabWidget()
+        self.tabs.setObjectName("documentTabs")
+        self.tabs.setTabsClosable(True)
+        self.tabs.setMovable(True)
+        self.tabs.setDocumentMode(True)
+        self.tabs.tabBar().setExpanding(False)
+        self.tabs.tabBar().setElideMode(Qt.TextElideMode.ElideRight)
+        self.tabs.tabBar().setUsesScrollButtons(True)
+        center_layout.addWidget(self.tabs)
+        self.welcome = QWidget()
+        self.welcome.setObjectName("welcomePage")
+        welcome_layout = QVBoxLayout(self.welcome)
+        welcome_layout.setContentsMargins(24, 24, 24, 24)
+        welcome_layout.setSpacing(14)
+        welcome_layout.addStretch()
+        title = QLabel("中文界面设计器")
+        title.setObjectName("welcomeTitle")
+        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        welcome_layout.addWidget(title)
+        subtitle = QLabel("从一个窗口，开始设计。")
+        subtitle.setObjectName("secondaryText")
+        subtitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        welcome_layout.addWidget(subtitle)
+        for text, callback in (("新建项目    Ctrl+N", self.new_document),
+                               ("打开项目    Ctrl+O", self.open_dialog),
+                               ("搜索命令    Ctrl+Shift+P", self.show_commands)):
+            button = QPushButton(text)
+            button.setMinimumWidth(240)
+            button.clicked.connect(lambda checked=False, run=callback: self._guard(run))
+            welcome_layout.addWidget(button, 0, Qt.AlignmentFlag.AlignHCenter)
+        welcome_layout.addStretch()
+        self.welcome.hide()
+        center_layout.addWidget(self.welcome)
+        self.setCentralWidget(central)
+        self.toolbox = ToolboxPanel(registry)
+        self.properties = PropertyPanel()
+        self.object_tree = ObjectTree()
+        self.object_tree.before_selection = self.properties.commit_pending
+        self.output = OutputPanel()
+        self.toolbox_dock = self._dock("组件箱", "toolbox", self.toolbox, Qt.DockWidgetArea.LeftDockWidgetArea)
+        self.property_dock = self._dock("属性", "properties", self.properties, Qt.DockWidgetArea.RightDockWidgetArea)
+        self.object_dock = self._dock("对象树", "objects", self.object_tree, Qt.DockWidgetArea.LeftDockWidgetArea)
+        self.output_dock = self._dock("输出", "output", self.output, Qt.DockWidgetArea.BottomDockWidgetArea)
+        self.splitDockWidget(self.toolbox_dock, self.object_dock, Qt.Orientation.Vertical)
+        self.resizeDocks([self.toolbox_dock, self.property_dock], [216, 320], Qt.Orientation.Horizontal)
+        self.resizeDocks([self.toolbox_dock, self.object_dock], [300, 240], Qt.Orientation.Vertical)
+        self.resizeDocks([self.output_dock], [72], Qt.Orientation.Vertical)
+        self.save_service = SaveService(self)
+        self.save_service.finished.connect(self._saved)
+        self.recovery: RecoveryService | None = None
+        if enable_recovery:
+            directory = recovery_directory or Path(QStandardPaths.writableLocation(QStandardPaths.StandardLocation.AppLocalDataLocation)) / "恢复副本"
+            try:
+                self.recovery = RecoveryService(directory, self)
+                self.recovery.notice.connect(self.report_error)
+            except OSError:
+                logger.exception("恢复目录无法建立。")
+                self.report_error("恢复目录无法建立，自动恢复暂不可用；仍可手动保存。")
+        self.actions: dict[str, QAction] = {}
+        self.preview_service = PreviewService(registry, self)
+        self.preview_service.notice.connect(self._preview_notice)
+        self.preview_service.error.connect(self.report_error)
+        self.preview_service.changed.connect(self._refresh_actions)
+        self._build_actions()
+        self._build_activity_bar()
+        self.document_status = QLabel()
+        self.document_status.setAccessibleName("文档保存状态")
+        self.preview_status = QLabel()
+        self.preview_status.setAccessibleName("预览状态")
+        self.statusBar().addPermanentWidget(self.document_status)
+        self.statusBar().addPermanentWidget(self.preview_status)
+        self._default_layout = self.saveState()
+        apply_preferences(self, self.workbench_preferences)
+        self.tabs.currentChanged.connect(self._tab_changed)
+        self.tabs.tabCloseRequested.connect(self.request_close)
+        self.toolbox.create_requested.connect(self._create_component)
+        self.properties.error.connect(self.report_error)
+        self.properties.menu_edit_requested.connect(self.edit_menus)
+        self.object_tree.itemDoubleClicked.connect(self._object_double_clicked)
+        self.statusBar().showMessage("从组件箱拖入控件；拖到容器内部可创建子控件。")
+        self.geometry_restored = False
+        self.layout_restored = False
+        if self.persist_settings:
+            geometry = self.settings.value("window/geometry")
+            state = self.settings.value("window/state_v2")
+            if geometry is not None:
+&gt;               self.geometry_restored = self.restoreGeometry(geometry)
+E               TypeError: 'PySide6.QtWidgets.QWidget.restoreGeometry' called with wrong argument types:
+E                 PySide6.QtWidgets.QWidget.restoreGeometry(list)
+E               Supported signatures:
+E                 PySide6.QtWidgets.QWidget.restoreGeometry(geometry: PySide6.QtCore.QByteArray | bytes | bytearray | memoryview, /)
+
+app\main_window.py:169: TypeError</failure></testcase><testcase classname="tests.test_full_audit" name="test_custom_property_column_width_survives_restart" time="0.638"><failure message="assert 110 == 177&#10; +  where 110 = &lt;built-in method columnWidth of PySide6.QtWidgets.QTreeWidget object at 0x0000025B389FCF40&gt;(0)&#10; +    where &lt;built-in method columnWidth of PySide6.QtWidgets.QTreeWidget object at 0x0000025B389FCF40&gt; = &lt;PySide6.QtWidgets.QTreeWidget(0x25b36071de0, name=&quot;propertyTree&quot;) at 0x0000025B389FCF40&gt;.columnWidth&#10; +      where &lt;PySide6.QtWidgets.QTreeWidget(0x25b36071de0, name=&quot;propertyTree&quot;) at 0x0000025B389FCF40&gt; = &lt;panels.properties.PropertyPanel(0x25b38f35e00, name=&quot;propertyPanel&quot;) at 0x0000025B38775340&gt;.tree&#10; +        where &lt;panels.properties.PropertyPanel(0x25b38f35e00, name=&quot;propertyPanel&quot;) at 0x0000025B38775340&gt; = &lt;app.main_window.MainWindow(0x25b38f33220) at 0x0000025B389BD300&gt;.properties">qt_app = &lt;PySide6.QtWidgets.QApplication(0x25b33802220) at 0x0000025B36FCDE00&gt;
+registry = &lt;core.registry.WidgetRegistry object at 0x0000025B389ED910&gt;
+tmp_path = WindowsPath('C:/Users/葛/AppData/Local/Temp/pytest-of-葛/pytest-554/test_custom_property_column_wi0')
+
+    def test_custom_property_column_width_survives_restart(qt_app, registry, tmp_path):
+        settings = QSettings(str(tmp_path / "columns.ini"), QSettings.Format.IniFormat)
+        first = MainWindow(registry, settings=settings, enable_recovery=False)
+        try:
+            apply_preferences(first, replace(current_preferences(first), font_size=12))
+            first.properties.tree.setColumnWidth(0, 177)
+            assert save_workbench(first)
+            second = MainWindow(registry, settings=settings, enable_recovery=False)
+            try:
+&gt;               assert second.properties.tree.columnWidth(0) == 177
+E               assert 110 == 177
+E                +  where 110 = &lt;built-in method columnWidth of PySide6.QtWidgets.QTreeWidget object at 0x0000025B389FCF40&gt;(0)
+E                +    where &lt;built-in method columnWidth of PySide6.QtWidgets.QTreeWidget object at 0x0000025B389FCF40&gt; = &lt;PySide6.QtWidgets.QTreeWidget(0x25b36071de0, name="propertyTree") at 0x0000025B389FCF40&gt;.columnWidth
+E                +      where &lt;PySide6.QtWidgets.QTreeWidget(0x25b36071de0, name="propertyTree") at 0x0000025B389FCF40&gt; = &lt;panels.properties.PropertyPanel(0x25b38f35e00, name="propertyPanel") at 0x0000025B38775340&gt;.tree
+E                +        where &lt;panels.properties.PropertyPanel(0x25b38f35e00, name="propertyPanel") at 0x0000025B38775340&gt; = &lt;app.main_window.MainWindow(0x25b38f33220) at 0x0000025B389BD300&gt;.properties
+
+tests\test_full_audit.py:91: AssertionError</failure></testcase></testsuite></testsuites>

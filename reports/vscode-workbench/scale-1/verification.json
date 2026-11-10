@@ -1,0 +1,30 @@
+{
+  "platform": "windows",
+  "scale": "1",
+  "screenshots": [
+    "startup.png",
+    "workbench.png",
+    "compact.png",
+    "example.png",
+    "commands.png",
+    "font-list.png",
+    "color-dialog.png",
+    "file-dialog.png",
+    "menu-editor.png",
+    "content-editor.png",
+    "component-support.png",
+    "empty-workspace.png"
+  ],
+  "checks": [
+    "Startup fits the available screen",
+    "Designed window palette remains independent",
+    "Activity buttons toggle docks without editing the project",
+    "Example source and document unchanged after dialog inspection",
+    "Property editor rows fit their content"
+  ],
+  "compact_size": [
+    960,
+    620
+  ],
+  "passed": true
+}

@@ -1,0 +1,3 @@
+# 便携包构建使用的已验证基线。
+-r requirements.txt
+PyInstaller==6.19.0

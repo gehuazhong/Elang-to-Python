@@ -1,0 +1,137 @@
+{
+  "format": "uiplay.widget_catalog.example",
+  "metadata_version": 1,
+  "description": "本文件说明注册契约，应用通过受信任的注册入口构造真实控件定义。",
+  "property_sets": {
+    "identity": [
+      {"key": "name", "display_name": "名称", "group": "基本", "value_type": "string", "storage": "node.name", "qt_property": "objectName", "default": "组件", "read_only": false, "validators": ["non_empty", "unique_name"]},
+      {"key": "code_name", "display_name": "代码名称", "group": "基本", "value_type": "string", "storage": "node.code_name", "qt_property": null, "adapter": "model_field", "default": null, "read_only": true, "validators": ["python_identifier", "unique_code_name"]}
+    ],
+    "visual": [
+      {"key": "x", "display_name": "位置X", "group": "布局", "value_type": "integer", "storage": "geometry.x", "qt_property": null, "adapter": "geometry", "default": 0, "read_only": false, "read_only_when": ["managed_by_layout", "locked"]},
+      {"key": "y", "display_name": "位置Y", "group": "布局", "value_type": "integer", "storage": "geometry.y", "qt_property": null, "adapter": "geometry", "default": 0, "read_only": false, "read_only_when": ["managed_by_layout", "locked"]},
+      {"key": "width", "display_name": "宽度", "group": "布局", "value_type": "integer", "storage": "geometry.width", "qt_property": null, "adapter": "geometry", "default": 120, "minimum": 1, "read_only": false, "read_only_when": ["managed_by_layout", "locked"]},
+      {"key": "height", "display_name": "高度", "group": "布局", "value_type": "integer", "storage": "geometry.height", "qt_property": null, "adapter": "geometry", "default": 32, "minimum": 1, "read_only": false, "read_only_when": ["managed_by_layout", "locked"]},
+      {"key": "enabled", "display_name": "启用", "group": "行为", "value_type": "boolean", "storage": "properties.enabled", "qt_property": "enabled", "default": true, "read_only": false},
+      {"key": "visible", "display_name": "可见", "group": "行为", "value_type": "boolean", "storage": "properties.visible", "qt_property": "visible", "adapter": "design_visibility", "default": true, "read_only": false},
+      {"key": "tool_tip", "display_name": "提示文本", "group": "行为", "value_type": "string", "storage": "properties.tool_tip", "qt_property": "toolTip", "default": "", "read_only": false},
+      {"key": "font", "display_name": "字体", "group": "外观", "value_type": "font", "storage": "properties.font", "qt_property": "font", "adapter": "font", "default": null, "nullable": true, "read_only": false},
+      {"key": "foreground_color", "display_name": "前景色", "group": "外观", "value_type": "color", "storage": "properties.foreground_color", "qt_property": null, "adapter": "controlled_style", "default": null, "nullable": true, "read_only": false},
+      {"key": "background_color", "display_name": "背景色", "group": "外观", "value_type": "color", "storage": "properties.background_color", "qt_property": null, "adapter": "controlled_style", "default": null, "nullable": true, "read_only": false}
+    ]
+  },
+  "widgets": [
+    {
+      "type_id": "builtin.button",
+      "type_version": 1,
+      "display_name": "按钮",
+      "group": "基本组件",
+      "qt_class": "PySide6.QtWidgets.QPushButton",
+      "kind": "visual",
+      "is_container": false,
+      "allowed_parent_slots": ["children"],
+      "provided_slots": [],
+      "default_size": [120, 40],
+      "default_name": "按钮",
+      "code_name_prefix": "button",
+      "inherits": ["identity", "visual"],
+      "property_overrides": {"height": {"default": 40}},
+      "properties": [
+        {"key": "text", "display_name": "标题", "group": "基本", "value_type": "string", "storage": "properties.text", "qt_property": "text", "default": "按钮", "read_only": false},
+        {"key": "checkable", "display_name": "可选中", "group": "行为", "value_type": "boolean", "storage": "properties.checkable", "qt_property": "checkable", "default": false, "read_only": false},
+        {"key": "checked", "display_name": "选中", "group": "行为", "value_type": "boolean", "storage": "properties.checked", "qt_property": "checked", "default": false, "read_only": false, "validators": ["requires_checkable_when_true"]}
+      ],
+      "events": [
+        {
+          "key": "clicked",
+          "display_name": "被单击",
+          "binding_kind": "qt_signal",
+          "qt_signal": "clicked",
+          "signature": ["bool"],
+          "parameters": [{"name": "checked", "display_name": "是否选中", "value_type": "boolean"}]
+        }
+      ],
+      "slots": [
+        {"key": "set_enabled", "display_name": "设置启用", "qt_method": "setEnabled", "parameters": [{"name": "enabled", "display_name": "是否启用", "value_type": "boolean"}]}
+      ],
+      "factory": "builtin.button",
+      "attachment_adapter": "widget_child",
+      "codegen_adapter": "builtin.widget"
+    },
+    {
+      "type_id": "builtin.label",
+      "type_version": 1,
+      "display_name": "标签",
+      "group": "基本组件",
+      "qt_class": "PySide6.QtWidgets.QLabel",
+      "kind": "visual",
+      "is_container": false,
+      "allowed_parent_slots": ["children"],
+      "provided_slots": [],
+      "default_size": [160, 32],
+      "default_name": "标签",
+      "code_name_prefix": "label",
+      "inherits": ["identity", "visual"],
+      "property_overrides": {"width": {"default": 160}},
+      "properties": [
+        {"key": "text", "display_name": "文本", "group": "基本", "value_type": "string", "storage": "properties.text", "qt_property": "text", "default": "标签", "read_only": false},
+        {"key": "word_wrap", "display_name": "自动换行", "group": "外观", "value_type": "boolean", "storage": "properties.word_wrap", "qt_property": "wordWrap", "default": false, "read_only": false},
+        {
+          "key": "alignment",
+          "display_name": "对齐方式",
+          "group": "外观",
+          "value_type": "enum",
+          "storage": "properties.alignment",
+          "qt_property": "alignment",
+          "adapter": "enum_alignment",
+          "default": "left_vcenter",
+          "read_only": false,
+          "enum_options": [
+            {"key": "left_vcenter", "display_name": "靠左并垂直居中", "qt_members": ["Qt.AlignmentFlag.AlignLeft", "Qt.AlignmentFlag.AlignVCenter"]},
+            {"key": "center", "display_name": "居中", "qt_members": ["Qt.AlignmentFlag.AlignHCenter", "Qt.AlignmentFlag.AlignVCenter"]},
+            {"key": "right_vcenter", "display_name": "靠右并垂直居中", "qt_members": ["Qt.AlignmentFlag.AlignRight", "Qt.AlignmentFlag.AlignVCenter"]}
+          ]
+        }
+      ],
+      "events": [],
+      "slots": [
+        {"key": "set_text", "display_name": "设置文本", "qt_method": "setText", "parameters": [{"name": "text", "display_name": "文本", "value_type": "string"}]},
+        {"key": "set_visible", "display_name": "设置可见", "qt_method": "setVisible", "parameters": [{"name": "visible", "display_name": "是否可见", "value_type": "boolean"}]}
+      ],
+      "factory": "builtin.label",
+      "attachment_adapter": "widget_child",
+      "codegen_adapter": "builtin.widget"
+    },
+    {
+      "type_id": "builtin.timer",
+      "type_version": 1,
+      "display_name": "定时器",
+      "group": "非可视组件",
+      "qt_class": "PySide6.QtCore.QTimer",
+      "kind": "non_visual",
+      "is_container": false,
+      "allowed_parent_slots": ["non_visual"],
+      "provided_slots": [],
+      "default_size": null,
+      "default_name": "定时器",
+      "code_name_prefix": "timer",
+      "inherits": ["identity"],
+      "property_overrides": {},
+      "properties": [
+        {"key": "interval", "display_name": "间隔", "group": "行为", "value_type": "integer", "storage": "properties.interval", "qt_property": "interval", "default": 1000, "minimum": 1, "maximum": 2147483647, "unit": "毫秒", "read_only": false},
+        {"key": "single_shot", "display_name": "仅执行一次", "group": "行为", "value_type": "boolean", "storage": "properties.single_shot", "qt_property": "singleShot", "default": false, "read_only": false},
+        {"key": "auto_start", "display_name": "自动启动", "group": "行为", "value_type": "boolean", "storage": "properties.auto_start", "qt_property": null, "adapter": "timer_start_after_bindings", "default": false, "read_only": false}
+      ],
+      "events": [
+        {"key": "timeout", "display_name": "超时", "binding_kind": "qt_signal", "qt_signal": "timeout", "signature": [], "parameters": []}
+      ],
+      "slots": [
+        {"key": "start", "display_name": "启动定时器", "qt_method": "start", "signature": [], "parameters": []},
+        {"key": "stop", "display_name": "停止定时器", "qt_method": "stop", "signature": [], "parameters": []}
+      ],
+      "factory": "builtin.timer",
+      "attachment_adapter": "qobject_parent",
+      "codegen_adapter": "builtin.timer"
+    }
+  ]
+}

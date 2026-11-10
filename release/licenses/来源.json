@@ -1,0 +1,10 @@
+{
+  "上游项目": "Qt qtbase",
+  "版本标签": "v6.11.1",
+  "说明": "以下文件从 Qt 官方源代码仓库下载，保留原文；完整第三方归属核对另见发行待办。",
+  "文件": [
+    {"名称": "LGPL-3.0-only.txt", "来源": "https://raw.githubusercontent.com/qt/qtbase/v6.11.1/LICENSES/LGPL-3.0-only.txt", "摘要": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"},
+    {"名称": "GPL-2.0-only.txt", "来源": "https://raw.githubusercontent.com/qt/qtbase/v6.11.1/LICENSES/GPL-2.0-only.txt", "摘要": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"},
+    {"名称": "GPL-3.0-only.txt", "来源": "https://raw.githubusercontent.com/qt/qtbase/v6.11.1/LICENSES/GPL-3.0-only.txt", "摘要": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"}
+  ]
+}

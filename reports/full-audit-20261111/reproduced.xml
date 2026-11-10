@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="15" skipped="0" tests="19" time="6.061" timestamp="2026-11-11T02:02:30.468119+08:00" hostname="DESKTOP-EIJ20OD"><testcase classname="tests.test_audit_20261111" name="test_palette_keeps_canvas_command_context[\u6392\u7248 \u7b49\u5bbd\u9ad8]" time="0.305" /><testcase classname="tests.test_audit_20261111" name="test_palette_keeps_canvas_command_context[\u7f16\u8f91 \u64a4\u9500]" time="0.229" /><testcase classname="tests.test_audit_20261111" name="test_sorted_table_refresh_keeps_cells_in_their_rows[0]" time="0.069" /><testcase classname="tests.test_audit_20261111" name="test_sorted_table_refresh_keeps_cells_in_their_rows[1]" time="0.084" /><testcase classname="tests.test_audit_20261111" name="test_item_view_style_refresh_preserves_item_and_selection[list_widget]" time="0.068"><failure message="assert False&#10; +  where False = isValid(&lt;PySide6.QtWidgets.QListWidgetItem object at 0x0000021CC5CAB6C0&gt;)">tests\test_audit_20261111.py:111: in test_item_view_style_refresh_preserves_item_and_selection
+    assert isValid(item)
+E   assert False
+E    +  where False = isValid(&lt;PySide6.QtWidgets.QListWidgetItem object at 0x0000021CC5CAB6C0&gt;)</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_item_view_style_refresh_preserves_item_and_selection[table_widget]" time="0.067"><failure message="assert False&#10; +  where False = isValid(&lt;PySide6.QtWidgets.QTableWidgetItem object at 0x0000021CC5CB7DC0&gt;)">tests\test_audit_20261111.py:111: in test_item_view_style_refresh_preserves_item_and_selection
+    assert isValid(item)
+E   assert False
+E    +  where False = isValid(&lt;PySide6.QtWidgets.QTableWidgetItem object at 0x0000021CC5CB7DC0&gt;)</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_item_view_style_refresh_preserves_item_and_selection[tree_widget]" time="0.068"><failure message="assert False&#10; +  where False = isValid(&lt;PySide6.QtWidgets.QTreeWidgetItem object at 0x0000021CC5A4A600&gt;)">tests\test_audit_20261111.py:111: in test_item_view_style_refresh_preserves_item_and_selection
+    assert isValid(item)
+E   assert False
+E    +  where False = isValid(&lt;PySide6.QtWidgets.QTreeWidgetItem object at 0x0000021CC5A4A600&gt;)</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_item_view_style_refresh_preserves_item_and_selection[super_list]" time="0.065"><failure message="assert False&#10; +  where False = isValid(&lt;PySide6.QtWidgets.QTreeWidgetItem object at 0x0000021CC4E32140&gt;)">tests\test_audit_20261111.py:111: in test_item_view_style_refresh_preserves_item_and_selection
+    assert isValid(item)
+E   assert False
+E    +  where False = isValid(&lt;PySide6.QtWidgets.QTreeWidgetItem object at 0x0000021CC4E32140&gt;)</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_invalid_file_directory_settings_fall_back_to_home[123-open]" time="0.230"><failure message="TypeError: expected str, bytes or os.PathLike object, not int">tests\test_audit_20261111.py:137: in test_invalid_file_directory_settings_fall_back_to_home
+    {"open": window.open_dialog, "save": window.save_current, "export": window.export_python_dialog}[operation]()
+app\main_window.py:381: in open_dialog
+    path = choose_project_file(self, Path(directory))
+D:\python311\Lib\pathlib.py:871: in __new__
+    self = cls._from_parts(args)
+D:\python311\Lib\pathlib.py:509: in _from_parts
+    drv, root, parts = self._parse_args(args)
+D:\python311\Lib\pathlib.py:493: in _parse_args
+    a = os.fspath(a)
+E   TypeError: expected str, bytes or os.PathLike object, not int</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_invalid_file_directory_settings_fall_back_to_home[123-save]" time="0.203"><failure message="TypeError: expected str, bytes or os.PathLike object, not int">tests\test_audit_20261111.py:137: in test_invalid_file_directory_settings_fall_back_to_home
+    {"open": window.open_dialog, "save": window.save_current, "export": window.export_python_dialog}[operation]()
+app\main_window.py:499: in save_current
+    return self._save_document(document, force_as=force_as)
+app\main_window.py:507: in _save_document
+    directory = Path(self.settings.value("files/default_directory", str(Path.home())))
+D:\python311\Lib\pathlib.py:871: in __new__
+    self = cls._from_parts(args)
+D:\python311\Lib\pathlib.py:509: in _from_parts
+    drv, root, parts = self._parse_args(args)
+D:\python311\Lib\pathlib.py:493: in _parse_args
+    a = os.fspath(a)
+E   TypeError: expected str, bytes or os.PathLike object, not int</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_invalid_file_directory_settings_fall_back_to_home[123-export]" time="0.331"><failure message="TypeError: expected str, bytes or os.PathLike object, not int">tests\test_audit_20261111.py:137: in test_invalid_file_directory_settings_fall_back_to_home
+    {"open": window.open_dialog, "save": window.save_current, "export": window.export_python_dialog}[operation]()
+app\main_window.py:462: in export_python_dialog
+    target = QFileDialog.getExistingDirectory(self, "选择 Python 项目导出目录", directory,
+tests\test_audit_20261111.py:132: in choose_export
+    seen.append(Path(directory))
+D:\python311\Lib\pathlib.py:871: in __new__
+    self = cls._from_parts(args)
+D:\python311\Lib\pathlib.py:509: in _from_parts
+    drv, root, parts = self._parse_args(args)
+D:\python311\Lib\pathlib.py:493: in _parse_args
+    a = os.fspath(a)
+E   TypeError: expected str, bytes or os.PathLike object, not int</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_invalid_file_directory_settings_fall_back_to_home[value1-open]" time="0.491"><failure message="TypeError: expected str, bytes or os.PathLike object, not list">tests\test_audit_20261111.py:137: in test_invalid_file_directory_settings_fall_back_to_home
+    {"open": window.open_dialog, "save": window.save_current, "export": window.export_python_dialog}[operation]()
+app\main_window.py:381: in open_dialog
+    path = choose_project_file(self, Path(directory))
+D:\python311\Lib\pathlib.py:871: in __new__
+    self = cls._from_parts(args)
+D:\python311\Lib\pathlib.py:509: in _from_parts
+    drv, root, parts = self._parse_args(args)
+D:\python311\Lib\pathlib.py:493: in _parse_args
+    a = os.fspath(a)
+E   TypeError: expected str, bytes or os.PathLike object, not list</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_invalid_file_directory_settings_fall_back_to_home[value1-save]" time="0.471"><failure message="TypeError: expected str, bytes or os.PathLike object, not list">tests\test_audit_20261111.py:137: in test_invalid_file_directory_settings_fall_back_to_home
+    {"open": window.open_dialog, "save": window.save_current, "export": window.export_python_dialog}[operation]()
+app\main_window.py:499: in save_current
+    return self._save_document(document, force_as=force_as)
+app\main_window.py:507: in _save_document
+    directory = Path(self.settings.value("files/default_directory", str(Path.home())))
+D:\python311\Lib\pathlib.py:871: in __new__
+    self = cls._from_parts(args)
+D:\python311\Lib\pathlib.py:509: in _from_parts
+    drv, root, parts = self._parse_args(args)
+D:\python311\Lib\pathlib.py:493: in _parse_args
+    a = os.fspath(a)
+E   TypeError: expected str, bytes or os.PathLike object, not list</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_invalid_file_directory_settings_fall_back_to_home[value1-export]" time="0.466"><failure message="TypeError: expected str, bytes or os.PathLike object, not list">tests\test_audit_20261111.py:137: in test_invalid_file_directory_settings_fall_back_to_home
+    {"open": window.open_dialog, "save": window.save_current, "export": window.export_python_dialog}[operation]()
+app\main_window.py:462: in export_python_dialog
+    target = QFileDialog.getExistingDirectory(self, "选择 Python 项目导出目录", directory,
+tests\test_audit_20261111.py:132: in choose_export
+    seen.append(Path(directory))
+D:\python311\Lib\pathlib.py:871: in __new__
+    self = cls._from_parts(args)
+D:\python311\Lib\pathlib.py:509: in _from_parts
+    drv, root, parts = self._parse_args(args)
+D:\python311\Lib\pathlib.py:493: in _parse_args
+    a = os.fspath(a)
+E   TypeError: expected str, bytes or os.PathLike object, not list</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_invalid_file_directory_settings_fall_back_to_home[\x00invalid-open]" time="0.490"><failure message="AssertionError: assert [WindowsPath('\x00invalid')] == [WindowsPath('C:/Users/葛')]&#10;  &#10;  At index 0 diff: WindowsPath('\x00invalid') != WindowsPath('C:/Users/葛')&#10;  Use -v to get more diff">tests\test_audit_20261111.py:138: in test_invalid_file_directory_settings_fall_back_to_home
+    assert seen == [Path.home()]
+E   AssertionError: assert [WindowsPath('\x00invalid')] == [WindowsPath('C:/Users/葛')]
+E     
+E     At index 0 diff: WindowsPath('\x00invalid') != WindowsPath('C:/Users/葛')
+E     Use -v to get more diff</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_invalid_file_directory_settings_fall_back_to_home[\x00invalid-save]" time="0.486"><failure message="AssertionError: assert [WindowsPath('\x00invalid')] == [WindowsPath('C:/Users/葛')]&#10;  &#10;  At index 0 diff: WindowsPath('\x00invalid') != WindowsPath('C:/Users/葛')&#10;  Use -v to get more diff">tests\test_audit_20261111.py:138: in test_invalid_file_directory_settings_fall_back_to_home
+    assert seen == [Path.home()]
+E   AssertionError: assert [WindowsPath('\x00invalid')] == [WindowsPath('C:/Users/葛')]
+E     
+E     At index 0 diff: WindowsPath('\x00invalid') != WindowsPath('C:/Users/葛')
+E     Use -v to get more diff</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_invalid_file_directory_settings_fall_back_to_home[\x00invalid-export]" time="0.511"><failure message="AssertionError: assert [WindowsPath('\x00invalid')] == [WindowsPath('C:/Users/葛')]&#10;  &#10;  At index 0 diff: WindowsPath('\x00invalid') != WindowsPath('C:/Users/葛')&#10;  Use -v to get more diff">tests\test_audit_20261111.py:138: in test_invalid_file_directory_settings_fall_back_to_home
+    assert seen == [Path.home()]
+E   AssertionError: assert [WindowsPath('\x00invalid')] == [WindowsPath('C:/Users/葛')]
+E     
+E     At index 0 diff: WindowsPath('\x00invalid') != WindowsPath('C:/Users/葛')
+E     Use -v to get more diff</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_recovery_shutdown_releases_document_subscriptions" time="0.128"><failure message="assert 1 == 0&#10; +  where 1 = len([&lt;function RecoveryService.watch.&lt;locals&gt;.changed at 0x0000021CC59FE0C0&gt;])&#10; +    where [&lt;function RecoveryService.watch.&lt;locals&gt;.changed at 0x0000021CC59FE0C0&gt;] = &lt;core.document.DocumentSession(0x21cc5f59020) at 0x0000021CC5CC3640&gt;._listeners">tests\test_audit_20261111.py:148: in test_recovery_shutdown_releases_document_subscriptions
+    assert len(document._listeners) == baseline
+E   assert 1 == 0
+E    +  where 1 = len([&lt;function RecoveryService.watch.&lt;locals&gt;.changed at 0x0000021CC59FE0C0&gt;])
+E    +    where [&lt;function RecoveryService.watch.&lt;locals&gt;.changed at 0x0000021CC59FE0C0&gt;] = &lt;core.document.DocumentSession(0x21cc5f59020) at 0x0000021CC5CC3640&gt;._listeners</failure></testcase><testcase classname="tests.test_audit_20261111" name="test_combo_style_refresh_preserves_current_selection" time="0.120"><failure message="assert 0 == 2&#10; +  where 0 = &lt;built-in method currentIndex of PySide6.QtWidgets.QComboBox object at 0x0000021CC5CB4640&gt;()&#10; +    where &lt;built-in method currentIndex of PySide6.QtWidgets.QComboBox object at 0x0000021CC5CB4640&gt; = &lt;PySide6.QtWidgets.QComboBox(0x21cc65d4ee0, name=&quot;组合框1&quot;) at 0x0000021CC5CB4640&gt;.currentIndex">tests\test_audit_20261111.py:164: in test_combo_style_refresh_preserves_current_selection
+    assert widget.currentIndex() == 2
+E   assert 0 == 2
+E    +  where 0 = &lt;built-in method currentIndex of PySide6.QtWidgets.QComboBox object at 0x0000021CC5CB4640&gt;()
+E    +    where &lt;built-in method currentIndex of PySide6.QtWidgets.QComboBox object at 0x0000021CC5CB4640&gt; = &lt;PySide6.QtWidgets.QComboBox(0x21cc65d4ee0, name="组合框1") at 0x0000021CC5CB4640&gt;.currentIndex</failure></testcase></testsuite></testsuites>

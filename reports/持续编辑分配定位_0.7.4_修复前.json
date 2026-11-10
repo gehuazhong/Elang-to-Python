@@ -1,0 +1,270 @@
+{
+  "说明": "三轮预热后启用 Python 分配追踪；追踪器本身占用额外内存，不与无追踪基准直接比较。",
+  "轮次": 15,
+  "采样": [
+    {
+      "轮次": 1,
+      "私有内存": 68952064,
+      "Python保留分配": 204420,
+      "Python分配峰值": 34643615,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 2,
+      "私有内存": 74698752,
+      "Python保留分配": 222229,
+      "Python分配峰值": 34753972,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 3,
+      "私有内存": 78372864,
+      "Python保留分配": 229389,
+      "Python分配峰值": 34756601,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 4,
+      "私有内存": 81117184,
+      "Python保留分配": 236674,
+      "Python分配峰值": 34756601,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 5,
+      "私有内存": 82939904,
+      "Python保留分配": 243521,
+      "Python分配峰值": 34792474,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 6,
+      "私有内存": 84430848,
+      "Python保留分配": 253703,
+      "Python分配峰值": 34792474,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 7,
+      "私有内存": 86695936,
+      "Python保留分配": 260648,
+      "Python分配峰值": 34792474,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 8,
+      "私有内存": 89350144,
+      "Python保留分配": 256706,
+      "Python分配峰值": 34833327,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 9,
+      "私有内存": 86192128,
+      "Python保留分配": 272908,
+      "Python分配峰值": 34833327,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 10,
+      "私有内存": 86810624,
+      "Python保留分配": 280955,
+      "Python分配峰值": 34833327,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 11,
+      "私有内存": 87126016,
+      "Python保留分配": 286057,
+      "Python分配峰值": 34833327,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 12,
+      "私有内存": 86716416,
+      "Python保留分配": 298851,
+      "Python分配峰值": 34833327,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 13,
+      "私有内存": 85852160,
+      "Python保留分配": 300641,
+      "Python分配峰值": 34833327,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 14,
+      "私有内存": 86478848,
+      "Python保留分配": 309382,
+      "Python分配峰值": 34833327,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 15,
+      "私有内存": 87486464,
+      "Python保留分配": 315301,
+      "Python分配峰值": 34833327,
+      "顶层窗口": 0
+    }
+  ],
+  "保留分配增量": [
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\tests\\check_soak_allocations.py:23",
+      "增加字节": 46487,
+      "增加分配数": 585
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\runtime\\widget_properties.py:134",
+      "增加字节": 39744,
+      "增加分配数": 736
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:67",
+      "增加字节": 22680,
+      "增加分配数": 435
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\object_tree.py:19",
+      "增加字节": 22200,
+      "增加分配数": 435
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\value_editors.py:19",
+      "增加字节": 15768,
+      "增加分配数": 292
+    },
+    {
+      "位置": "D:\\python311\\Lib\\collections\\__init__.py:690",
+      "增加字节": 13824,
+      "增加分配数": 27
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:53",
+      "增加字节": 12840,
+      "增加分配数": 255
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\runtime\\builder.py:244",
+      "增加字节": 9612,
+      "增加分配数": 178
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:60",
+      "增加字节": 8160,
+      "增加分配数": 180
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:49",
+      "增加字节": 8160,
+      "增加分配数": 180
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\runtime\\builder.py:226",
+      "增加字节": 8154,
+      "增加分配数": 151
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\tests\\test_property_interactions.py:24",
+      "增加字节": 6588,
+      "增加分配数": 122
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:41",
+      "增加字节": 6000,
+      "增加分配数": 15
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\value_editors.py:61",
+      "增加字节": 5778,
+      "增加分配数": 107
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\value_editors.py:46",
+      "增加字节": 5616,
+      "增加分配数": 104
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:225",
+      "增加字节": 5400,
+      "增加分配数": 100
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\runtime\\builder.py:229",
+      "增加字节": 4968,
+      "增加分配数": 92
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:35",
+      "增加字节": 3840,
+      "增加分配数": 135
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\resources\\icons.py:18",
+      "增加字节": 3456,
+      "增加分配数": 64
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:44",
+      "增加字节": 3240,
+      "增加分配数": 15
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:194",
+      "增加字节": 3175,
+      "增加分配数": 54
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:177",
+      "增加字节": 3024,
+      "增加分配数": 56
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:293",
+      "增加字节": 2991,
+      "增加分配数": 50
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:292",
+      "增加字节": 2786,
+      "增加分配数": 48
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:241",
+      "增加字节": 2694,
+      "增加分配数": 46
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:231",
+      "增加字节": 2679,
+      "增加分配数": 46
+    },
+    {
+      "位置": "<frozen abc>:123",
+      "增加字节": 1976,
+      "增加分配数": 26
+    },
+    {
+      "位置": "D:\\python311\\Lib\\subprocess.py:1018",
+      "增加字节": 1867,
+      "增加分配数": 16
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\app\\main_window.py:258",
+      "增加字节": 1800,
+      "增加分配数": 30
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:317",
+      "增加字节": 1719,
+      "增加分配数": 29
+    }
+  ],
+  "受跟踪对象数量增长": {
+    "panels.properties.PropertyPanel": 15,
+    "panels.object_tree.ObjectTree": 15,
+    "PySide6.QtWidgets.QLabel": 30,
+    "PySide6.QtWidgets.QLineEdit": 15,
+    "PySide6.QtWidgets.QTreeWidget": 15
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "mode": "preview",
+  "platform": "windows",
+  "signals": {
+    "opengl_widget": {
+      "initialized": 1,
+      "rendered": 5
+    },
+    "rhi_widget": {
+      "initialized": 1,
+      "rendered": 6
+    }
+  },
+  "errors": [],
+  "web_loaded": true,
+  "javascript": [
+    42.0
+  ],
+  "web_title": "Native Web Check",
+  "opengl_pixel": "#246b92",
+  "rhi_pixel": "#266c58",
+  "completed_properties": {
+    "web_attributes": true,
+    "web_fonts": true,
+    "web_background": true,
+    "opengl_partial": true,
+    "rhi_mirror": true,
+    "svg_ratio": true,
+    "svg_animation": true,
+    "scene_antialiasing": true,
+    "scene_background": true,
+    "live_web_update": true,
+    "live_gpu_update": true
+  },
+  "passed": true
+}

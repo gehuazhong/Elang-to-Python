@@ -1,0 +1,7 @@
+{
+  "platform": "windows",
+  "live_font_preview_and_project_isolation": "passed",
+  "apply_then_cancel": "passed",
+  "restart_restores_font_and_layout": "passed",
+  "small_dialog_and_restore_defaults": "passed"
+}

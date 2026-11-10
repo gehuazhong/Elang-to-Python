@@ -1,0 +1,14 @@
+{
+  "platform": "windows",
+  "audit": {
+    "registered_types": 77,
+    "toolbox_types": 72,
+    "before": 1668,
+    "after": 2694,
+    "added_property_entries": 1026
+  },
+  "native_preview": "passed",
+  "isolated_export": "passed",
+  "designer_properties": "passed",
+  "designer_edit_and_undo": "passed"
+}

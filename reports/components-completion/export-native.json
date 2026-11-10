@@ -1,0 +1,23 @@
+{
+  "mode": "export",
+  "platform": "windows",
+  "signals": {
+    "opengl_widget": {
+      "initialized": 1,
+      "rendered": 4
+    },
+    "rhi_widget": {
+      "initialized": 1,
+      "rendered": 5
+    }
+  },
+  "errors": [],
+  "web_loaded": true,
+  "javascript": [
+    42.0
+  ],
+  "web_title": "Native Web Check",
+  "opengl_pixel": "#246b92",
+  "rhi_pixel": "#266c58",
+  "passed": true
+}

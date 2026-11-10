@@ -1,0 +1,78 @@
+{
+  "platform": "windows",
+  "export_entry": "reports\\full-audit-20261111\\item-export-16utsu4c\\main.py",
+  "native": {
+    "list_widget": {
+      "style_refreshes": 20,
+      "model_resets_during_style": 0,
+      "selection_and_edits_preserved": true,
+      "content_replacement": true,
+      "style_refresh_ms": 3.69
+    },
+    "table_widget": {
+      "style_refreshes": 20,
+      "model_resets_during_style": 0,
+      "selection_and_edits_preserved": true,
+      "content_replacement": true,
+      "style_refresh_ms": 5.192
+    },
+    "tree_widget": {
+      "style_refreshes": 20,
+      "model_resets_during_style": 0,
+      "selection_and_edits_preserved": true,
+      "content_replacement": true,
+      "style_refresh_ms": 3.596
+    },
+    "super_list": {
+      "style_refreshes": 20,
+      "model_resets_during_style": 0,
+      "selection_and_edits_preserved": true,
+      "content_replacement": true,
+      "style_refresh_ms": 4.4
+    },
+    "combo_box": {
+      "style_refreshes": 20,
+      "model_resets_during_style": 0,
+      "selection_and_edits_preserved": true,
+      "content_replacement": true,
+      "style_refresh_ms": 1.769
+    }
+  },
+  "isolated_export": {
+    "list_widget": {
+      "style_refreshes": 20,
+      "model_resets_during_style": 0,
+      "selection_and_edits_preserved": true,
+      "content_replacement": true,
+      "style_refresh_ms": 3.398
+    },
+    "table_widget": {
+      "style_refreshes": 20,
+      "model_resets_during_style": 0,
+      "selection_and_edits_preserved": true,
+      "content_replacement": true,
+      "style_refresh_ms": 4.296
+    },
+    "tree_widget": {
+      "style_refreshes": 20,
+      "model_resets_during_style": 0,
+      "selection_and_edits_preserved": true,
+      "content_replacement": true,
+      "style_refresh_ms": 3.603
+    },
+    "super_list": {
+      "style_refreshes": 20,
+      "model_resets_during_style": 0,
+      "selection_and_edits_preserved": true,
+      "content_replacement": true,
+      "style_refresh_ms": 4.724
+    },
+    "combo_box": {
+      "style_refreshes": 20,
+      "model_resets_during_style": 0,
+      "selection_and_edits_preserved": true,
+      "content_replacement": true,
+      "style_refresh_ms": 1.788
+    }
+  }
+}

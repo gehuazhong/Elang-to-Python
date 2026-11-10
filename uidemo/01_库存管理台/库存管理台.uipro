@@ -1,0 +1,1615 @@
+{
+  "canvas": {
+    "grid_size": 8,
+    "show_grid": true,
+    "show_guides": true,
+    "snap_distance": 6,
+    "snap_to_grid": true,
+    "snap_to_guides": true
+  },
+  "codegen": {
+    "entry_file": "main.py",
+    "template_id": "builtin.pyside6",
+    "window_class": "MainWindow"
+  },
+  "connections": [
+    {
+      "enabled": true,
+      "event": "textChanged",
+      "id": "0716c400-5f3e-43e5-bf27-ccbde23e688e",
+      "source_id": "29df56d6-4635-4f0f-b6ac-f7dca77fb392",
+      "target": {
+        "handler_id": "1360c8ba-1e50-44a9-9ad0-f3c8859aa7cb",
+        "kind": "handler"
+      }
+    },
+    {
+      "enabled": true,
+      "event": "currentIndexChanged",
+      "id": "c5fe2e72-103b-4abb-91d8-caeadd98eff8",
+      "source_id": "f4bf407d-48e0-4ff5-a7e9-9cd1aa33ece3",
+      "target": {
+        "handler_id": "608112d7-514e-40a9-9974-e6fe50e493b2",
+        "kind": "handler"
+      }
+    },
+    {
+      "enabled": true,
+      "event": "toggled",
+      "id": "50e1a4fb-09fa-48f7-84f7-10bfdb030c29",
+      "source_id": "26ddc3a4-9068-4e15-9984-ca74283a19ba",
+      "target": {
+        "handler_id": "822e8fca-e853-452d-9c89-d182c3317afa",
+        "kind": "handler"
+      }
+    },
+    {
+      "enabled": true,
+      "event": "clicked",
+      "id": "935e4934-e21d-486d-8525-90fcd4e246e6",
+      "source_id": "f2f598fc-3861-4622-99ae-731ac144d512",
+      "target": {
+        "handler_id": "cb9d9578-06a0-4155-8bcc-c51d56286bec",
+        "kind": "handler"
+      }
+    },
+    {
+      "enabled": true,
+      "event": "clicked",
+      "id": "feb07ee7-19e9-45c9-a22f-68d4deeebcfd",
+      "source_id": "1b1b4d86-b042-4f8f-8521-db379be81481",
+      "target": {
+        "handler_id": "e04bae04-1fd4-4897-8053-33aadb541204",
+        "kind": "handler"
+      }
+    },
+    {
+      "enabled": true,
+      "event": "selection_changed",
+      "id": "de0360d1-2821-4d38-9cf5-2ef478a60759",
+      "source_id": "fe3f0834-1f57-48e2-a76a-a59c87a7fbe8",
+      "target": {
+        "handler_id": "add8ae35-ce79-499e-88c5-5f116a737cf4",
+        "kind": "handler"
+      }
+    }
+  ],
+  "document_id": "7cd37e62-f014-4fcd-9ed6-26f0a7ea8ccc",
+  "extensions": {},
+  "format": "uipro",
+  "handlers": [
+    {
+      "code_name": "on_search_textChanged",
+      "description": "处理“搜索物品”的“文本改变”事件。",
+      "id": "1360c8ba-1e50-44a9-9ad0-f3c8859aa7cb",
+      "name": "搜索物品文本改变",
+      "parameters": []
+    },
+    {
+      "code_name": "on_category_currentIndexChanged",
+      "description": "处理“物品分类”的“选择改变”事件。",
+      "id": "608112d7-514e-40a9-9974-e6fe50e493b2",
+      "name": "物品分类选择改变",
+      "parameters": []
+    },
+    {
+      "code_name": "on_low_only_toggled",
+      "description": "处理“仅看缺货”的“选中状态改变”事件。",
+      "id": "822e8fca-e853-452d-9c89-d182c3317afa",
+      "name": "仅看缺货选中状态改变",
+      "parameters": []
+    },
+    {
+      "code_name": "on_search_button_clicked",
+      "description": "处理“查询”的“被单击”事件。",
+      "id": "cb9d9578-06a0-4155-8bcc-c51d56286bec",
+      "name": "查询被单击",
+      "parameters": []
+    },
+    {
+      "code_name": "on_reset_button_clicked",
+      "description": "处理“重置”的“被单击”事件。",
+      "id": "e04bae04-1fd4-4897-8053-33aadb541204",
+      "name": "重置被单击",
+      "parameters": []
+    },
+    {
+      "code_name": "on_stock_list_selection_changed",
+      "description": "处理“库存列表”的“选择改变”事件。",
+      "id": "add8ae35-ce79-499e-88c5-5f116a737cf4",
+      "name": "库存列表选择改变",
+      "parameters": []
+    }
+  ],
+  "name": "青禾 · 库存管理台",
+  "nodes": [
+    {
+      "code_name": "result",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 28,
+        "width": 460,
+        "x": 228,
+        "y": 620
+      },
+      "id": "0825d891-d833-490c-a7b3-51ae23d1e168",
+      "layout": null,
+      "layout_item": null,
+      "name": "共 8 项 · 低库存阈值：10 件",
+      "object_order": 13,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 9,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "共 8 项 · 低库存阈值：10 件",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 13,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "reset_button",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 36,
+        "width": 100,
+        "x": 906,
+        "y": 274
+      },
+      "id": "1b1b4d86-b042-4f8f-8521-db379be81481",
+      "layout": null,
+      "layout_item": null,
+      "name": "重置",
+      "object_order": 11,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "auto_repeat": false,
+        "background_color": "#ffffff",
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "flat": false,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#253332",
+        "layout_direction": "left_to_right",
+        "repeat_delay": 300,
+        "repeat_interval": 100,
+        "status_tip": "",
+        "text": "重置",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 11,
+      "type_id": "builtin.button",
+      "type_version": 1
+    },
+    {
+      "code_name": "nav_active",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 42,
+        "width": 164,
+        "x": 16,
+        "y": 138
+      },
+      "id": "1d923ee5-f553-4e28-998b-a9142b64b4ea",
+      "layout": null,
+      "layout_item": null,
+      "name": "当前模块",
+      "object_order": 2,
+      "parent_id": "7fba7f85-d14b-49f6-9ce6-6a4d18620d62",
+      "properties": {
+        "background_color": "#285c4b",
+        "content_bottom": 0,
+        "content_left": 0,
+        "content_right": 0,
+        "content_top": 0,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame_shadow": "plain",
+        "frame_shape": "none",
+        "layout_direction": "left_to_right",
+        "line_width": 1,
+        "mid_line_width": 0,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 2,
+      "type_id": "builtin.frame",
+      "type_version": 1
+    },
+    {
+      "code_name": "warehouse_note",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 80,
+        "width": 148,
+        "x": 24,
+        "y": 296
+      },
+      "id": "2578a8d8-b3e3-4800-a943-9f976fea3ff3",
+      "layout": null,
+      "layout_item": null,
+      "name": "办公用品与设备",
+      "object_order": 5,
+      "parent_id": "7fba7f85-d14b-49f6-9ce6-6a4d18620d62",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "办公用品与设备\n统一登记，按需领用。",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": true
+      },
+      "slot": "children",
+      "stack_order": 5,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "low_only",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 30,
+        "width": 132,
+        "x": 658,
+        "y": 277
+      },
+      "id": "26ddc3a4-9068-4e15-9984-ca74283a19ba",
+      "layout": null,
+      "layout_item": null,
+      "name": "仅看缺货",
+      "object_order": 9,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "background_color": "",
+        "check_state": "unchecked",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_direction": "left_to_right",
+        "status_tip": "",
+        "text": "仅看低库存",
+        "tool_tip": "",
+        "tristate": false,
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 9,
+      "type_id": "builtin.check_box",
+      "type_version": 1
+    },
+    {
+      "code_name": "main_window",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 680,
+        "width": 1040,
+        "x": 100,
+        "y": 100
+      },
+      "id": "2996cbc1-7661-48e9-920f-2d397231e0bb",
+      "layout": null,
+      "layout_item": null,
+      "name": "主窗口",
+      "object_order": 0,
+      "parent_id": null,
+      "properties": {
+        "background_color": "#f5f6f2",
+        "enabled": true,
+        "font_family": "Microsoft YaHei UI",
+        "font_size": 10,
+        "foreground_color": "#253332",
+        "visible": true,
+        "window_title": "青禾 · 库存管理台"
+      },
+      "slot": "root",
+      "stack_order": null,
+      "type_id": "builtin.main_window",
+      "type_version": 1
+    },
+    {
+      "code_name": "search",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 36,
+        "width": 272,
+        "x": 228,
+        "y": 274
+      },
+      "id": "29df56d6-4635-4f0f-b6ac-f7dca77fb392",
+      "layout": null,
+      "layout_item": null,
+      "name": "搜索物品",
+      "object_order": 7,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "#ffffff",
+        "clear_button": true,
+        "echo_mode": "normal",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame": true,
+        "layout_direction": "left_to_right",
+        "max_length": 32767,
+        "placeholder_text": "搜索 ID、名称或位置",
+        "read_only": false,
+        "status_tip": "",
+        "text": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 7,
+      "type_id": "builtin.line_edit",
+      "type_version": 1
+    },
+    {
+      "code_name": "stock_label",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 28,
+        "width": 198,
+        "x": 18,
+        "y": 10
+      },
+      "id": "5075bb84-45b7-4764-8d90-3d36027fa26c",
+      "layout": null,
+      "layout_item": null,
+      "name": "在库数量2",
+      "object_order": 0,
+      "parent_id": "60b250de-1824-4ef8-8c63-2cf34c01b659",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "在库数量",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "warning_value",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 46,
+        "width": 198,
+        "x": 18,
+        "y": 40
+      },
+      "id": "58f63fbb-f1ba-4ef1-8f85-74d190b146f2",
+      "layout": null,
+      "layout_item": null,
+      "name": "2",
+      "object_order": 1,
+      "parent_id": "623eebae-c5b3-4c0c-89a2-ae302510d797",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": true,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 25,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#9a602b",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "2",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "stock_value",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 46,
+        "width": 198,
+        "x": 18,
+        "y": 40
+      },
+      "id": "5a202da7-e63e-4ef8-8767-3a2db3381a00",
+      "layout": null,
+      "layout_item": null,
+      "name": "406",
+      "object_order": 1,
+      "parent_id": "60b250de-1824-4ef8-8c63-2cf34c01b659",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": true,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 25,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#253332",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "406",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "stock_panel",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 98,
+        "width": 246,
+        "x": 490,
+        "y": 150
+      },
+      "id": "60b250de-1824-4ef8-8c63-2cf34c01b659",
+      "layout": null,
+      "layout_item": null,
+      "name": "在库数量",
+      "object_order": 5,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "background_color": "#ffffff",
+        "content_bottom": 0,
+        "content_left": 0,
+        "content_right": 0,
+        "content_top": 0,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame_shadow": "plain",
+        "frame_shape": "none",
+        "layout_direction": "left_to_right",
+        "line_width": 1,
+        "mid_line_width": 0,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 5,
+      "type_id": "builtin.frame",
+      "type_version": 1
+    },
+    {
+      "code_name": "warning_panel",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 98,
+        "width": 246,
+        "x": 752,
+        "y": 150
+      },
+      "id": "623eebae-c5b3-4c0c-89a2-ae302510d797",
+      "layout": null,
+      "layout_item": null,
+      "name": "需要补货",
+      "object_order": 6,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "background_color": "#ffffff",
+        "content_bottom": 0,
+        "content_left": 0,
+        "content_right": 0,
+        "content_top": 0,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame_shadow": "plain",
+        "frame_shape": "none",
+        "layout_direction": "left_to_right",
+        "line_width": 1,
+        "mid_line_width": 0,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 6,
+      "type_id": "builtin.frame",
+      "type_version": 1
+    },
+    {
+      "code_name": "sku_label",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 28,
+        "width": 198,
+        "x": 18,
+        "y": 10
+      },
+      "id": "64c2a6ff-41d6-4fba-91f1-ccb047f69a68",
+      "layout": null,
+      "layout_item": null,
+      "name": "物品种类2",
+      "object_order": 0,
+      "parent_id": "88dde5c1-3953-46e2-98b7-6803fb2c960a",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "物品种类",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "brand",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 38,
+        "width": 150,
+        "x": 24,
+        "y": 32
+      },
+      "id": "71c6a185-8c16-4bdd-be34-25bc88e70030",
+      "layout": null,
+      "layout_item": null,
+      "name": "青禾仓库",
+      "object_order": 0,
+      "parent_id": "7fba7f85-d14b-49f6-9ce6-6a4d18620d62",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": true,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 22,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#285c4b",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "青禾仓库",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "sidebar",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 680,
+        "width": 196,
+        "x": 0,
+        "y": 0
+      },
+      "id": "7fba7f85-d14b-49f6-9ce6-6a4d18620d62",
+      "layout": null,
+      "layout_item": null,
+      "name": "侧栏",
+      "object_order": 0,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "background_color": "#e7eee7",
+        "content_bottom": 0,
+        "content_left": 0,
+        "content_right": 0,
+        "content_top": 0,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame_shadow": "plain",
+        "frame_shape": "none",
+        "layout_direction": "left_to_right",
+        "line_width": 1,
+        "mid_line_width": 0,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.frame",
+      "type_version": 1
+    },
+    {
+      "code_name": "nav_text",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 32,
+        "width": 145,
+        "x": 16,
+        "y": 5
+      },
+      "id": "8330026c-815b-434e-b055-3fe781a0eacd",
+      "layout": null,
+      "layout_item": null,
+      "name": "01   库存总览",
+      "object_order": 0,
+      "parent_id": "1d923ee5-f553-4e28-998b-a9142b64b4ea",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": true,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#ffffff",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "01   库存总览",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "sku_panel",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 98,
+        "width": 246,
+        "x": 228,
+        "y": 150
+      },
+      "id": "88dde5c1-3953-46e2-98b7-6803fb2c960a",
+      "layout": null,
+      "layout_item": null,
+      "name": "物品种类",
+      "object_order": 4,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "background_color": "#ffffff",
+        "content_bottom": 0,
+        "content_left": 0,
+        "content_right": 0,
+        "content_top": 0,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame_shadow": "plain",
+        "frame_shape": "none",
+        "layout_direction": "left_to_right",
+        "line_width": 1,
+        "mid_line_width": 0,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 4,
+      "type_id": "builtin.frame",
+      "type_version": 1
+    },
+    {
+      "code_name": "selection",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 24,
+        "width": 778,
+        "x": 228,
+        "y": 647
+      },
+      "id": "9b704f5c-554c-4dab-a575-46dc123a4e99",
+      "layout": null,
+      "layout_item": null,
+      "name": "选择一行查看物品信息",
+      "object_order": 14,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 9,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "选择一行查看物品信息",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 14,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "sku_value",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 46,
+        "width": 198,
+        "x": 18,
+        "y": 40
+      },
+      "id": "a90fd069-9e2e-4a86-babd-585b8c7e376d",
+      "layout": null,
+      "layout_item": null,
+      "name": "8",
+      "object_order": 1,
+      "parent_id": "88dde5c1-3953-46e2-98b7-6803fb2c960a",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": true,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 25,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#285c4b",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "8",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "eyebrow",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 28,
+        "width": 510,
+        "x": 228,
+        "y": 22
+      },
+      "id": "af3724d0-6f07-4d2a-85e1-c6fbf2da99c8",
+      "layout": null,
+      "layout_item": null,
+      "name": "WAREHOUSE / OVERVIEW",
+      "object_order": 1,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 9,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "WAREHOUSE / OVERVIEW",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "title",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 44,
+        "width": 510,
+        "x": 228,
+        "y": 52
+      },
+      "id": "af6099d0-3859-427e-b20d-41532be47073",
+      "layout": null,
+      "layout_item": null,
+      "name": "库存总览",
+      "object_order": 2,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": true,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 24,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#253332",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "库存总览",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 2,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "sidebar_footer",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 52,
+        "width": 148,
+        "x": 24,
+        "y": 598
+      },
+      "id": "c0e7bc31-d3d7-4319-813e-b1dfc52afc4f",
+      "layout": null,
+      "layout_item": null,
+      "name": "本地示例数据",
+      "object_order": 6,
+      "parent_id": "7fba7f85-d14b-49f6-9ce6-6a4d18620d62",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "本地示例数据\n2026 / 11 / 07",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 6,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "brand_caption",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 28,
+        "width": 156,
+        "x": 24,
+        "y": 76
+      },
+      "id": "c51404c3-2bc3-4b9e-9ab5-b7660c260b5a",
+      "layout": null,
+      "layout_item": null,
+      "name": "小团队的库存工作台",
+      "object_order": 1,
+      "parent_id": "7fba7f85-d14b-49f6-9ce6-6a4d18620d62",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "小团队的库存工作台",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "warehouse_label",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 28,
+        "width": 140,
+        "x": 24,
+        "y": 220
+      },
+      "id": "d34d8563-551b-4cca-a7a9-496160e460eb",
+      "layout": null,
+      "layout_item": null,
+      "name": "当前仓库",
+      "object_order": 3,
+      "parent_id": "7fba7f85-d14b-49f6-9ce6-6a4d18620d62",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "当前仓库",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 3,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "warning_label",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 28,
+        "width": 198,
+        "x": 18,
+        "y": 10
+      },
+      "id": "dd291e3b-ca24-4a85-a24e-b59b2a68f882",
+      "layout": null,
+      "layout_item": null,
+      "name": "需要补货2",
+      "object_order": 0,
+      "parent_id": "623eebae-c5b3-4c0c-89a2-ae302510d797",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "需要补货",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "subtitle",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 28,
+        "width": 720,
+        "x": 228,
+        "y": 103
+      },
+      "id": "e0f76517-2860-46cd-96f1-a165da7cf8b5",
+      "layout": null,
+      "layout_item": null,
+      "name": "快速找到物品，及时补足低库存。",
+      "object_order": 3,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "快速找到物品，及时补足低库存。",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 3,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "central_widget",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "layout": {
+        "kind": "absolute",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "spacing": 8
+      },
+      "layout_item": null,
+      "name": "工作区",
+      "object_order": 0,
+      "parent_id": "2996cbc1-7661-48e9-920f-2d397231e0bb",
+      "properties": {
+        "background_color": "#f5f6f2",
+        "enabled": true,
+        "visible": true
+      },
+      "slot": "central",
+      "stack_order": null,
+      "type_id": "builtin.central_widget",
+      "type_version": 1
+    },
+    {
+      "code_name": "search_button",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 36,
+        "width": 96,
+        "x": 798,
+        "y": 274
+      },
+      "id": "f2f598fc-3861-4622-99ae-731ac144d512",
+      "layout": null,
+      "layout_item": null,
+      "name": "查询",
+      "object_order": 10,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "auto_repeat": false,
+        "background_color": "#285c4b",
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "flat": false,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#ffffff",
+        "layout_direction": "left_to_right",
+        "repeat_delay": 300,
+        "repeat_interval": 100,
+        "status_tip": "",
+        "text": "查询",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 10,
+      "type_id": "builtin.button",
+      "type_version": 1
+    },
+    {
+      "code_name": "category",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 36,
+        "width": 132,
+        "x": 512,
+        "y": 274
+      },
+      "id": "f4bf407d-48e0-4ff5-a7e9-9cd1aa33ece3",
+      "layout": null,
+      "layout_item": null,
+      "name": "物品分类",
+      "object_order": 8,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "background_color": "#ffffff",
+        "current_index": 0,
+        "duplicates_enabled": false,
+        "editable": false,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "insert_policy": "none",
+        "items": [
+          "全部分类",
+          "办公用品",
+          "电子设备",
+          "耗材"
+        ],
+        "layout_direction": "left_to_right",
+        "max_visible_items": 10,
+        "placeholder_text": "请选择",
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 8,
+      "type_id": "builtin.combo_box",
+      "type_version": 1
+    },
+    {
+      "code_name": "warehouse",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 28,
+        "width": 154,
+        "x": 24,
+        "y": 252
+      },
+      "id": "fc7169c6-95ed-4c42-99fe-ec7c80d74065",
+      "layout": null,
+      "layout_item": null,
+      "name": "杭州 · 一号仓",
+      "object_order": 4,
+      "parent_id": "7fba7f85-d14b-49f6-9ce6-6a4d18620d62",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": true,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#253332",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "杭州 · 一号仓",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 4,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "stock_list",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 284,
+        "width": 778,
+        "x": 228,
+        "y": 326
+      },
+      "id": "fe3f0834-1f57-48e2-a76a-a59c87a7fbe8",
+      "layout": null,
+      "layout_item": null,
+      "name": "库存列表",
+      "object_order": 12,
+      "parent_id": "e5b1752e-9d45-4907-8648-08d034c101a4",
+      "properties": {
+        "alternating": false,
+        "background_color": "#ffffff",
+        "checkboxes": false,
+        "checked_rows": [],
+        "column_width": 120,
+        "editable": false,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "full_row": true,
+        "header_visible": true,
+        "layout_direction": "left_to_right",
+        "multi_select": false,
+        "row_height": 31,
+        "sorting": true,
+        "status_tip": "",
+        "stretch_last_section": true,
+        "table_data": {
+          "column_widths": [
+            62,
+            246,
+            106,
+            70,
+            116,
+            150
+          ],
+          "headers": [
+            "ID",
+            "物品名称 / 规格",
+            "分类",
+            "库存",
+            "库位",
+            "状态"
+          ],
+          "rows": [
+            [
+              "1001",
+              "A4 复印纸 / 500 张",
+              "办公用品",
+              "128",
+              "A-01-01",
+              "充足"
+            ],
+            [
+              "1002",
+              "无线鼠标 / 石墨灰",
+              "电子设备",
+              "36",
+              "B-02-04",
+              "充足"
+            ],
+            [
+              "1003",
+              "USB-C 扩展坞 / 六合一",
+              "电子设备",
+              "8",
+              "B-02-06",
+              "需补货"
+            ],
+            [
+              "1004",
+              "黑色中性笔 / 0.5 mm",
+              "办公用品",
+              "96",
+              "A-01-03",
+              "充足"
+            ],
+            [
+              "1005",
+              "标签纸 / 40 × 30 mm",
+              "耗材",
+              "12",
+              "C-01-02",
+              "充足"
+            ],
+            [
+              "1006",
+              "笔记本支架 / 铝合金",
+              "电子设备",
+              "42",
+              "B-03-01",
+              "充足"
+            ],
+            [
+              "1007",
+              "打印机墨盒 / 黑色",
+              "耗材",
+              "6",
+              "C-02-01",
+              "需补货"
+            ],
+            [
+              "1008",
+              "牛皮纸档案袋 / A4",
+              "办公用品",
+              "78",
+              "A-02-05",
+              "充足"
+            ]
+          ]
+        },
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 12,
+      "type_id": "builtin.super_list",
+      "type_version": 1
+    }
+  ],
+  "resources": [],
+  "root_id": "2996cbc1-7661-48e9-920f-2d397231e0bb",
+  "schema_version": 2,
+  "tab_order": [
+    "29df56d6-4635-4f0f-b6ac-f7dca77fb392",
+    "f4bf407d-48e0-4ff5-a7e9-9cd1aa33ece3",
+    "26ddc3a4-9068-4e15-9984-ca74283a19ba",
+    "f2f598fc-3861-4622-99ae-731ac144d512",
+    "1b1b4d86-b042-4f8f-8521-db379be81481",
+    "fe3f0834-1f57-48e2-a76a-a59c87a7fbe8"
+  ]
+}

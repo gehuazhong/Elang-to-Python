@@ -1,0 +1,264 @@
+{
+  "说明": "三轮预热后启用 Python 分配追踪；追踪器本身占用额外内存，不与无追踪基准直接比较。",
+  "轮次": 15,
+  "采样": [
+    {
+      "轮次": 1,
+      "私有内存": 69148672,
+      "Python保留分配": 197468,
+      "Python分配峰值": 34644535,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 2,
+      "私有内存": 76410880,
+      "Python保留分配": 206138,
+      "Python分配峰值": 34746043,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 3,
+      "私有内存": 78254080,
+      "Python保留分配": 210523,
+      "Python分配峰值": 34746043,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 4,
+      "私有内存": 80056320,
+      "Python保留分配": 211626,
+      "Python分配峰值": 34746043,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 5,
+      "私有内存": 81539072,
+      "Python保留分配": 210744,
+      "Python分配峰值": 34770859,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 6,
+      "私有内存": 83091456,
+      "Python保留分配": 214778,
+      "Python分配峰值": 34770859,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 7,
+      "私有内存": 83632128,
+      "Python保留分配": 215957,
+      "Python分配峰值": 34770859,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 8,
+      "私有内存": 82833408,
+      "Python保留分配": 206833,
+      "Python分配峰值": 34790319,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 9,
+      "私有内存": 85045248,
+      "Python保留分配": 216010,
+      "Python分配峰值": 34790319,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 10,
+      "私有内存": 85131264,
+      "Python保留分配": 215733,
+      "Python分配峰值": 34790319,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 11,
+      "私有内存": 85250048,
+      "Python保留分配": 218188,
+      "Python分配峰值": 34790319,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 12,
+      "私有内存": 85737472,
+      "Python保留分配": 219846,
+      "Python分配峰值": 34790319,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 13,
+      "私有内存": 85176320,
+      "Python保留分配": 218854,
+      "Python分配峰值": 34790319,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 14,
+      "私有内存": 85577728,
+      "Python保留分配": 220537,
+      "Python分配峰值": 34790319,
+      "顶层窗口": 0
+    },
+    {
+      "轮次": 15,
+      "私有内存": 85757952,
+      "Python保留分配": 221374,
+      "Python分配峰值": 34790319,
+      "顶层窗口": 0
+    }
+  ],
+  "保留分配增量": [
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\tests\\check_soak_allocations.py:23",
+      "增加字节": 46102,
+      "增加分配数": 580
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\runtime\\widget_properties.py:134",
+      "增加字节": 35100,
+      "增加分配数": 650
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\value_editors.py:19",
+      "增加字节": 16254,
+      "增加分配数": 301
+    },
+    {
+      "位置": "D:\\python311\\Lib\\collections\\__init__.py:690",
+      "增加字节": 13824,
+      "增加分配数": 27
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\runtime\\builder.py:244",
+      "增加字节": 9774,
+      "增加分配数": 181
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\runtime\\builder.py:226",
+      "增加字节": 9558,
+      "增加分配数": 177
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\runtime\\builder.py:229",
+      "增加字节": 8370,
+      "增加分配数": 155
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\tests\\test_property_interactions.py:42",
+      "增加字节": 7290,
+      "增加分配数": 135
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\value_editors.py:46",
+      "增加字节": 6048,
+      "增加分配数": 112
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\value_editors.py:61",
+      "增加字节": 5832,
+      "增加分配数": 108
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:229",
+      "增加字节": 5130,
+      "增加分配数": 95
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:198",
+      "增加字节": 3302,
+      "增加分配数": 56
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:297",
+      "增加字节": 3056,
+      "增加分配数": 51
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:181",
+      "增加字节": 2970,
+      "增加分配数": 55
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\resources\\icons.py:18",
+      "增加字节": 2916,
+      "增加分配数": 54
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:245",
+      "增加字节": 2639,
+      "增加分配数": 45
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:296",
+      "增加字节": 2503,
+      "增加分配数": 43
+    },
+    {
+      "位置": "<frozen abc>:123",
+      "增加字节": 1976,
+      "增加分配数": 26
+    },
+    {
+      "位置": "D:\\python311\\Lib\\subprocess.py:1018",
+      "增加字节": 1867,
+      "增加分配数": 16
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\app\\main_window.py:259",
+      "增加字节": 1800,
+      "增加分配数": 30
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:321",
+      "增加字节": 1755,
+      "增加分配数": 30
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:235",
+      "增加字节": 1588,
+      "增加分配数": 27
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\tests\\check_soak_allocations.py:49",
+      "增加字节": 1088,
+      "增加分配数": 16
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\designer\\renderer.py:190",
+      "增加字节": 1080,
+      "增加分配数": 20
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\object_tree.py:120",
+      "增加字节": 972,
+      "增加分配数": 18
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:303",
+      "增加字节": 944,
+      "增加分配数": 16
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\designer\\renderer.py:64",
+      "增加字节": 918,
+      "增加分配数": 17
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\core\\deferred.py:15",
+      "增加字节": 900,
+      "增加分配数": 15
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\panels\\properties.py:213",
+      "增加字节": 879,
+      "增加分配数": 15
+    },
+    {
+      "位置": "D:\\PythonProject\\UI Play Pro 1.0\\tests\\check_soak_allocations.py:48",
+      "增加字节": 840,
+      "增加分配数": 30
+    }
+  ],
+  "受跟踪对象数量增长": {}
+}

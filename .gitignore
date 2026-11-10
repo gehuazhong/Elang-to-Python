@@ -1,0 +1,20 @@
+.venv/
+venv/
+.idea/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+build/
+dist/
+
+# Local credentials and project backups.
+.env
+.env.*
+!.env.example
+*.uipro.bak
+*.uipro.lock
+*.prof
+*.pstats
+Thumbs.db
+.DS_Store

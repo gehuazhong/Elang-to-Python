@@ -1,0 +1,29 @@
+{
+  "native": {
+    "platform": "windows",
+    "click_positions_checked": 12,
+    "repeated_switches": 60,
+    "active_state_synchronized": true,
+    "hidden_tab_header": true
+  },
+  "isolated_export": {
+    "platform": "windows",
+    "click_positions_checked": 12,
+    "repeated_switches": 60,
+    "active_state_synchronized": true,
+    "hidden_tab_header": true
+  },
+  "preview_process": {
+    "platform": "windows",
+    "click_positions_checked": 12,
+    "repeated_switches": 60,
+    "active_state_synchronized": true,
+    "hidden_tab_header": true
+  },
+  "original_projects_unchanged": {
+    "uidemo\\08_万金油UI\\万金油UI.uipro": "11ff491930d5104c97803b6076b1f430b62de3e59114e9bbc388cd2d644b580b",
+    "uidemo\\07_兔子工具个人中心\\兔子工具个人中心.uipro": "c6eb69209c628ac4fec986f559fa40a41731d5d0338fb4c8cc75920400b5fb85"
+  },
+  "example": "uidemo\\08_万金油UI\\万金油UI_导航增强.uipro",
+  "export": "reports\\navigation-20261111\\export\\main.py"
+}

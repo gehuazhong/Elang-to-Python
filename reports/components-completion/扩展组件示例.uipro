@@ -1,0 +1,324 @@
+{
+  "canvas": {
+    "grid_size": 8,
+    "show_grid": true,
+    "show_guides": true,
+    "snap_distance": 6,
+    "snap_to_grid": true,
+    "snap_to_guides": true
+  },
+  "codegen": {
+    "entry_file": "main.py",
+    "template_id": "builtin.pyside6",
+    "window_class": "MainWindow"
+  },
+  "connections": [],
+  "document_id": "5983e358-88b5-4acf-8732-61c7f17204c7",
+  "extensions": {},
+  "format": "uipro",
+  "handlers": [],
+  "name": "扩展组件验收",
+  "nodes": [
+    {
+      "code_name": "graphics_view_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 250,
+        "width": 320,
+        "x": 650,
+        "y": 310
+      },
+      "id": "1369c5fb-37f7-49d9-9b18-adb3fa2acd95",
+      "layout": null,
+      "layout_item": null,
+      "name": "图形视图1",
+      "object_order": 4,
+      "parent_id": "294fe769-307e-4eab-8e06-3d7f0ff1ac78",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "image": "",
+        "interactive": true,
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "scene_height": 480,
+        "scene_width": 640,
+        "status_tip": "",
+        "text": "图形场景",
+        "tool_tip": "",
+        "visible": true,
+        "zoom": 100
+      },
+      "slot": "children",
+      "stack_order": 4,
+      "type_id": "builtin.graphics_view",
+      "type_version": 1
+    },
+    {
+      "code_name": "opengl_widget_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 250,
+        "width": 295,
+        "x": 20,
+        "y": 310
+      },
+      "id": "2500d550-4629-42ef-b9e8-7ef6263ec77b",
+      "layout": null,
+      "layout_item": null,
+      "name": "OpenGL 绘图控件1",
+      "object_order": 2,
+      "parent_id": "294fe769-307e-4eab-8e06-3d7f0ff1ac78",
+      "properties": {
+        "background_color": "",
+        "clear_color": "#246b92",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "samples": 1,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 2,
+      "type_id": "builtin.opengl_widget",
+      "type_version": 1
+    },
+    {
+      "code_name": "central_widget",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "294fe769-307e-4eab-8e06-3d7f0ff1ac78",
+      "layout": {
+        "kind": "absolute",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "spacing": 8
+      },
+      "layout_item": null,
+      "name": "工作区",
+      "object_order": 0,
+      "parent_id": "dc7842fd-ada1-4b35-ba86-0142bae48956",
+      "properties": {
+        "enabled": true,
+        "visible": true
+      },
+      "slot": "central",
+      "stack_order": null,
+      "type_id": "builtin.central_widget",
+      "type_version": 1
+    },
+    {
+      "code_name": "web_view_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 270,
+        "width": 610,
+        "x": 20,
+        "y": 20
+      },
+      "id": "49c12cb2-d9b7-4713-b05d-4d599a6e8705",
+      "layout": null,
+      "layout_item": null,
+      "name": "网页控件1",
+      "object_order": 0,
+      "parent_id": "294fe769-307e-4eab-8e06-3d7f0ff1ac78",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "html": "<!doctype html><meta charset='utf-8'><title>Native Web Check</title><style>body{font:18px 'Microsoft YaHei UI';padding:24px;color:#243444}h1{color:#0078d4}</style><h1>网页控件已加载</h1><p>原生 Chromium · JavaScript · 独立导出</p><script>window.uiplayCheck=6*7</script>",
+        "javascript": true,
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "source_mode": "html",
+        "status_tip": "",
+        "tool_tip": "",
+        "url": "about:blank",
+        "visible": true,
+        "zoom_factor": 1.0
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.web_view",
+      "type_version": 1
+    },
+    {
+      "code_name": "svg_widget_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 270,
+        "width": 320,
+        "x": 650,
+        "y": 20
+      },
+      "id": "5b43bdba-51e6-44f7-a115-6de6d686a15a",
+      "layout": null,
+      "layout_item": null,
+      "name": "SVG 矢量图1",
+      "object_order": 1,
+      "parent_id": "294fe769-307e-4eab-8e06-3d7f0ff1ac78",
+      "properties": {
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "status_tip": "",
+        "svg_data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"160\" viewBox=\"0 0 200 160\"><rect x=\"20\" y=\"20\" width=\"160\" height=\"120\" rx=\"16\" fill=\"#0078d4\"/></svg>",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.svg_widget",
+      "type_version": 1
+    },
+    {
+      "code_name": "rhi_widget_1",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 250,
+        "width": 295,
+        "x": 335,
+        "y": 310
+      },
+      "id": "94f49bb2-8123-4260-a2e8-5db2d1c83c87",
+      "layout": null,
+      "layout_item": null,
+      "name": "硬件渲染控件1",
+      "object_order": 3,
+      "parent_id": "294fe769-307e-4eab-8e06-3d7f0ff1ac78",
+      "properties": {
+        "background_color": "",
+        "clear_color": "#266c58",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_column": -1,
+        "layout_column_span": 1,
+        "layout_direction": "left_to_right",
+        "layout_row": -1,
+        "layout_row_span": 1,
+        "layout_stretch": 0,
+        "samples": 1,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 3,
+      "type_id": "builtin.rhi_widget",
+      "type_version": 1
+    },
+    {
+      "code_name": "main_window",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 650,
+        "width": 1000,
+        "x": 100,
+        "y": 100
+      },
+      "id": "dc7842fd-ada1-4b35-ba86-0142bae48956",
+      "layout": null,
+      "layout_item": null,
+      "name": "主窗口",
+      "object_order": 0,
+      "parent_id": null,
+      "properties": {
+        "enabled": true,
+        "visible": true,
+        "window_title": "扩展组件验收"
+      },
+      "slot": "root",
+      "stack_order": null,
+      "type_id": "builtin.main_window",
+      "type_version": 1
+    }
+  ],
+  "resources": [],
+  "root_id": "dc7842fd-ada1-4b35-ba86-0142bae48956",
+  "schema_version": 2,
+  "tab_order": []
+}

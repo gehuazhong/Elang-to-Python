@@ -1,0 +1,926 @@
+{
+  "canvas": {
+    "grid_size": 8,
+    "show_grid": true,
+    "show_guides": true,
+    "snap_distance": 6,
+    "snap_to_grid": true,
+    "snap_to_guides": true
+  },
+  "codegen": {
+    "entry_file": "main.py",
+    "template_id": "builtin.pyside6",
+    "window_class": "MainWindow"
+  },
+  "connections": [
+    {
+      "enabled": true,
+      "event": "clicked",
+      "id": "275a3dfa-414e-4883-87ae-5106e72d86e8",
+      "source_id": "7f27c439-8e3f-48cd-af94-a6033d42eaeb",
+      "target": {
+        "handler_id": "1269926a-ea1c-4681-b746-15601e00167b",
+        "kind": "handler"
+      }
+    },
+    {
+      "enabled": true,
+      "event": "clicked",
+      "id": "3c96d892-c81f-4de8-a156-d8f096abcba3",
+      "source_id": "5d9970d3-2f50-4544-9727-2d3d712c9f01",
+      "target": {
+        "handler_id": "c8bd60be-496c-4a45-8662-fad9b210b4cd",
+        "kind": "handler"
+      }
+    },
+    {
+      "enabled": true,
+      "event": "clicked",
+      "id": "c06fa26d-9b23-4c4c-ad49-d030786a843b",
+      "source_id": "9c7ecf82-cb1c-4153-b20e-b561efe3f216",
+      "target": {
+        "handler_id": "2067a602-d6c3-4950-88dc-a825ee1d63e0",
+        "kind": "handler"
+      }
+    },
+    {
+      "enabled": true,
+      "event": "clicked",
+      "id": "4b2531d1-3345-41e2-983c-354ce3d96adb",
+      "source_id": "02d0bf65-f38f-46b2-b01f-0cb2f789f5d7",
+      "target": {
+        "handler_id": "e39d4676-8d95-46d3-8c8c-aff895168f47",
+        "kind": "handler"
+      }
+    },
+    {
+      "enabled": true,
+      "event": "clicked",
+      "id": "8469ad2a-ee7d-447a-8bc2-8d2a97948c9c",
+      "source_id": "430f423b-ccfc-482e-bca5-a156f0b121be",
+      "target": {
+        "handler_id": "e2946184-619d-40d7-8ce5-a8aff5f8d823",
+        "kind": "handler"
+      }
+    },
+    {
+      "enabled": true,
+      "event": "clicked",
+      "id": "e3b2b90c-24b0-44c7-aece-c5c7b56a736b",
+      "source_id": "64ce00d7-7a66-4874-a479-133e8326bac0",
+      "target": {
+        "handler_id": "4a0b74e7-a167-40f0-9ab3-cd44513deb59",
+        "kind": "handler"
+      }
+    }
+  ],
+  "document_id": "fbb208f2-5644-4088-aae5-88dcd4dc5be3",
+  "extensions": {},
+  "format": "uipro",
+  "handlers": [
+    {
+      "code_name": "on_menu_new_clicked",
+      "description": "处理“新建项目(&N)”的“被单击”事件。",
+      "id": "1269926a-ea1c-4681-b746-15601e00167b",
+      "name": "新建项目(&N)被单击",
+      "parameters": []
+    },
+    {
+      "code_name": "on_menu_recent_inventory_clicked",
+      "description": "处理“库存管理台”的“被单击”事件。",
+      "id": "c8bd60be-496c-4a45-8662-fad9b210b4cd",
+      "name": "库存管理台被单击",
+      "parameters": []
+    },
+    {
+      "code_name": "on_menu_recent_tasks_clicked",
+      "description": "处理“任务下载中心”的“被单击”事件。",
+      "id": "2067a602-d6c3-4950-88dc-a825ee1d63e0",
+      "name": "任务下载中心被单击",
+      "parameters": []
+    },
+    {
+      "code_name": "on_menu_exit_clicked",
+      "description": "处理“退出(&X)”的“被单击”事件。",
+      "id": "e39d4676-8d95-46d3-8c8c-aff895168f47",
+      "name": "退出(&X)被单击",
+      "parameters": []
+    },
+    {
+      "code_name": "on_menu_details_clicked",
+      "description": "处理“显示说明(&G)”的“被单击”事件。",
+      "id": "e2946184-619d-40d7-8ce5-a8aff5f8d823",
+      "name": "显示说明(&G)被单击",
+      "parameters": []
+    },
+    {
+      "code_name": "on_menu_about_clicked",
+      "description": "处理“关于菜单示例”的“被单击”事件。",
+      "id": "4a0b74e7-a167-40f0-9ab3-cd44513deb59",
+      "name": "关于菜单示例被单击",
+      "parameters": []
+    }
+  ],
+  "name": "菜单编辑示例",
+  "nodes": [
+    {
+      "code_name": "menu_exit",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "02d0bf65-f38f-46b2-b01f-0cb2f789f5d7",
+      "layout": null,
+      "layout_item": null,
+      "name": "退出(&X)",
+      "object_order": 5,
+      "parent_id": "38fe8d58-a1f8-4c76-9aa5-c1f034b5d918",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "Ctrl+Q",
+        "status_tip": "",
+        "text": "退出(&X)",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_bar",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "25fd2f64-10a3-4562-adaf-5604fcd193f6",
+      "layout": null,
+      "layout_item": null,
+      "name": "菜单栏",
+      "object_order": 0,
+      "parent_id": "46f3f1c0-e70b-4033-aa42-ff7dffd0d576",
+      "properties": {
+        "background_color": "",
+        "bar_height": 28,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "layout_direction": "left_to_right",
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "menu_bar",
+      "stack_order": null,
+      "type_id": "builtin.menu_bar",
+      "type_version": 1
+    },
+    {
+      "code_name": "content_title",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 34,
+        "width": 748,
+        "x": 24,
+        "y": 24
+      },
+      "id": "37c60cb2-a2d6-494c-893a-112caaf9456b",
+      "layout": null,
+      "layout_item": null,
+      "name": "从菜单开始操作",
+      "object_order": 0,
+      "parent_id": "43876f9b-6bb9-487e-a932-983ba955e987",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": true,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 16,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#253332",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "从菜单开始操作",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_file",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "38fe8d58-a1f8-4c76-9aa5-c1f034b5d918",
+      "layout": null,
+      "layout_item": null,
+      "name": "文件(&F)",
+      "object_order": 0,
+      "parent_id": "25fd2f64-10a3-4562-adaf-5604fcd193f6",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "",
+        "status_tip": "",
+        "text": "文件(&F)",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "title",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 46,
+        "width": 800,
+        "x": 36,
+        "y": 60
+      },
+      "id": "3a06c0e4-710e-4c1a-a1ea-52e7251c61c6",
+      "layout": null,
+      "layout_item": null,
+      "name": "我的项目工作台",
+      "object_order": 1,
+      "parent_id": "f0783501-580d-4c16-8848-5007937baacb",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": true,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 24,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#253332",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "我的项目工作台",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_details",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "430f423b-ccfc-482e-bca5-a156f0b121be",
+      "layout": null,
+      "layout_item": null,
+      "name": "显示说明(&G)",
+      "object_order": 0,
+      "parent_id": "fb39d3b0-e989-4240-9771-1adacb5500c7",
+      "properties": {
+        "checkable": true,
+        "checked": true,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "Ctrl+G",
+        "status_tip": "",
+        "text": "显示说明(&G)",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "content",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 246,
+        "width": 808,
+        "x": 36,
+        "y": 180
+      },
+      "id": "43876f9b-6bb9-487e-a932-983ba955e987",
+      "layout": null,
+      "layout_item": null,
+      "name": "内容区",
+      "object_order": 3,
+      "parent_id": "f0783501-580d-4c16-8848-5007937baacb",
+      "properties": {
+        "background_color": "#ffffff",
+        "content_bottom": 0,
+        "content_left": 0,
+        "content_right": 0,
+        "content_top": 0,
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 0,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "",
+        "frame_shadow": "plain",
+        "frame_shape": "none",
+        "layout_direction": "left_to_right",
+        "line_width": 1,
+        "mid_line_width": 0,
+        "status_tip": "",
+        "tool_tip": "",
+        "visible": true
+      },
+      "slot": "children",
+      "stack_order": 3,
+      "type_id": "builtin.frame",
+      "type_version": 1
+    },
+    {
+      "code_name": "main_window",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 600,
+        "width": 880,
+        "x": 100,
+        "y": 100
+      },
+      "id": "46f3f1c0-e70b-4033-aa42-ff7dffd0d576",
+      "layout": null,
+      "layout_item": null,
+      "name": "主窗口",
+      "object_order": 0,
+      "parent_id": null,
+      "properties": {
+        "background_color": "#f5f6f2",
+        "enabled": true,
+        "font_family": "Microsoft YaHei UI",
+        "font_size": 10,
+        "foreground_color": "#253332",
+        "visible": true,
+        "window_title": "菜单编辑示例"
+      },
+      "slot": "root",
+      "stack_order": null,
+      "type_id": "builtin.main_window",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_disabled",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "4f623431-0f46-47f5-9839-edabb74d9fdf",
+      "layout": null,
+      "layout_item": null,
+      "name": "禁止操作",
+      "object_order": 3,
+      "parent_id": "38fe8d58-a1f8-4c76-9aa5-c1f034b5d918",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": false,
+        "separator": false,
+        "shortcut": "",
+        "status_tip": "",
+        "text": "禁止操作",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "detail",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 128,
+        "width": 748,
+        "x": 24,
+        "y": 82
+      },
+      "id": "5b3cc678-566a-4d31-8fe7-679acdb545b9",
+      "layout": null,
+      "layout_item": null,
+      "name": "文件 → 新建项目：更新下方状态",
+      "object_order": 1,
+      "parent_id": "43876f9b-6bb9-487e-a932-983ba955e987",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "文件 → 新建项目：更新下方状态\n文件 → 最近项目：体验三级菜单\n视图 → 显示说明：切换本区内容\n禁止操作不可点击；隐藏操作不会显示",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 1,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_recent_inventory",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "5d9970d3-2f50-4544-9727-2d3d712c9f01",
+      "layout": null,
+      "layout_item": null,
+      "name": "库存管理台",
+      "object_order": 0,
+      "parent_id": "a6d77975-64c2-4a7f-a39e-342e3e7b3fd6",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "",
+        "status_tip": "",
+        "text": "库存管理台",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_about",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "64ce00d7-7a66-4874-a479-133e8326bac0",
+      "layout": null,
+      "layout_item": null,
+      "name": "关于菜单示例",
+      "object_order": 0,
+      "parent_id": "78135417-f975-493f-b97e-788be0f731f6",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "F1",
+        "status_tip": "",
+        "text": "关于菜单示例",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_help",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "78135417-f975-493f-b97e-788be0f731f6",
+      "layout": null,
+      "layout_item": null,
+      "name": "帮助(&H)",
+      "object_order": 2,
+      "parent_id": "25fd2f64-10a3-4562-adaf-5604fcd193f6",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "",
+        "status_tip": "",
+        "text": "帮助(&H)",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_new",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "7f27c439-8e3f-48cd-af94-a6033d42eaeb",
+      "layout": null,
+      "layout_item": null,
+      "name": "新建项目(&N)",
+      "object_order": 0,
+      "parent_id": "38fe8d58-a1f8-4c76-9aa5-c1f034b5d918",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "Ctrl+N",
+        "status_tip": "",
+        "text": "新建项目(&N)",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_hidden",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "942f18da-80cc-4389-9873-aec902dafaf5",
+      "layout": null,
+      "layout_item": null,
+      "name": "隐藏操作",
+      "object_order": 4,
+      "parent_id": "38fe8d58-a1f8-4c76-9aa5-c1f034b5d918",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "",
+        "status_tip": "",
+        "text": "隐藏操作",
+        "visible": false
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_recent_tasks",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "9c7ecf82-cb1c-4153-b20e-b561efe3f216",
+      "layout": null,
+      "layout_item": null,
+      "name": "任务下载中心",
+      "object_order": 1,
+      "parent_id": "a6d77975-64c2-4a7f-a39e-342e3e7b3fd6",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "",
+        "status_tip": "",
+        "text": "任务下载中心",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_recent",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "a6d77975-64c2-4a7f-a39e-342e3e7b3fd6",
+      "layout": null,
+      "layout_item": null,
+      "name": "最近项目(&R)",
+      "object_order": 1,
+      "parent_id": "38fe8d58-a1f8-4c76-9aa5-c1f034b5d918",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "",
+        "status_tip": "",
+        "text": "最近项目(&R)",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "eyebrow",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 24,
+        "width": 800,
+        "x": 36,
+        "y": 26
+      },
+      "id": "a93e5706-3a8b-46ad-8c03-cc025e2ed6f3",
+      "layout": null,
+      "layout_item": null,
+      "name": "菜单与事件",
+      "object_order": 0,
+      "parent_id": "f0783501-580d-4c16-8848-5007937baacb",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 9,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "菜单与事件",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 0,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_message",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 42,
+        "width": 808,
+        "x": 36,
+        "y": 458
+      },
+      "id": "cc7ea731-d3d8-4699-bcb2-2a57a5327001",
+      "layout": null,
+      "layout_item": null,
+      "name": "就绪。请使用窗口上方菜单。",
+      "object_order": 4,
+      "parent_id": "f0783501-580d-4c16-8848-5007937baacb",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#285c4b",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "就绪。请使用窗口上方菜单。",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 4,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "intro",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": {
+        "height": 32,
+        "width": 800,
+        "x": 36,
+        "y": 116
+      },
+      "id": "e706d22d-4550-468a-8ef0-48bcc19f1bb0",
+      "layout": null,
+      "layout_item": null,
+      "name": "文件、视图、帮助菜单可直接操作，也可以使用 Ct",
+      "object_order": 2,
+      "parent_id": "f0783501-580d-4c16-8848-5007937baacb",
+      "properties": {
+        "alignment": "left_vcenter",
+        "background_color": "",
+        "enabled": true,
+        "font_bold": false,
+        "font_family": "",
+        "font_italic": false,
+        "font_size": 10,
+        "font_strikeout": false,
+        "font_underline": false,
+        "foreground_color": "#697570",
+        "frame_shape": "none",
+        "indent": -1,
+        "layout_direction": "left_to_right",
+        "margin": 0,
+        "status_tip": "",
+        "text": "文件、视图、帮助菜单可直接操作，也可以使用 Ctrl+N、Ctrl+G。",
+        "tool_tip": "",
+        "visible": true,
+        "word_wrap": false
+      },
+      "slot": "children",
+      "stack_order": 2,
+      "type_id": "builtin.label",
+      "type_version": 1
+    },
+    {
+      "code_name": "central_widget",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "f0783501-580d-4c16-8848-5007937baacb",
+      "layout": {
+        "kind": "absolute",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "spacing": 8
+      },
+      "layout_item": null,
+      "name": "工作区",
+      "object_order": 0,
+      "parent_id": "46f3f1c0-e70b-4033-aa42-ff7dffd0d576",
+      "properties": {
+        "background_color": "#f5f6f2",
+        "enabled": true,
+        "visible": true
+      },
+      "slot": "central",
+      "stack_order": null,
+      "type_id": "builtin.central_widget",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_separator",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "f90ae44f-8b4f-4c73-8d83-4bac4c300d52",
+      "layout": null,
+      "layout_item": null,
+      "name": "文件菜单分隔线",
+      "object_order": 2,
+      "parent_id": "38fe8d58-a1f8-4c76-9aa5-c1f034b5d918",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": true,
+        "shortcut": "",
+        "status_tip": "",
+        "text": "-",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    },
+    {
+      "code_name": "menu_view",
+      "designer": {
+        "hidden": false,
+        "locked": false
+      },
+      "extensions": {},
+      "geometry": null,
+      "id": "fb39d3b0-e989-4240-9771-1adacb5500c7",
+      "layout": null,
+      "layout_item": null,
+      "name": "视图(&V)",
+      "object_order": 1,
+      "parent_id": "25fd2f64-10a3-4562-adaf-5604fcd193f6",
+      "properties": {
+        "checkable": false,
+        "checked": false,
+        "enabled": true,
+        "separator": false,
+        "shortcut": "",
+        "status_tip": "",
+        "text": "视图(&V)",
+        "visible": true
+      },
+      "slot": "menu",
+      "stack_order": null,
+      "type_id": "builtin.menu_item",
+      "type_version": 1
+    }
+  ],
+  "resources": [],
+  "root_id": "46f3f1c0-e70b-4033-aa42-ff7dffd0d576",
+  "schema_version": 2,
+  "tab_order": []
+}
