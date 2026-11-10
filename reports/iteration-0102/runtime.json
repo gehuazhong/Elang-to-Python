@@ -1,0 +1,83 @@
+{
+  "version": "0.10.2",
+  "native": {
+    "platform": "windows",
+    "dialogs": {
+      "color": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      },
+      "font": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      },
+      "open_file": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      },
+      "open_files": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      },
+      "save_file": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      },
+      "directory": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      }
+    },
+    "tab_refreshes_without_data_loss": 50,
+    "close_releases_dialog_and_timer": true
+  },
+  "isolated_export": {
+    "platform": "windows",
+    "dialogs": {
+      "color": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      },
+      "font": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      },
+      "open_file": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      },
+      "open_files": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      },
+      "save_file": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      },
+      "directory": {
+        "accepted": 6,
+        "cancelled": 6,
+        "reopens": 12
+      }
+    },
+    "tab_refreshes_without_data_loss": 50,
+    "close_releases_dialog_and_timer": true,
+    "failed_startup_cleanup": true,
+    "retry_after_repair": true,
+    "isolated": true
+  },
+  "save_reload_keeps_export_version": true,
+  "registry_fingerprint": "78ea756544a4d77c0188d0f4dda2f78e194c55543cdbff7a0feb38651aeeb3d8",
+  "source_fingerprint": "59a8239860415baa297b268c30da3cfa46940d6c9de6ce687215136afb72d447"
+}

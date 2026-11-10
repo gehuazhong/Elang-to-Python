@@ -8,12 +8,13 @@ import logging
 from pathlib import Path
 from typing import Any
 
-from PySide6.QtCore import QEvent, QObject, QPoint, QRect, QSize, Qt, QTimer, Signal
+from PySide6.QtCore import QEvent, QObject, QPoint, QRect, QSize, Qt, QTimer, Signal, Slot
 from PySide6.QtGui import QColor, QIcon, QImage, QMouseEvent, QPainter, QPen, QPixmap, QResizeEvent
 from PySide6.QtWidgets import (
     QAbstractItemView, QAbstractButton, QColorDialog, QDialog, QFileDialog, QFontDialog,
     QLabel, QStatusBar, QTabBar, QToolBar, QTreeWidget, QTreeWidgetItem, QWidget,
 )
+from shiboken6 import isValid
 from .application import configure_file_dialog
 from .widget_properties import apply_column_widths, table_content_key
 try:
@@ -365,10 +366,13 @@ class CommonDialog(QObject):
             button.clicked.connect(self.open_dialog)
 
     def open_dialog(self, checked: bool = False) -> None:
-        if self.dialog is not None:
+        if self.dialog is not None and isValid(self.dialog):
             self.dialog.raise_()
             self.dialog.activateWindow()
             return
+        self.dialog = None
+        self.result = None
+        dialog = None
         try:
             owner = self.parent() if isinstance(self.parent(), QWidget) else None
             kind = self.values.get("dialog_kind", "open_file")
@@ -399,18 +403,19 @@ class CommonDialog(QObject):
                 dialog.setLabelText(QFileDialog.DialogLabel.Reject, "取消")
             dialog.setWindowTitle(self.values.get("title", "请选择"))
             self.dialog = dialog
+            dialog.destroyed.connect(self._dialog_destroyed)
             dialog.finished.connect(self._finished)
             dialog.open()
         except Exception:
             logger.exception("打开通用对话框失败。")
-            if self.dialog:
-                self.dialog.deleteLater()
-                self.dialog = None
+            if dialog is not None:
+                self._release_dialog(dialog)
             self.cancelled.emit()
 
+    @Slot(int)
     def _finished(self, code: int) -> None:
-        dialog, self.dialog = self.dialog, None
-        if dialog is None:
+        dialog = self.sender()
+        if dialog is None or dialog is not self.dialog or not isValid(dialog):
             return
         try:
             if code == QDialog.DialogCode.Accepted:
@@ -421,17 +426,33 @@ class CommonDialog(QObject):
                 else:
                     font = dialog.selectedFont()
                     self.result = {"字体": font.family(), "字号": font.pointSize(), "粗体": font.bold(), "斜体": font.italic()}
-                self.accepted.emit(self.result)
             else:
                 self.result = None
-                self.cancelled.emit()
         finally:
+            # 先解除旧对话框的归属，再允许业务回调打开新窗口或销毁对象。
+            self._release_dialog(dialog)
+        if code == QDialog.DialogCode.Accepted:
+            self.accepted.emit(self.result)
+        else:
+            self.cancelled.emit()
+
+    def _release_dialog(self, dialog: QDialog) -> None:
+        if self.dialog is dialog:
+            self.dialog = None
+        if isValid(dialog):
+            dialog.hide()
+        if isValid(dialog):
             dialog.deleteLater()
+
+    @Slot()
+    def _dialog_destroyed(self) -> None:
+        if self.dialog is not None and not isValid(self.dialog):
+            self.dialog = None
 
     def dispose(self) -> None:
         self.bind_trigger(None)
         if self.dialog is not None:
-            self.dialog.reject()
+            self._release_dialog(self.dialog)
 
 
 EASY_FACTORIES: dict[str, type[QObject]] = {cls.__name__: cls for cls in (

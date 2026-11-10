@@ -1,0 +1,142 @@
+{
+  "projects": [
+    {
+      "path": "examples/\u4e2d\u6587\u754c\u9762\u793a\u4f8b.uipro",
+      "nodes": 5,
+      "sha256": "de1d7730a57c789e7c2bef6a060e7f6c8a42ec30bc872a53bb0bebde7d5b8b7d",
+      "error_type": "DesignerError",
+      "message": "\u4ee3\u7801\u6a21\u677f\u5c1a\u4e0d\u53d7\u652f\u6301\u3002"
+    },
+    {
+      "path": "examples/\u5bb9\u5668\u4e0e\u65e5\u671f\u793a\u4f8b.uipro",
+      "nodes": 26,
+      "sha256": "ac39deb216c865149979f3346a0f31880a611dfeb09767d394c611b0c80a0765",
+      "export_files": 19
+    },
+    {
+      "path": "examples/\u5e38\u7528\u7ec4\u4ef6\u793a\u4f8b.uipro",
+      "nodes": 15,
+      "sha256": "774db1fac06edd84cde1262661f08a12399ba03e64bc804e5f72a880eca77b96",
+      "export_files": 19
+    },
+    {
+      "path": "examples/\u6613\u8bed\u8a00\u57fa\u7840\u7ec4\u4ef6\u793a\u4f8b.uipro",
+      "nodes": 26,
+      "sha256": "e1f9bdbcc35fd722398514ea16db40d0cfddcfb178cae7c9dab2592e54dc5e02",
+      "export_files": 20
+    },
+    {
+      "path": "examples/\u7a97\u53e3\u7ec4\u4ef6\u8ddf\u968f\u793a\u4f8b.uipro",
+      "nodes": 11,
+      "sha256": "4cd816f8f3edb79cd712093d83246a91f7c0cb497f578b8494879b5fbfe70175",
+      "export_files": 19
+    },
+    {
+      "path": "examples/\u7b2c\u4e8c\u9636\u6bb5\u793a\u4f8b.uipro",
+      "nodes": 4,
+      "sha256": "38c02efad5ea8f19c24daf537af614e9274cca02d7a12469e19aec845341f89a",
+      "export_files": 19
+    },
+    {
+      "path": "examples/\u7ec4\u4ef6\u5c5e\u6027\u8865\u5168\u793a\u4f8b.uipro",
+      "nodes": 26,
+      "sha256": "a7fffa145ecb691249c31668dea1973031e0dc0369b51aaba46947e60cebefee",
+      "export_files": 19
+    },
+    {
+      "path": "examples/\u81ea\u52a8\u5e03\u5c40\u4e0e\u9ad8\u7ea7\u5bb9\u5668.uipro",
+      "nodes": 36,
+      "sha256": "0a27749443be999479c1ef4af58b8ed77c334dda9264542837519d09f42472b8",
+      "export_files": 19
+    },
+    {
+      "path": "examples/\u9009\u62e9\u5939\u8868\u5934\u4e0e\u9875\u9762.uipro",
+      "nodes": 39,
+      "sha256": "5059d7adaf6f5b60f960ed2a7e4bcd414b00cca5de3217ddc73ae539f2ccafb1",
+      "export_files": 19
+    },
+    {
+      "path": "uidemo/01_\u5e93\u5b58\u7ba1\u7406\u53f0/\u5e93\u5b58\u7ba1\u7406\u53f0.uipro",
+      "nodes": 31,
+      "sha256": "8cd6dabdb919d456374c8880721ac00bb4449e8796a4fb4a5798dd001d267cba",
+      "export_files": 19
+    },
+    {
+      "path": "uidemo/02_\u4efb\u52a1\u4e0b\u8f7d\u4e2d\u5fc3/\u4efb\u52a1\u4e0b\u8f7d\u4e2d\u5fc3.uipro",
+      "nodes": 17,
+      "sha256": "29317e2e1a0ff78246bbdeec27bacc9317c40b95f1871e3bd4aae091ad63e1b7",
+      "export_files": 19
+    },
+    {
+      "path": "uidemo/03_\u8d26\u53f7\u767b\u5f55/\u8d26\u53f7\u767b\u5f55.uipro",
+      "nodes": 20,
+      "sha256": "a1aaafd2e02945107cd42135279c19e6744d5650fe9ad3cfae19df0913cb6fde",
+      "export_files": 19
+    },
+    {
+      "path": "uidemo/04_\u5e94\u7528\u8bbe\u7f6e/\u5e94\u7528\u8bbe\u7f6e.uipro",
+      "nodes": 38,
+      "sha256": "897b44c80c7e732e6bd9d7ae54c787c5f4af8829164ee5ad93ed5361fd8498c4",
+      "export_files": 19
+    },
+    {
+      "path": "uidemo/05_\u83dc\u5355\u7f16\u8f91\u793a\u4f8b/\u83dc\u5355\u7f16\u8f91\u793a\u4f8b.uipro",
+      "nodes": 23,
+      "sha256": "7d39805f1463e3d1e4d46ab010b0e73cbdf0b28e8fa73441c915e40cbe23a0f3",
+      "export_files": 19
+    },
+    {
+      "path": "uidemo/06_\u6587\u672c\u4e0e\u8f93\u5165\u7ec4\u4ef6/\u6587\u672c\u4e0e\u8f93\u5165\u7ec4\u4ef6.uipro",
+      "nodes": 22,
+      "sha256": "1d2db08d1d404035e4dfc6e6e835fae919e46dbc768e980ad5cb64b88fb2702b",
+      "export_files": 20
+    },
+    {
+      "path": "uidemo/07_\u5154\u5b50\u5de5\u5177\u4e2a\u4eba\u4e2d\u5fc3/\u5154\u5b50\u5de5\u5177\u4e2a\u4eba\u4e2d\u5fc3.uipro",
+      "nodes": 50,
+      "sha256": "c6eb69209c628ac4fec986f559fa40a41731d5d0338fb4c8cc75920400b5fb85",
+      "export_files": 21
+    },
+    {
+      "path": "uidemo/08_\u4e07\u91d1\u6cb9UI/\u4e07\u91d1\u6cb9UI.uipro",
+      "nodes": 27,
+      "sha256": "6d27d5ed31503a4a21ab4a8e07781e61f95b387907b565d1850074ade9aa58bb",
+      "export_files": 20
+    },
+    {
+      "path": "uidemo/08_\u4e07\u91d1\u6cb9UI/\u4e07\u91d1\u6cb9UI_\u5bfc\u822a\u589e\u5f3a.uipro",
+      "nodes": 23,
+      "sha256": "e0647a118fe7996794c65de75ab5aa39f3e6deefaa9f69ddc6f0c2d5f7dab2f3",
+      "export_files": 20
+    },
+    {
+      "path": "uidemo/08_\u4e07\u91d1\u6cb9UI/\u4e07\u91d1\u6cb9UI_\u5fae\u535a\u5de5\u4f5c\u53f0.uipro",
+      "nodes": 142,
+      "sha256": "a961ea9d3e180c80682a11212e903f64263df145522d7a18f30ab17f8c2e76da",
+      "export_files": 20
+    },
+    {
+      "path": "uidemo/09_\u661f\u5c7f\u767b\u5f55/\u661f\u5c7f\u767b\u5f55.uipro",
+      "nodes": 50,
+      "sha256": "402448bf589e27a8f85e7b3a4f0c0babfa132c81ea2a53e962aa066ae2b46d2f",
+      "export_files": 22
+    },
+    {
+      "path": "uidemo/10_\u591c\u822a\u97f3\u4e50/\u591c\u822a\u97f3\u4e50.uipro",
+      "nodes": 166,
+      "sha256": "bb196de081d38425f3c44bc18521f2e2e3e558d9b8347ad7a2605824f6b93809",
+      "export_files": 25
+    },
+    {
+      "path": "uidemo/11_\u4e91\u6816\u9a7e\u9a76\u8231/\u4e91\u6816\u9a7e\u9a76\u8231.uipro",
+      "nodes": 173,
+      "sha256": "501e6be3665c924fa49f3f7242101aa7af168e5b8be8402392a04f8fccf3db7e",
+      "export_files": 29
+    }
+  ],
+  "all_loaded_and_built": true,
+  "export_compatibility_matches_baseline": true,
+  "baseline_commit": "d9bb3c1edfa8c7297679090dda23d4a5935af5b1",
+  "source_files_unchanged": true,
+  "source_fingerprint": "59a8239860415baa297b268c30da3cfa46940d6c9de6ce687215136afb72d447"
+}

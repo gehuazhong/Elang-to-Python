@@ -5,7 +5,9 @@ from __future__ import annotations
 import ast
 import builtins
 import keyword
+from collections.abc import Mapping
 from pathlib import Path
+from typing import Any
 
 from core.build_plan import compile_plan
 from core.errors import require
@@ -15,6 +17,17 @@ from core.registry import WidgetRegistry
 from core.window_scaling import scale_base_size, scale_items
 from widgets.catalog import QT_WIDGET_CLASSES, COMPONENT_CLASSES, ADAPTER_CLASSES, ADVANCED_CLASSES, SUPPORTED_SLOTS
 from core.image_values import image_bytes, image_filename
+
+
+def _canonical_value(value: Any) -> Any:
+    """字典键不影响语义；序列顺序必须保留。"""
+    if isinstance(value, Mapping):
+        return {key: _canonical_value(value[key]) for key in sorted(value)}
+    if isinstance(value, list):
+        return [_canonical_value(item) for item in value]
+    if isinstance(value, tuple):
+        return tuple(_canonical_value(item) for item in value)
+    return value
 
 
 def generate_files(model: ProjectModel, registry: WidgetRegistry) -> dict[str, bytes]:
@@ -58,7 +71,9 @@ def generate_files(model: ProjectModel, registry: WidgetRegistry) -> dict[str, b
              "from .layout.scaling import ScaleItem as _ScaleItem",
              "from .layout.runtime import WindowScaler as _WindowScaler",
              "from .application import configure_application", "", f"class {class_name}(_QMainWindow):",
-             "    def __init__(self) -> None:", "        super().__init__()", "        self.setup_ui()", "",
+             "    def __init__(self) -> None:", "        super().__init__()",
+             "        try:", "            self.setup_ui()", "        except Exception:",
+             "            self.deleteLater()", "            raise", "",
              "    def setup_ui(self) -> None:", "        self.controls: dict[str, _QObject] = {}",
              "        advanced_records = []"]
     expressions: dict[str, str] = {}
@@ -92,7 +107,7 @@ def generate_files(model: ProjectModel, registry: WidgetRegistry) -> dict[str, b
         for key, picture in pictures.items():
             assets[image_filename(picture)] = image_bytes(picture)
             values[key] = ""
-        lines.append(f"        values = {values!r}")
+        lines.append(f"        values = {_canonical_value(values)!r}")
         for key, picture in pictures.items():
             lines.append(f"        values[{key!r}] = _image_asset(__file__, {image_filename(picture)!r})")
         parent_code = model.nodes[node.parent_id].code_name if node.parent_id else None
@@ -152,7 +167,7 @@ def generate_files(model: ProjectModel, registry: WidgetRegistry) -> dict[str, b
             lines.append(f"            {item.key!r}: {expressions[item.key]},")
         lines += ["        }", f"        self._component_scaler = _WindowScaler(self, self.centralWidget(), {scale_base_size(plan.nodes)!r}, scale_items, scale_controls)"]
     lines += ["        from .events import connect_exported_events",
-              f"        self._event_connections = connect_exported_events(self, {selected_events!r}, __file__)",
+              f"        self._event_connections = connect_exported_events(self, {_canonical_value(selected_events)!r}, __file__)",
               "        _start_components(self.controls)", "        _start_advanced(self.controls)"]
     lines += ["", f"def create_window() -> {class_name}:", f"    return {class_name}()", ""]
     source = "\n".join(lines)

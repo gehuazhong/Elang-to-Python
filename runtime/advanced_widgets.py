@@ -1,7 +1,9 @@
 """Shared creation and ownership rules for preview and independent exports."""
 
-from PySide6.QtCore import Qt, QPoint, QRect, QObject, QEvent
+from PySide6.QtCore import Qt, QPoint, QRect, QObject, QEvent, QTimer
 from PySide6.QtWidgets import QWidget, QMainWindow
+from shiboken6 import isValid
+from .easy_widgets import CommonDialog
 from .advanced_containers import (CONTAINER_FACTORIES, LayoutContainer, ScrollArea, Splitter,
                                   StackedWidget, ToolBox, MdiArea, MdiSubWindow, DockWidget, Wizard,
                                   DialogWindow, TriggerWindow)
@@ -129,14 +131,30 @@ class AdvancedLifecycle(QObject):
     def __init__(self, root, controls):
         super().__init__(root)
         self.controls = controls
+        self._close_check = QTimer(self)
+        self._close_check.setSingleShot(True)
+        self._close_check.timeout.connect(self._finish_close)
         root.installEventFilter(self)
 
     def eventFilter(self, watched, event):
         if event.type() == QEvent.Type.Close:
-            for widget in self.controls.values():
-                if widget is not watched:
-                    dispose_advanced(widget)
+            # Close filters run before business handlers can reject the request.
+            self._close_check.start(0)
         return False
+
+    def _finish_close(self):
+        root = self.parent()
+        if root.isVisible():
+            return
+        for widget in self.controls.values():
+            if widget is root or not isValid(widget):
+                continue
+            if isinstance(widget, CommonDialog):
+                widget.dispose()
+            elif isinstance(widget, QTimer):
+                widget.stop()
+            else:
+                dispose_advanced(widget)
 
 
 def dispose_advanced(widget):

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="4" time="0.682" timestamp="2026-11-11T06:12:33.582328+08:00" hostname="DESKTOP-EIJ20OD"><testcase classname="tests.test_tab_bar_refresh" name="test_style_refresh_keeps_tab_selection_and_business_data[False]" time="0.116"><failure message="AssertionError: assert 'first' == 'third'&#10;  &#10;  - third&#10;  + first">tests\test_tab_bar_refresh.py:28: in test_style_refresh_keeps_tab_selection_and_business_data
+    assert tabs.tabText(tabs.currentIndex()) == "third"
+E   AssertionError: assert 'first' == 'third'
+E
+E     - third
+E     + first</failure></testcase><testcase classname="tests.test_tab_bar_refresh" name="test_style_refresh_keeps_tab_selection_and_business_data[True]" time="0.071"><failure message="AssertionError: assert 'first' == 'third'&#10;  &#10;  - third&#10;  + first">tests\test_tab_bar_refresh.py:28: in test_style_refresh_keeps_tab_selection_and_business_data
+    assert tabs.tabText(tabs.currentIndex()) == "third"
+E   AssertionError: assert 'first' == 'third'
+E
+E     - third
+E     + first</failure></testcase><testcase classname="tests.test_tab_bar_refresh" name="test_explicit_tab_selection_keeps_metadata_and_user_signals" time="0.066"><failure message="AssertionError: assert (1 == 1 and None == 'business value')&#10; +  where 1 = &lt;built-in method currentIndex of TabBar object at 0x0000020B66E61C80&gt;()&#10; +    where &lt;built-in method currentIndex of TabBar object at 0x0000020B66E61C80&gt; = &lt;runtime.advanced_views.TabBar(0x20b6327f6b0) at 0x0000020B66E61C80&gt;.currentIndex&#10; +  and   None = &lt;built-in method tabData of TabBar object at 0x0000020B66E61C80&gt;(1)&#10; +    where &lt;built-in method tabData of TabBar object at 0x0000020B66E61C80&gt; = &lt;runtime.advanced_views.TabBar(0x20b6327f6b0) at 0x0000020B66E61C80&gt;.tabData">tests\test_tab_bar_refresh.py:46: in test_explicit_tab_selection_keeps_metadata_and_user_signals
+    assert tabs.currentIndex() == 1 and tabs.tabData(1) == "business value"
+E   AssertionError: assert (1 == 1 and None == 'business value')
+E    +  where 1 = &lt;built-in method currentIndex of TabBar object at 0x0000020B66E61C80&gt;()
+E    +    where &lt;built-in method currentIndex of TabBar object at 0x0000020B66E61C80&gt; = &lt;runtime.advanced_views.TabBar(0x20b6327f6b0) at 0x0000020B66E61C80&gt;.currentIndex
+E    +  and   None = &lt;built-in method tabData of TabBar object at 0x0000020B66E61C80&gt;(1)
+E    +    where &lt;built-in method tabData of TabBar object at 0x0000020B66E61C80&gt; = &lt;runtime.advanced_views.TabBar(0x20b6327f6b0) at 0x0000020B66E61C80&gt;.tabData</failure></testcase><testcase classname="tests.test_tab_bar_refresh" name="test_configure_preserves_existing_signal_block" time="0.080" /></testsuite></testsuites>

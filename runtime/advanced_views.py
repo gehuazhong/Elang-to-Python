@@ -91,14 +91,25 @@ class UndoView(QUndoView):
 
 class TabBar(QTabBar):
     def configure(self, values):
-        while self.count():
-            self.removeTab(0)
-        for text in values["items"]:
-            self.addTab(text)
-        self.setCurrentIndex(values["current_index"])
-        self.setTabsClosable(values["tabs_closable"])
-        self.setMovable(values["movable"])
-        self.setExpanding(values["expanding"])
+        items = tuple(values["items"])
+        changed = getattr(self, "_items_source", None) != items
+        previous = self.blockSignals(True)
+        try:
+            if changed:
+                while self.count():
+                    self.removeTab(0)
+                for text in items:
+                    self.addTab(text)
+                self._items_source = items
+            index = values["current_index"]
+            if changed or getattr(self, "_index_source", None) != index:
+                self.setCurrentIndex(index)
+                self._index_source = index
+            self.setTabsClosable(values["tabs_closable"])
+            self.setMovable(values["movable"])
+            self.setExpanding(values["expanding"])
+        finally:
+            self.blockSignals(previous)
 
 
 class ButtonGroup(QButtonGroup):
