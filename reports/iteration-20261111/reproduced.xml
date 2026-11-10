@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="10" time="1.625" timestamp="2026-11-11T03:44:11.082226+08:00" hostname="DESKTOP-EIJ20OD"><testcase classname="tests.test_clipboard_references" name="test_group_remaps_internal_dialog_trigger[False]" time="0.106"><failure message="AssertionError: assert 'button_1' == 'button_1_copy'&#10;  &#10;  - button_1_copy&#10;  ?         -----&#10;  + button_1">tests\test_clipboard_references.py:21: in test_group_remaps_internal_dialog_trigger
+    assert pasted.nodes[keys[1]].properties["trigger_control"] == pasted.nodes[keys[0]].code_name
+E   AssertionError: assert 'button_1' == 'button_1_copy'
+E
+E     - button_1_copy
+E     ?         -----
+E     + button_1</failure></testcase><testcase classname="tests.test_clipboard_references" name="test_group_remaps_internal_dialog_trigger[True]" time="0.080"><failure message="core.errors.DesignerError: 触发按钮不存在或类型不支持。">tests\test_clipboard_references.py:18: in test_group_remaps_internal_dialog_trigger
+    fragment = copy_group(project, registry, (button, dialog))
+core\commands\group_clipboard.py:55: in copy_group
+    validate_group(result, registry)
+core\commands\group_clipboard.py:93: in validate_group
+    validate_fragment(ComponentFragment(fragment.id, nodes[source], (mapped,), handlers, False, 0), registry)
+core\commands\clipboard.py:97: in validate_fragment
+    registry.validate(model)
+core\registry.py:110: in validate
+    require(target is not None and target.type_id in {"builtin.button", "builtin.tool_button", "builtin.command_link_button"},
+core\errors.py:10: in require
+    raise DesignerError(message)
+E   core.errors.DesignerError: 触发按钮不存在或类型不支持。</failure></testcase><testcase classname="tests.test_clipboard_references" name="test_group_clears_external_dialog_triggers" time="0.076"><failure message="core.errors.DesignerError: 触发按钮不存在或类型不支持。">tests\test_clipboard_references.py:32: in test_group_clears_external_dialog_triggers
+    fragment = copy_group(project, registry, tuple(dialogs))
+core\commands\group_clipboard.py:55: in copy_group
+    validate_group(result, registry)
+core\commands\group_clipboard.py:77: in validate_group
+    registry.validate(model)
+core\registry.py:110: in validate
+    require(target is not None and target.type_id in {"builtin.button", "builtin.tool_button", "builtin.command_link_button"},
+core\errors.py:10: in require
+    raise DesignerError(message)
+E   core.errors.DesignerError: 触发按钮不存在或类型不支持。</failure></testcase><testcase classname="tests.test_clipboard_references" name="test_nonvisual_group_can_be_pasted_into_another_project" time="0.098"><failure message="core.errors.DesignerError: 剪贴板控件顺序重复。">tests\test_clipboard_references.py:42: in test_nonvisual_group_can_be_pasted_into_another_project
+    fragment = copy_group(project, registry, (timer, dialog))
+core\commands\group_clipboard.py:55: in copy_group
+    validate_group(result, registry)
+core\commands\group_clipboard.py:66: in validate_group
+    require(len({node.object_order for node in fragment.nodes}) == len(keys)
+core\errors.py:10: in require
+    raise DesignerError(message)
+E   core.errors.DesignerError: 剪贴板控件顺序重复。</failure></testcase><testcase classname="tests.test_runtime_dialog_lifecycle" name="test_result_callback_can_open_the_next_dialog[True]" time="0.167"><failure message="assert (None is not None)&#10; +  where None = &lt;runtime.advanced_dialogs.InputDialog(0x24783ed2930, name = &quot;输入对话框1&quot;) at 0x00000247846E4600&gt;.native">tests\test_runtime_dialog_lifecycle.py:41: in test_result_callback_can_open_the_next_dialog
+    assert service.native is not None and service.native is not original
+E   assert (None is not None)
+E    +  where None = &lt;runtime.advanced_dialogs.InputDialog(0x24783ed2930, name = "输入对话框1") at 0x00000247846E4600&gt;.native</failure></testcase><testcase classname="tests.test_runtime_dialog_lifecycle" name="test_result_callback_can_open_the_next_dialog[False]" time="0.074"><failure message="assert (None is not None)&#10; +  where None = &lt;runtime.advanced_dialogs.InputDialog(0x24783ed2c50, name = &quot;输入对话框1&quot;) at 0x0000024785088BC0&gt;.native">tests\test_runtime_dialog_lifecycle.py:41: in test_result_callback_can_open_the_next_dialog
+    assert service.native is not None and service.native is not original
+E   assert (None is not None)
+E    +  where None = &lt;runtime.advanced_dialogs.InputDialog(0x24783ed2c50, name = "输入对话框1") at 0x0000024785088BC0&gt;.native</failure></testcase><testcase classname="tests.test_runtime_dialog_lifecycle" name="test_progress_completion_is_emitted_once" time="0.086"><failure message="assert 3 == 1&#10; +  where 3 = &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784E16980&gt;()&#10; +    where &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784E16980&gt; = &lt;PySide6.QtTest.QSignalSpy object at 0x0000024784E16980&gt;.count">tests\test_runtime_dialog_lifecycle.py:51: in test_progress_completion_is_emitted_once
+    assert finished.count() == 1
+E   assert 3 == 1
+E    +  where 3 = &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784E16980&gt;()
+E    +    where &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784E16980&gt; = &lt;PySide6.QtTest.QSignalSpy object at 0x0000024784E16980&gt;.count</failure></testcase><testcase classname="tests.test_runtime_dialog_lifecycle" name="test_cancelled_progress_ignores_late_updates" time="0.079"><failure message="assert 1 == 0&#10; +  where 1 = &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784EA31C0&gt;()&#10; +    where &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784EA31C0&gt; = &lt;PySide6.QtTest.QSignalSpy object at 0x0000024784EA31C0&gt;.count">tests\test_runtime_dialog_lifecycle.py:61: in test_cancelled_progress_ignores_late_updates
+    assert finished.count() == 0
+E   assert 1 == 0
+E    +  where 1 = &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784EA31C0&gt;()
+E    +    where &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784EA31C0&gt; = &lt;PySide6.QtTest.QSignalSpy object at 0x0000024784EA31C0&gt;.count</failure></testcase><testcase classname="tests.test_runtime_dialog_lifecycle" name="test_busy_progress_does_not_report_completion" time="0.105"><failure message="assert 1 == 0&#10; +  where 1 = &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784E20A40&gt;()&#10; +    where &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784E20A40&gt; = &lt;PySide6.QtTest.QSignalSpy object at 0x0000024784E20A40&gt;.count">tests\test_runtime_dialog_lifecycle.py:69: in test_busy_progress_does_not_report_completion
+    assert finished.count() == 0
+E   assert 1 == 0
+E    +  where 1 = &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784E20A40&gt;()
+E    +    where &lt;built-in method count of PySide6.QtTest.QSignalSpy object at 0x0000024784E20A40&gt; = &lt;PySide6.QtTest.QSignalSpy object at 0x0000024784E20A40&gt;.count</failure></testcase><testcase classname="tests.test_runtime_dialog_lifecycle" name="test_reopening_completed_progress_starts_from_initial_value" time="0.076"><failure message="assert -1 == 0&#10; +  where -1 = &lt;built-in method value of PySide6.QtWidgets.QProgressDialog object at 0x0000024784E748C0&gt;()&#10; +    where &lt;built-in method value of PySide6.QtWidgets.QProgressDialog object at 0x0000024784E748C0&gt; = &lt;PySide6.QtWidgets.QProgressDialog(0x24780b549c0) at 0x0000024784E748C0&gt;.value&#10; +      where &lt;PySide6.QtWidgets.QProgressDialog(0x24780b549c0) at 0x0000024784E748C0&gt; = &lt;runtime.advanced_dialogs.ProgressDialog(0x24783ed3c40, name = &quot;进度对话框1&quot;) at 0x0000024784E77D00&gt;.native">tests\test_runtime_dialog_lifecycle.py:76: in test_reopening_completed_progress_starts_from_initial_value
+    assert service.native.value() == 0
+E   assert -1 == 0
+E    +  where -1 = &lt;built-in method value of PySide6.QtWidgets.QProgressDialog object at 0x0000024784E748C0&gt;()
+E    +    where &lt;built-in method value of PySide6.QtWidgets.QProgressDialog object at 0x0000024784E748C0&gt; = &lt;PySide6.QtWidgets.QProgressDialog(0x24780b549c0) at 0x0000024784E748C0&gt;.value
+E    +      where &lt;PySide6.QtWidgets.QProgressDialog(0x24780b549c0) at 0x0000024784E748C0&gt; = &lt;runtime.advanced_dialogs.ProgressDialog(0x24783ed3c40, name = "进度对话框1") at 0x0000024784E77D00&gt;.native</failure></testcase></testsuite></testsuites>

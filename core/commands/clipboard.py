@@ -48,6 +48,7 @@ def check_copyable(model: ProjectModel, registry: WidgetRegistry, node_id: str, 
 
 
 def copy_fragment(model: ProjectModel, registry: WidgetRegistry, node_id: str) -> ComponentFragment:
+    from .references import omit_external_references
     check_copyable(model, registry, node_id)
     connections: list[FrozenMap] = []
     handler_ids: set[str] = set()
@@ -61,14 +62,8 @@ def copy_fragment(model: ProjectModel, registry: WidgetRegistry, node_id: str) -
         elif connection["source_id"] == node_id or target.get("node_id") == node_id:
             omitted += 1
     handlers = tuple(item for item in model.data["handlers"] if item["id"] in handler_ids)
-    node = model.nodes[node_id]
-    for reference in ("trigger_control", "navigation_page"):
-        if node.properties.get(reference):
-            node = replace(node, properties=node.properties.changed(**{reference: ""}))
-            omitted += 1
-    if node.type_id == "builtin.button_group" and node.properties.get("members"):
-        omitted += len(node.properties["members"])
-        node = replace(node, properties=node.properties.changed(members=()))
+    node, omitted_references = omit_external_references(model.nodes[node_id], {model.nodes[node_id].code_name})
+    omitted += omitted_references
     fragment = ComponentFragment(str(uuid4()), node, tuple(connections), handlers,
                                  node_id in model.data["tab_order"], omitted)
     validate_fragment(fragment, registry)
@@ -188,7 +183,8 @@ def paste_fragment(model: ProjectModel, registry: WidgetRegistry, fragment: Comp
         created = candidate.nodes[key]
         copied = replace(created, properties=fragment.node.properties, designer=fragment.node.designer,
                          name=unique_name(fragment.node.name, {node.name for node in model.nodes.values()}, "副本"),
-                         code_name=unique_name(fragment.node.code_name, {node.code_name for node in model.nodes.values()}, "_copy"))
+                         code_name=unique_name(fragment.node.code_name, {node.code_name for node in model.nodes.values()}
+                                               | {item.get("code_name", "") for item in model.data["handlers"]}, "_copy"))
         return _paste_events(candidate.with_nodes({key: copied}), fragment, copied), key
     parent_id = parent_id or model.central_id
     if fragment.node.type_id == "builtin.mdi_subwindow" and model.nodes[parent_id].type_id != "builtin.mdi_area":

@@ -46,7 +46,7 @@ def create_node(model: ProjectModel, registry: WidgetRegistry, type_id: str, x: 
         require_container(model, registry, parent_id)
     number = 1
     names = {node.name for node in model.nodes.values()}
-    codes = {node.code_name for node in model.nodes.values()}
+    codes = {node.code_name for node in model.nodes.values()} | {item.get("code_name", "") for item in model.data["handlers"]}
     while f"{spec.label}{number}" in names or f"{spec.code_prefix}_{number}" in codes:
         number += 1
     siblings = [node for node in model.nodes.values() if node.parent_id == parent_id and node.slot == spec.slot]

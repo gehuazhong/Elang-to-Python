@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import re
 from typing import Any
 
@@ -88,6 +88,12 @@ class WidgetSpec:
     can_contain: bool = False
     events: tuple[EventSpec, ...] = ()
     aliases: tuple[str, ...] = ()
+    _defaults: FrozenMap = field(init=False, repr=False, compare=False)
+
+    def __post_init__(self) -> None:
+        for name in ("properties", "events", "aliases", "default_size"):
+            object.__setattr__(self, name, tuple(getattr(self, name)))
+        object.__setattr__(self, "_defaults", FrozenMap({item.key: item.default for item in self.properties}))
 
     def property(self, key: str) -> PropertySpec:
         result = next((item for item in self.properties if item.key == key), None)
@@ -95,4 +101,4 @@ class WidgetSpec:
         return result
 
     def defaults(self) -> FrozenMap:
-        return FrozenMap({item.key: item.default for item in self.properties})
+        return self._defaults

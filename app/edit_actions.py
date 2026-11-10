@@ -119,6 +119,8 @@ class EditActions(QObject):
                     check_copyable(model, self.window.registry, selected, include_children=True)
                 require(len({model.nodes[selected].parent_id for selected in roots}) == 1,
                         "请选择同一容器的控件。")
+                require(len({model.nodes[selected].slot for selected in roots}) == 1,
+                        "请分别复制画布控件、窗口条和非可视组件。")
                 copyable = True
             except DesignerError:
                 pass
@@ -249,7 +251,7 @@ class EditActions(QObject):
         document = self.window.document
         model = document.model
         roots = selected_roots(model, document.selected_ids)
-        has_descendants = len(subtree_ids(model, roots)) > len(roots)
+        has_descendants = len(subtree_ids(model, roots)) > len(roots) or (len(roots) > 1 and model.nodes[roots[0]].slot == "dock")
         fragment = (copy_tree(model, self.window.registry, roots) if has_descendants else
                     copy_group(model, self.window.registry, roots) if len(roots) > 1 else
                     copy_fragment(model, self.window.registry, roots[0]))

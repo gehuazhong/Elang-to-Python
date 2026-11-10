@@ -18,6 +18,7 @@ from .arrange import bounding_rect, constrain_delta
 from .clipboard import ComponentFragment, MAX_CLIPBOARD_BYTES, check_copyable, unique_name, validate_fragment
 from .hierarchy import require_container
 from .nodes import resolve_radio_selection
+from .references import omit_external_references, remap_references
 
 
 @dataclass(frozen=True, slots=True)
@@ -50,11 +51,8 @@ def copy_tree(model: ProjectModel, registry: WidgetRegistry, keys: tuple[str, ..
     copied_nodes = []
     codes = {model.nodes[key].code_name for key in included}
     for key in included:
-        node = model.nodes[key]
-        for reference in ("trigger_control", "navigation_page"):
-            if node.properties.get(reference) and node.properties[reference] not in codes:
-                node = replace(node, properties=node.properties.changed(**{reference: ""}))
-                omitted += 1
+        node, omitted_references = omit_external_references(model.nodes[key], codes)
+        omitted += omitted_references
         copied_nodes.append(node)
     result = TreeFragment(str(uuid4()), tuple(copied_nodes), roots, tuple(connections),
                           tuple(item for item in model.data["handlers"] if item["id"] in used),
@@ -183,10 +181,7 @@ def paste_tree(model: ProjectModel, registry: WidgetRegistry, fragment: TreeFrag
         changes[copied.id] = copied
     code_map = {node.code_name: changes[remap[node.id]].code_name for node in fragment.nodes}
     for key, node in tuple(changes.items()):
-        references = {reference: code_map.get(node.properties[reference], "")
-                      for reference in ("trigger_control", "navigation_page") if reference in node.properties}
-        if references:
-            changes[key] = replace(node, properties=node.properties.changed(**references))
+        changes[key] = remap_references(node, code_map)
     handler_map = {item["id"]: str(uuid4()) for item in fragment.handlers}
     handlers = tuple(item.changed(id=handler_map[item["id"]], code_name=unique_name(item["code_name"], codes, "_copy"))
                      for item in fragment.handlers)

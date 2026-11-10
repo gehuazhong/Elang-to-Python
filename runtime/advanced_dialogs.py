@@ -1,9 +1,10 @@
 """Nonblocking native dialogs with a consistent result signal."""
 
-from PySide6.QtCore import QObject, Signal
+from PySide6.QtCore import QObject, Signal, Slot
 from PySide6.QtGui import QColor, QFont
 from PySide6.QtWidgets import (QMessageBox, QErrorMessage, QInputDialog, QColorDialog,
                                QFontDialog, QProgressDialog, QLineEdit)
+from shiboken6 import isValid
 from .advanced_containers import TriggerWindow, BUTTONS
 
 
@@ -24,13 +25,17 @@ class DialogService(QObject, TriggerWindow):
     def open_dialog(self, checked=False):
         if self.design_mode:
             return
-        if self.native is not None:
+        if self.native is not None and isValid(self.native) and not self.native._uiplay_settled:
             self.native.show()
             self.native.raise_()
             return
+        if self.native is not None:
+            self._release_native(self.native)
         v = self.values
         dialog = self.native_class(self.parent())
         self.native = dialog
+        dialog._uiplay_settled = False
+        dialog.destroyed.connect(self._native_destroyed)
         dialog.setWindowTitle(v["title"])
         dialog.setModal(v.get("modal", False))
         if isinstance(dialog, QMessageBox):
@@ -87,45 +92,82 @@ class DialogService(QObject, TriggerWindow):
             dialog.setLabelText(v["text"])
             dialog.setCancelButtonText(v["cancel_text"])
             dialog.setRange(v["minimum"], v["maximum"])
-            dialog.setValue(v["value"])
             dialog.setAutoClose(v["auto_close"])
             dialog.setAutoReset(v.get("auto_reset", True))
             dialog.setMinimumDuration(0)
-            dialog.canceled.connect(self.cancelled)
+            dialog.setValue(v["value"])
+            dialog.canceled.connect(self._progress_cancelled)
         dialog.finished.connect(self._finished)
         if isinstance(dialog, QErrorMessage):
             dialog.showMessage(v["text"])
         else:
             dialog.show()
 
+    @Slot(int)
     def _finished(self, result):
-        dialog = self.native
-        if dialog is None:
+        dialog = self.sender()
+        if dialog is not self.native or dialog is None:
             return
         value = result
         if isinstance(dialog, QMessageBox):
-            accepted = result not in {0, QMessageBox.StandardButton.Cancel.value, QMessageBox.StandardButton.No.value}
+            accepted = result not in {0, QMessageBox.StandardButton.Cancel.value, QMessageBox.StandardButton.No.value,
+                                      QMessageBox.StandardButton.Close.value}
         else:
             accepted = bool(result)
         if accepted:
             if isinstance(dialog, QInputDialog):
-                value = {"text": dialog.textValue, "integer": dialog.intValue,
-                         "decimal": dialog.doubleValue}[self.values["input_mode"]]()
+                value = {QInputDialog.InputMode.TextInput: dialog.textValue,
+                         QInputDialog.InputMode.IntInput: dialog.intValue,
+                         QInputDialog.InputMode.DoubleInput: dialog.doubleValue}[dialog.inputMode()]()
             elif isinstance(dialog, QColorDialog):
                 value = dialog.currentColor().name(QColor.NameFormat.HexArgb)
             elif isinstance(dialog, QFontDialog):
                 value = dialog.currentFont().toString()
+            elif isinstance(dialog, QProgressDialog):
+                value = dialog.value()
+        self._settle(dialog, accepted, value)
+
+    def _release_native(self, dialog):
+        if self.native is dialog:
+            self.native = None
+        if isValid(dialog):
+            dialog.hide()
+            dialog.deleteLater()
+
+    def _settle(self, dialog, accepted, value=None, *, keep_open=False):
+        if dialog is not self.native or not isValid(dialog):
+            return
+        if dialog._uiplay_settled:
+            if not keep_open:
+                self._release_native(dialog)
+            return
+        dialog._uiplay_settled = True
+        # Detach the completed dialog before business callbacks can open another.
+        if not keep_open:
+            self._release_native(dialog)
+        if accepted:
             self.accepted.emit(value)
-        elif not isinstance(dialog, QProgressDialog):
+        else:
             self.cancelled.emit()
-        self.native = None
-        dialog.deleteLater()
+
+    @Slot()
+    def _progress_cancelled(self):
+        dialog = self.sender()
+        if dialog is self.native and dialog is not None:
+            self._settle(dialog, False)
+
+    @Slot()
+    def _native_destroyed(self):
+        if self.native is not None and not isValid(self.native):
+            self.native = None
 
     def setValue(self, value):
-        if isinstance(self.native, QProgressDialog):
-            self.native.setValue(value)
-            if value >= self.native.maximum():
-                self.accepted.emit(value)
+        dialog = self.native
+        if isinstance(dialog, QProgressDialog) and isValid(dialog) and not dialog._uiplay_settled:
+            minimum, maximum = dialog.minimum(), dialog.maximum()
+            dialog.setValue(value)
+            if value == maximum and (minimum, maximum) != (0, 0):
+                self._settle(dialog, True, value, keep_open=not dialog.autoClose() if isValid(dialog) else False)
 
     def dispose(self):
         self.bind_trigger(None)

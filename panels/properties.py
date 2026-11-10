@@ -179,18 +179,22 @@ class PropertyPanel(QWidget):
             self.validation_message.hide()
             spec = document.registry.get(node.type_id)
             if len(document.selected_ids) > 1:
+                visual = node.slot == "children"
                 self.heading.setText(f"已选择 {len(document.selected_ids)} 个控件")
-                self.validation_message.setText(f"排版基准：{node.name}。可整组移动、复制、删除或使用“排版”菜单。单独选择一个控件可编辑属性。")
+                self.validation_message.setText(
+                    f"排版基准：{node.name}。可整组移动、复制、删除或使用“排版”菜单。单独选择一个控件可编辑属性。" if visual else
+                    "可整组复制或删除。单独选择一个组件可编辑属性。")
                 self.validation_message.setStyleSheet(f"color: {MUTED};")
                 self.validation_message.show()
-                self.tree.setHeaderLabels(["对象", "位置与尺寸"])
+                self.tree.setHeaderLabels(["对象", "位置与尺寸" if visual else "类型"])
                 self.search.setPlaceholderText("搜索所选对象")
                 for key in document.selected_ids:
                     selected = document.model.nodes[key]
                     geometry = selected.geometry
-                    details = (f"{geometry.x}, {geometry.y}　·　{geometry.width} × {geometry.height}" if geometry else "由容器管理")
+                    details = (f"{geometry.x}, {geometry.y}　·　{geometry.width} × {geometry.height}" if geometry else
+                               document.registry.require(selected.type_id).label)
                     item = QTreeWidgetItem([selected.name, details])
-                    item.setToolTip(0, selected.name + ("（对齐基准）" if key == node.id else ""))
+                    item.setToolTip(0, selected.name + ("（对齐基准）" if visual and key == node.id else ""))
                     if key == node.id:
                         font = item.font(0)
                         font.setBold(True)

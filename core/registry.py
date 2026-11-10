@@ -34,7 +34,8 @@ class WidgetRegistry:
         records = []
         for key in sorted(self._specs):
             spec = self._specs[key]
-            record = {field.name: getattr(spec, field.name) for field in fields(spec) if field.name not in {"properties", "events"}}
+            record = {field.name: getattr(spec, field.name) for field in fields(spec)
+                      if field.init and field.name not in {"properties", "events"}}
             record["events"] = [asdict(event) for event in spec.events]
             record["properties"] = [{field.name: thaw(getattr(prop, field.name)) for field in fields(prop)}
                                     for prop in spec.properties]

@@ -165,11 +165,12 @@ class DocumentSession(QObject):
         keys = tuple(dict.fromkeys(node_ids)) or (self._model.root_id,)
         require(all(key in self._model.nodes for key in keys), "所选控件已经不存在。")
         current = primary if primary in keys else keys[-1]
-        # 根窗口和工作区是独立编辑对象，不与普通组件混选。
-        if self._model.nodes[current].slot != "children":
+        # 画布控件、非可视组件和停靠窗口分别多选；结构节点保持单选。
+        slot = self._model.nodes[current].slot
+        if slot not in {"children", "non_visual", "dock"}:
             keys = (current,)
         else:
-            keys = tuple(key for key in keys if self._model.nodes[key].slot == "children")
+            keys = tuple(key for key in keys if self._model.nodes[key].slot == slot)
         if keys != self.selected_ids or current != self.selected_id:
             self.selected_ids, self.selected_id = keys, current
             self.selection_changed.emit(current)

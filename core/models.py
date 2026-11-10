@@ -36,16 +36,16 @@ class FrozenMap(Mapping[str, Any]):
 
 
 def freeze(value: Any) -> Any:
+    if value is None or type(value) in (str, int, bool):
+        return value
+    if type(value) is float and math.isfinite(value):
+        return value
     if isinstance(value, FrozenMap):
         return value
     if isinstance(value, Mapping):
         return FrozenMap(value)
     if isinstance(value, (list, tuple)):
         return tuple(freeze(item) for item in value)
-    if value is None or type(value) in (str, int, bool):
-        return value
-    if type(value) is float and math.isfinite(value):
-        return value
     raise DesignerError("项目包含不能保存的值或非有限数字。")
 
 

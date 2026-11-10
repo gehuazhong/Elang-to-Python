@@ -1,0 +1,48 @@
+{
+  "designer": {
+    "ctrl_multiselection": true,
+    "copy_paste_shortcuts": true,
+    "atomic_undo_redo": true
+  },
+  "native": {
+    "platform": "windows",
+    "independent_copied_triggers": 2,
+    "input_callback_reopens": 12,
+    "progress_option_combinations": 4,
+    "completion_and_cancellation_once": true,
+    "busy_progress_not_completed": true
+  },
+  "isolated_export": {
+    "platform": "windows",
+    "independent_copied_triggers": 2,
+    "input_callback_reopens": 12,
+    "progress_option_combinations": 4,
+    "completion_and_cancellation_once": true,
+    "busy_progress_not_completed": true
+  },
+  "preview_process": {
+    "platform": "windows",
+    "independent_copied_triggers": 2,
+    "input_callback_reopens": 12,
+    "progress_option_combinations": 4,
+    "completion_and_cancellation_once": true,
+    "busy_progress_not_completed": true
+  },
+  "saved_project_roundtrip": true,
+  "existing_projects": {
+    "uidemo/07_\u5154\u5b50\u5de5\u5177\u4e2a\u4eba\u4e2d\u5fc3/\u5154\u5b50\u5de5\u5177\u4e2a\u4eba\u4e2d\u5fc3.uipro": {
+      "nodes": 50,
+      "sha256": "c6eb69209c628ac4fec986f559fa40a41731d5d0338fb4c8cc75920400b5fb85"
+    },
+    "uidemo/08_\u4e07\u91d1\u6cb9UI/\u4e07\u91d1\u6cb9UI.uipro": {
+      "nodes": 23,
+      "sha256": "11ff491930d5104c97803b6076b1f430b62de3e59114e9bbc388cd2d644b580b"
+    },
+    "uidemo/08_\u4e07\u91d1\u6cb9UI/\u4e07\u91d1\u6cb9UI_\u5bfc\u822a\u589e\u5f3a.uipro": {
+      "nodes": 23,
+      "sha256": "e0647a118fe7996794c65de75ab5aa39f3e6deefaa9f69ddc6f0c2d5f7dab2f3"
+    }
+  },
+  "registry_fingerprint": "78ea756544a4d77c0188d0f4dda2f78e194c55543cdbff7a0feb38651aeeb3d8",
+  "source_fingerprint": "bda7fb2e951ab208cf1b65f1fe2f8c09c643f89eb8d7deb97c9f7ce8161d05d6"
+}

@@ -1,0 +1,15 @@
+{
+  "visual_controls": 500,
+  "runs_ms": [
+    75.173,
+    79.649,
+    75.292,
+    77.861,
+    77.892,
+    76.862,
+    76.621
+  ],
+  "median_ms": 76.862,
+  "registry_fingerprint": "78ea756544a4d77c0188d0f4dda2f78e194c55543cdbff7a0feb38651aeeb3d8",
+  "source_fingerprint": "bda7fb2e951ab208cf1b65f1fe2f8c09c643f89eb8d7deb97c9f7ce8161d05d6"
+}
