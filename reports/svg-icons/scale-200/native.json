@@ -1,0 +1,12 @@
+{
+  "platform": "windows",
+  "icons": 64,
+  "mouse_search_selection": true,
+  "category_popup": true,
+  "color_dialog": true,
+  "layout": true,
+  "reopen_cycles": 12,
+  "device_pixel_ratio": 2.0,
+  "example": "examples\\常用SVG图标.uipro",
+  "source_fingerprint": "5146e7a2c5a8cd9f527b1ae0bddc100502e476400de6446fca0b4844d05d95f0"
+}

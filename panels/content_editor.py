@@ -345,13 +345,17 @@ class ContentEditor(QWidget):
         label.setTextFormat(Qt.TextFormat.PlainText)
         label.setToolTip(label.text())
         layout.addWidget(label, 1)
-        self.button = QPushButton("编辑…")
+        self.button = QPushButton("图标…" if spec.key == "svg_data" else "编辑…")
         self.button.setAccessibleName("编辑" + spec.label)
         self.button.clicked.connect(self.choose)
         layout.addWidget(self.button)
 
     @staticmethod
     def summary(spec: PropertySpec, value: Any) -> str:
+        if spec.key == "svg_data":
+            from resources.svg_icons import ICON_BY_KEY, identify_icon
+            icon = identify_icon(value)
+            return ICON_BY_KEY[icon[0]].label if icon else "自定义 SVG"
         if spec.value_type == "multiline":
             return "空文本" if not value else f"{len(value.splitlines())} 行文字"
         if spec.value_type == "table":
@@ -362,10 +366,16 @@ class ContentEditor(QWidget):
 
     def choose(self) -> None:
         self.choosing = True
-        dialog = ContentDialog(self.spec, thaw(self.current_value), self.commit, self, column_default=self.column_default)
+        dialog = None
         try:
+            if self.spec.key == "svg_data":
+                from .svg_editor import SvgDialog
+                dialog = SvgDialog(self.spec, self.current_value, self.commit, self)
+            else:
+                dialog = ContentDialog(self.spec, thaw(self.current_value), self.commit, self, column_default=self.column_default)
             dialog.exec()
         finally:
-            dialog.deleteLater()
+            if dialog is not None:
+                dialog.deleteLater()
             self.choosing = False
             self.editing_finished.emit()

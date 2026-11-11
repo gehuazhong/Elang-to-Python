@@ -1,6 +1,6 @@
 [project]
 name = "uiplay-pro"
-version = "0.10.2"
+version = "0.10.3"
 description = "全中文可视化界面设计器"
 requires-python = ">=3.11"
 dependencies = ["PySide6==6.11.1"]

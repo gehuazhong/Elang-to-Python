@@ -200,7 +200,8 @@ def register_advanced_widgets(registry: WidgetRegistry, common: tuple[P, ...]) -
         ), events=(("initialized", "图形上下文就绪"), ("rendered", "绘制完成"), ("failed", "图形初始化失败")))
     add("svg_widget", "SVG 矢量图", "图形组件", (200, 160), (
         P("svg_data", "SVG 内容", "内容", "multiline",
-          '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="160" viewBox="0 0 200 160"><rect x="20" y="20" width="160" height="120" rx="16" fill="#0078d4"/></svg>'),
+          '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="160" viewBox="0 0 200 160"><rect x="20" y="20" width="160" height="120" rx="16" fill="#0078d4"/></svg>',
+          description="点击图标按钮，按分类或中英文搜索常用图标，设置颜色和线宽；也可编辑 SVG 源码。内容随项目保存，预览与导出均生效。"),
     ))
     add("web_view", "网页控件", "扩展组件", (480, 320), (
         enum("source_mode", "页面来源", "html", (("html", "内嵌 HTML"), ("url", "网址")), "内容"),

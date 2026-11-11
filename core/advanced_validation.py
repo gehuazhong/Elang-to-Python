@@ -1,8 +1,8 @@
 """Project-level invariants for layouts, references and native extensions."""
 
 from urllib.parse import urlsplit
-from xml.etree import ElementTree
 from .errors import require
+from .svg_values import validate_svg
 from layout.containers import grid_cells
 
 BUTTON_TYPES = frozenset("builtin." + key for key in
@@ -53,13 +53,7 @@ def validate_advanced(model, registry):
         if node.type_id in {"builtin.rhi_widget", "builtin.opengl_widget"}:
             require(values["samples"] in {1, 2, 4, 8}, "采样数只支持一、二、四或八。")
         if node.type_id == "builtin.svg_widget":
-            data = values["svg_data"]
-            require("<!DOCTYPE" not in data.upper() and "<!ENTITY" not in data.upper(), "SVG 不支持文档类型或实体声明。")
-            try:
-                root = ElementTree.fromstring(data)
-                require(root.tag in {"svg", "{http://www.w3.org/2000/svg}svg"}, "SVG 内容必须以 svg 元素为根。")
-            except ElementTree.ParseError:
-                require(False, "SVG 内容不是有效的 XML。")
+            validate_svg(values["svg_data"])
         if node.type_id == "builtin.web_view" and values["source_mode"] == "url":
             try:
                 url = urlsplit(values["url"])
